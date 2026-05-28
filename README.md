@@ -64,7 +64,7 @@ DrivX turns safe driving into a verifiable on-chain identity. Drivers build a Sa
 ## Links
 
 - **Website:** [jpdeveloper89-cmd.github.io/drivx](https://jpdeveloper89-cmd.github.io/drivx)
-- **Twitter:** [@driver_protocol](https://x.com/driver_protocol)
+- **Twitter:** [@drivx_](https://x.com/drivx_)
 - **Whitepaper:** [Read here](https://jpdeveloper89-cmd.github.io/drivx/DrivX_Whitepaper.html)
 
 ---
