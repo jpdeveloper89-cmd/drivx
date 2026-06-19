@@ -1,21 +1,33 @@
-# SafeDrive Protocol
+# DrivX Protocol
 
 Decentralized driver-owned protocol that transforms safe driving behavior into a verifiable, portable asset with real economic value. Built on Base (Ethereum L2).
+
+**Website:** https://jpdeveloper89-cmd.github.io/drivx/  
+**Web App:** https://jpdeveloper89-cmd.github.io/drivx/app/
 
 ## Monorepo Structure
 
 ```
-safedrive-protocol/
+drivx-protocol/
 ├── packages/
 │   ├── contracts/    # Solidity smart contracts (Hardhat + Foundry)
 │   ├── backend/     # Node.js + Express API services
 │   ├── mobile/      # React Native + Expo mobile app
 │   └── web/         # Next.js web platform
-├── tsconfig.base.json   # Shared TypeScript configuration
-├── .eslintrc.json       # Shared ESLint configuration
-├── .prettierrc          # Shared Prettier configuration
-└── package.json         # Root workspace configuration
+├── website/         # Landing page (GitHub Pages)
+├── docs/            # Technical specifications
+└── Logo/            # Brand assets
 ```
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Smart Contracts | Solidity 0.8.24, Hardhat, OpenZeppelin |
+| Backend | Node.js, Express, PostgreSQL, Redis |
+| Mobile | React Native, Expo |
+| Web | Next.js 14, Tailwind CSS |
+| Blockchain | Base (Ethereum L2) |
 
 ## Getting Started
 
@@ -23,7 +35,6 @@ safedrive-protocol/
 
 - Node.js >= 18.0.0
 - npm >= 9.0.0
-- Foundry (for fuzz testing): https://book.getfoundry.sh/getting-started/installation
 
 ### Installation
 
@@ -31,32 +42,39 @@ safedrive-protocol/
 npm install
 ```
 
-### Smart Contracts
+### Backend Tests (175 passing)
+
+```bash
+cd backend
+npm test
+```
+
+### Smart Contract Tests (38 passing)
 
 ```bash
 cd packages/contracts
-
-# Compile with Hardhat
-npx hardhat compile
-
-# Run Hardhat tests
 npx hardhat test
-
-# Run Foundry fuzz tests
-forge test --fuzz-runs 1000
-
-# Deploy to Base Sepolia testnet
-npx hardhat run scripts/deploy.ts --network baseTestnet
 ```
 
-### Foundry Setup
-
-After `npm install`, install Foundry's forge-std:
+### Web Platform (Dev Server)
 
 ```bash
-cd packages/contracts
-forge install foundry-rs/forge-std --no-commit
+cd packages/web
+npm install
+npm run dev
 ```
+
+## Contracts
+
+| Contract | Description |
+|----------|-------------|
+| SafetyRegistry | On-chain driving identity + Safety Score |
+| ConsentManager | Bitmask consent grants with 12-month cap |
+| StakingContract | DVX staking with 7-day cooldown |
+| RevenueDistributor | Immutable 70/20/10 revenue split |
+| DVXBuyback | Weekly buyback with TWAP pricing |
+| GovernanceTimelock | 48-hour delay for parameter changes |
+| MarketplaceContract | Delivery escrow + protocol fees |
 
 ## Networks
 
