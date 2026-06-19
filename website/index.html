@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrivX — Driver-Owned Protocol</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #09090b;
+            --text: #fafafa;
+            --muted: #a1a1aa;
+            --border: #27272a;
+            --accent: #6366f1;
+            --accent-glow: rgba(99, 102, 241, 0.15);
+            --accent-secondary: #22d3ee;
+            --card-bg: #111113;
+            --section-alt: #0f0f11;
+        }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: inherit; text-decoration: none; }
+
+        /* Nav */
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 100;
+            background: rgba(9,9,11,0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 40px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .nav-logo { font-weight: 700; font-size: 1.5rem; letter-spacing: -0.5px; }
+        .nav-links { display: flex; gap: 32px; font-size: 0.9rem; color: var(--muted); }
+        .nav-links a:hover { color: var(--text); }
+        .nav-cta {
+            background: var(--accent); color: #fff; padding: 8px 20px;
+            border-radius: 6px; font-size: 0.85rem; font-weight: 500;
+            transition: all 0.2s;
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+        .nav-cta:hover { opacity: 0.9; box-shadow: 0 0 30px var(--accent-glow); }
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-logo">
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none" style="vertical-align: middle; margin-right: 8px;">
+            <path d="M6 4h10c7.732 0 14 6.268 14 14s-6.268 14-14 14H6V4z" stroke="url(#logo-grad)" stroke-width="2.5" fill="none"/>
+            <path d="M6 16h14" stroke="url(#logo-grad)" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+            <circle cx="24" cy="16" r="2.5" fill="url(#logo-grad)"/>
+            <circle cx="6" cy="16" r="2" fill="#22d3ee"/>
+            <defs>
+                <linearGradient id="logo-grad" x1="0" y1="0" x2="32" y2="32">
+                    <stop offset="0%" stop-color="#6366f1"/>
+                    <stop offset="100%" stop-color="#22d3ee"/>
+                </linearGradient>
+            </defs>
+        </svg>
+        DrivX
+    </div>
+    <div class="nav-links">
+        <a href="#how">How It Works</a>
+        <a href="#tokenomics">Tokenomics</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="DrivX_Whitepaper.html" target="_blank">Whitepaper</a>
+        <a href="https://github.com/drivxprotocol" target="_blank">GitHub</a>
+    </div>
+    <a href="http://localhost:3000" class="nav-cta">Launch App</a>
+</nav>
+
+<style>
+    /* Hero */
+    .hero {
+        min-height: 100vh; display: flex; flex-direction: column;
+        justify-content: center; align-items: center; text-align: center;
+        padding: 120px 40px 80px;
+    }
+    .hero-tag {
+        font-size: 0.8rem; font-weight: 500; color: var(--muted);
+        text-transform: uppercase; letter-spacing: 2px; margin-bottom: 24px;
+    }
+    .hero h1 {
+        font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700;
+        letter-spacing: -2px; line-height: 1.1; max-width: 800px;
+        margin-bottom: 24px;
+        background: linear-gradient(135deg, #fafafa 0%, var(--accent) 50%, var(--accent-secondary) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .hero p {
+        font-size: 1.15rem; color: var(--muted); max-width: 560px;
+        line-height: 1.7; margin-bottom: 40px;
+    }
+    .hero-buttons { display: flex; gap: 16px; }
+    .btn-primary {
+        background: var(--accent); color: #fff; padding: 14px 32px;
+        border-radius: 8px; font-size: 0.95rem; font-weight: 500;
+        transition: all 0.2s;
+        box-shadow: 0 0 24px var(--accent-glow);
+    }
+    .btn-primary:hover { opacity: 0.9; box-shadow: 0 0 36px var(--accent-glow); }
+    .btn-secondary {
+        border: 1px solid var(--border); padding: 14px 32px;
+        border-radius: 8px; font-size: 0.95rem; font-weight: 500;
+        color: var(--text); transition: border-color 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--text); }
+
+    /* Stats bar */
+    .stats {
+        display: flex; justify-content: center; gap: 64px;
+        padding: 48px 40px; border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+    }
+    .stat { text-align: center; }
+    .stat-value { font-size: 2rem; font-weight: 700; letter-spacing: -1px; color: var(--accent-secondary); }
+    .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: 1px; }
+
+    /* Sections */
+    section { padding: 100px 40px; max-width: 1100px; margin: 0 auto; }
+    .section-tag {
+        font-size: 0.75rem; font-weight: 600; text-transform: uppercase;
+        letter-spacing: 2px; color: var(--muted); margin-bottom: 12px;
+    }
+    .section-title {
+        font-size: 2.2rem; font-weight: 700; letter-spacing: -1px;
+        margin-bottom: 16px; max-width: 600px;
+    }
+    .section-desc {
+        font-size: 1.05rem; color: var(--muted); max-width: 560px;
+        margin-bottom: 48px; line-height: 1.7;
+    }
+
+    /* Cards grid */
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .card {
+        background: var(--card-bg); border: 1px solid var(--border);
+        border-radius: 12px; padding: 32px;
+        transition: border-color 0.2s;
+    }
+    .card:hover { border-color: var(--accent); box-shadow: 0 0 20px var(--accent-glow); }
+    .card-number {
+        font-size: 0.75rem; font-weight: 600; color: var(--accent);
+        margin-bottom: 12px;
+    }
+    .card h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 8px; color: var(--text); }
+    .card p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+
+    /* Tokenomics */
+    .token-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .token-list { list-style: none; }
+    .token-list li {
+        padding: 16px 0; border-bottom: 1px solid var(--border);
+        display: flex; justify-content: space-between; align-items: center;
+    }
+    .token-list li:last-child { border-bottom: none; }
+    .token-key { font-size: 0.9rem; color: var(--muted); }
+    .token-val { font-size: 0.95rem; font-weight: 600; }
+    .revenue-split { margin-top: 32px; }
+    .split-bar {
+        display: flex; height: 8px; border-radius: 4px; overflow: hidden;
+        margin: 16px 0 12px;
+    }
+    .split-drivers { background: var(--accent); flex: 70; }
+    .split-treasury { background: var(--accent-secondary); flex: 20; }
+    .split-incentive { background: #a78bfa; flex: 10; }
+    .split-legend { display: flex; gap: 24px; font-size: 0.8rem; color: var(--muted); }
+    .split-legend span::before {
+        content: ''; display: inline-block; width: 8px; height: 8px;
+        border-radius: 2px; margin-right: 6px; vertical-align: middle;
+    }
+    .legend-drivers::before { background: var(--accent); }
+    .legend-treasury::before { background: var(--accent-secondary); }
+    .legend-incentive::before { background: #a78bfa; }
+
+    /* Roadmap */
+    .roadmap-list { list-style: none; position: relative; padding-left: 32px; }
+    .roadmap-list::before {
+        content: ''; position: absolute; left: 7px; top: 8px; bottom: 8px;
+        width: 1px; background: var(--border);
+    }
+    .roadmap-list li { position: relative; padding: 20px 0; }
+    .roadmap-list li::before {
+        content: ''; position: absolute; left: -28px; top: 28px;
+        width: 11px; height: 11px; border-radius: 50%;
+        border: 2px solid var(--accent); background: var(--bg);
+    }
+    .roadmap-phase {
+        font-size: 0.75rem; font-weight: 600; text-transform: uppercase;
+        letter-spacing: 1.5px; color: var(--muted); margin-bottom: 4px;
+    }
+    .roadmap-title { font-size: 1.05rem; font-weight: 600; margin-bottom: 4px; }
+    .roadmap-desc { font-size: 0.88rem; color: var(--muted); }
+
+    /* CTA */
+    .cta-section {
+        text-align: center; padding: 100px 40px;
+        border-top: 1px solid var(--border);
+    }
+    .cta-section h2 {
+        font-size: 2.2rem; font-weight: 700; letter-spacing: -1px;
+        margin-bottom: 16px;
+    }
+    .cta-section p { color: var(--muted); margin-bottom: 32px; font-size: 1.05rem; }
+
+    /* Footer */
+    footer {
+        padding: 40px; border-top: 1px solid var(--border);
+        display: flex; justify-content: space-between; align-items: center;
+        font-size: 0.85rem; color: var(--muted);
+    }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a:hover { color: var(--text); }
+
+    @media (max-width: 768px) {
+        nav { padding: 12px 20px; }
+        .nav-links { display: none; }
+        .hero { padding: 100px 24px 60px; }
+        .stats { flex-wrap: wrap; gap: 32px; }
+        section { padding: 60px 24px; }
+        .token-grid { grid-template-columns: 1fr; }
+        .hero-buttons { flex-direction: column; }
+        footer { flex-direction: column; gap: 16px; }
+    }
+
+    /* Animated grid background */
+    .grid-bg {
+        position: fixed; inset: 0; z-index: -1; overflow: hidden;
+        background:
+            linear-gradient(rgba(99,102,241,0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(99,102,241,0.03) 1px, transparent 1px);
+        background-size: 60px 60px;
+    }
+    .grid-bg::after {
+        content: ''; position: absolute; inset: 0;
+        background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 60%);
+    }
+
+    /* Floating orbs */
+    .orb {
+        position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.4;
+        animation: float 20s ease-in-out infinite;
+    }
+    .orb-1 {
+        width: 500px; height: 500px; top: -100px; right: -100px;
+        background: radial-gradient(circle, var(--accent), transparent);
+    }
+    .orb-2 {
+        width: 400px; height: 400px; bottom: 20%; left: -100px;
+        background: radial-gradient(circle, var(--accent-secondary), transparent);
+        animation-delay: -7s;
+    }
+    .orb-3 {
+        width: 300px; height: 300px; top: 40%; right: 10%;
+        background: radial-gradient(circle, #a78bfa, transparent);
+        animation-delay: -14s; opacity: 0.25;
+    }
+    @keyframes float {
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        33% { transform: translate(30px, -20px) scale(1.05); }
+        66% { transform: translate(-20px, 20px) scale(0.95); }
+    }
+
+    /* Glow line under hero */
+    .hero-glow {
+        width: 300px; height: 2px; margin: 48px auto 0;
+        background: linear-gradient(90deg, transparent, var(--accent), var(--accent-secondary), transparent);
+        border-radius: 2px;
+        animation: pulse-glow 3s ease-in-out infinite;
+    }
+    @keyframes pulse-glow {
+        0%, 100% { opacity: 0.6; transform: scaleX(1); }
+        50% { opacity: 1; transform: scaleX(1.2); }
+    }
+</style>
+
+<!-- Background effects -->
+<div class="grid-bg"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-tag">Driver-Owned Protocol on Base</div>
+    <h1>Your driving data is worth billions. Own it.</h1>
+    <p>DrivX turns safe driving into a verifiable on-chain identity. Earn real revenue — not printed tokens — from the value you create.</p>
+    <div class="hero-buttons">
+        <a href="http://localhost:3000" class="btn-primary">Get Started</a>
+        <a href="DrivX_Whitepaper.html" target="_blank" class="btn-secondary">Read Whitepaper</a>
+    </div>
+    <div class="hero-glow"></div>
+</section>
+
+<!-- Stats -->
+<div class="stats">
+    <div class="stat">
+        <div class="stat-value">$950B</div>
+        <div class="stat-label">Insurance Market</div>
+    </div>
+    <div class="stat">
+        <div class="stat-value">435M</div>
+        <div class="stat-label">Gig Workers Globally</div>
+    </div>
+    <div class="stat">
+        <div class="stat-value">100B</div>
+        <div class="stat-label">Fixed DVX Supply</div>
+    </div>
+    <div class="stat">
+        <div class="stat-value">70%</div>
+        <div class="stat-label">Revenue to Drivers</div>
+    </div>
+</div>
+
+<!-- Token Address -->
+<div style="text-align:center; padding:20px 40px; border-bottom:1px solid var(--border);">
+    <span style="font-size:0.75rem; text-transform:uppercase; letter-spacing:1.5px; color:var(--muted); margin-right:12px;">$DVX Contract</span>
+    <code style="font-size:0.85rem; background:var(--card-bg); border:1px solid var(--border); padding:6px 14px; border-radius:6px; color:var(--accent-secondary); letter-spacing:0.5px;">TBA — Launching Soon</code>
+</div>
+
+<!-- How It Works -->
+<section id="how">
+    <div class="section-tag">How It Works</div>
+    <h2 class="section-title">Drive. Score. Earn.</h2>
+    <p class="section-desc">No hardware. No seed phrases. No crypto knowledge needed. Just drive safely and let the protocol handle the rest.</p>
+
+    <div class="cards">
+        <div class="card">
+            <div class="card-number">01</div>
+            <h3>Drive</h3>
+            <p>The app auto-detects your driving using phone sensors. No manual start, no dongles. Just drive normally.</p>
+        </div>
+        <div class="card">
+            <div class="card-number">02</div>
+            <h3>Build Your Score</h3>
+            <p>Every trip builds your on-chain Safety Score (0–1000). Speed, braking, cornering, phone usage — all measured, all verified.</p>
+        </div>
+        <div class="card">
+            <div class="card-number">03</div>
+            <h3>Own Your Identity</h3>
+            <p>Your Driving Identity lives on-chain. Portable across insurers, employers, and platforms. You control who sees it.</p>
+        </div>
+        <div class="card">
+            <div class="card-number">04</div>
+            <h3>Earn Revenue</h3>
+            <p>Stake DVX and earn weekly distributions in WETH + USDC from real protocol revenue. Not emissions. Not inflation.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Why Different -->
+<section style="background: var(--section-alt); margin: 0; max-width: 100%; padding: 100px 40px;">
+    <div style="max-width: 1100px; margin: 0 auto;">
+        <div class="section-tag">Why DrivX</div>
+        <h2 class="section-title">Not another drive-to-earn token.</h2>
+        <p class="section-desc">Most crypto driving projects print tokens as rewards. When emissions slow, the token dies. DrivX is structurally different.</p>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Real Revenue, Not Emissions</h3>
+                <p>Stakers earn WETH + USDC from trading fees, insurance verification fees, and marketplace fees. No new tokens are ever minted.</p>
+            </div>
+            <div class="card">
+                <h3>Fixed Supply, Deflationary</h3>
+                <p>100B DVX. No mint function. Buyback-and-burn reduces supply permanently. Every burn is on-chain and irreversible.</p>
+            </div>
+            <div class="card">
+                <h3>No Team Tokens</h3>
+                <p>Zero pre-allocation. 100% of supply into the liquidity pool. Team funded from 20% treasury. All wallets published at launch.</p>
+            </div>
+            <div class="card">
+                <h3>On-Chain Identity</h3>
+                <p>Your Safety Score is portable, verifiable, and composable. No platform can revoke it. No company can lock it. You own it.</p>
+            </div>
+            <div class="card">
+                <h3>Score-Weighted Yield</h3>
+                <p>Revenue share = stake × Safety Score. A safe driver with 1K DVX earns more than a speculator with 10K DVX and no score.</p>
+            </div>
+            <div class="card">
+                <h3>Immutable Economics</h3>
+                <p>The 70/20/10 revenue split is hardcoded. No admin keys. No governance can change it. Verified on Basescan.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tokenomics -->
+<section id="tokenomics">
+    <div class="section-tag">Tokenomics</div>
+    <h2 class="section-title">Transparent. Fixed. Deflationary.</h2>
+    <p class="section-desc">100% fair launch via Bankr Bot on Base. No pre-sale. No VCs. No vesting. Instant liquidity from block 1.</p>
+
+    <div class="token-grid">
+        <ul class="token-list">
+            <li><span class="token-key">Token</span><span class="token-val">$DVX</span></li>
+            <li><span class="token-key">Network</span><span class="token-val">Base (Ethereum L2)</span></li>
+            <li><span class="token-key">Total Supply</span><span class="token-val">100,000,000,000</span></li>
+            <li><span class="token-key">Minting</span><span class="token-val">Impossible (no function)</span></li>
+            <li><span class="token-key">Launch</span><span class="token-val">100% into Uniswap V4 LP</span></li>
+            <li><span class="token-key">Liquidity</span><span class="token-val">Locked permanently</span></li>
+            <li><span class="token-key">Swap Fee</span><span class="token-val">1.2% per trade</span></li>
+            <li><span class="token-key">Protocol Share</span><span class="token-val">57% of swap fee</span></li>
+        </ul>
+        <div>
+            <div class="revenue-split">
+                <h3 style="font-size: 1rem; margin-bottom: 4px;">Revenue Allocation</h3>
+                <p style="font-size: 0.85rem; color: var(--muted);">Hardcoded. Immutable. No admin override.</p>
+                <div class="split-bar">
+                    <div class="split-drivers"></div>
+                    <div class="split-treasury"></div>
+                    <div class="split-incentive"></div>
+                </div>
+                <div class="split-legend">
+                    <span class="legend-drivers">70% Safe Drivers</span>
+                    <span class="legend-treasury">20% Protocol Dev</span>
+                    <span class="legend-incentive">10% Incentive Pool</span>
+                </div>
+            </div>
+            <div style="margin-top: 40px; padding: 24px; background: var(--section-alt); border-radius: 8px;">
+                <h3 style="font-size: 0.95rem; margin-bottom: 8px;">Staking Formula</h3>
+                <p style="font-size: 0.85rem; color: var(--muted); font-family: 'Courier New', monospace;">
+                    your_share = (your_stake × your_score) / Σ(all_stakes × all_scores)
+                </p>
+                <p style="font-size: 0.82rem; color: var(--muted); margin-top: 8px;">
+                    Min stake: 100 DVX · 7-day cooldown · Revenue in WETH + USDC + DVX
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Roadmap -->
+<section id="roadmap" style="background: var(--section-alt); margin: 0; max-width: 100%; padding: 100px 40px;">
+    <div style="max-width: 1100px; margin: 0 auto;">
+        <div class="section-tag">Roadmap</div>
+        <h2 class="section-title">From app to trustless infrastructure.</h2>
+        <p class="section-desc">Each phase builds on the last. Revenue from day one. Trustless scoring by year two.</p>
+
+        <ul class="roadmap-list">
+            <li>
+                <div class="roadmap-phase">Phase 1 — Q3 2026</div>
+                <div class="roadmap-title">Foundation</div>
+                <div class="roadmap-desc">Mobile app live (iOS + Android). Auto-detection, scoring, trip history. Build driver base. No crypto visible.</div>
+            </li>
+            <li>
+                <div class="roadmap-phase">Phase 2 — Q4 2026</div>
+                <div class="roadmap-title">Token Launch</div>
+                <div class="roadmap-desc">DVX deployed via Bankr Bot on Base. Revenue Distributor, Staking, Buyback contracts live. Trip rewards enabled. Early contributor bonus active.</div>
+            </li>
+            <li>
+                <div class="roadmap-phase">Phase 3 — Q1 2027</div>
+                <div class="roadmap-title">Insurance Integration</div>
+                <div class="roadmap-desc">Verification API live. First insurer partnerships. Drivers unlock premium discounts from their Safety Score. Consent management active.</div>
+            </li>
+            <li>
+                <div class="roadmap-phase">Phase 4 — Q2 2027</div>
+                <div class="roadmap-title">Marketplace & Scale</div>
+                <div class="roadmap-desc">Direct-hire delivery marketplace. Accountability Engine and public dashboard. Infrastructure APIs. Government data licensing.</div>
+            </li>
+            <li>
+                <div class="roadmap-phase">Phase 5 — Q3 2027 onwards</div>
+                <div class="roadmap-title">Trustless Infrastructure</div>
+                <div class="roadmap-desc">ZK score proofs. Verifiable computation via zkVM. On-device federated scoring. Sybil-resistant driving proofs.</div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <h2>Safe drivers keep roads safe.<br>DrivX makes sure they get paid.</h2>
+    <p>Join the protocol. Own your data. Earn from the value you create.</p>
+    <div class="hero-buttons" style="justify-content: center;">
+        <a href="http://localhost:3000" class="btn-primary">Launch App</a>
+        <a href="DrivX_Whitepaper.html" target="_blank" class="btn-secondary">Read Whitepaper</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div>&copy; 2026 DrivX Protocol</div>
+    <div class="footer-links">
+        <a href="https://twitter.com/drivxprotocol" target="_blank">Twitter</a>
+        <a href="https://github.com/drivxprotocol" target="_blank">GitHub</a>
+        <a href="DrivX_Whitepaper.html" target="_blank">Whitepaper</a>
+    </div>
+</footer>
+
+<!-- Modal removed - buttons now link directly to the app -->
+
+</body>
+</html>

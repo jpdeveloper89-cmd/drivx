@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg: #09090b;
+  --text: #fafafa;
+  --muted: #a1a1aa;
+  --border: #27272a;
+  --accent: #6366f1;
+  --accent-glow: rgba(99, 102, 241, 0.15);
+  --accent-secondary: #22d3ee;
+  --card-bg: #111113;
+  --section-alt: #0f0f11;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* Grid background */
+.grid-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(99,102,241,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99,102,241,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.grid-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(99,102,241,0.15) 0%, transparent 60%);
+}
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-2.5 text-white rounded-lg font-medium transition-all;
+    background: #6366f1;
+    box-shadow: 0 0 24px rgba(99,102,241,0.15);
+  }
+  .btn-primary:hover {
+    opacity: 0.9;
+    box-shadow: 0 0 36px rgba(99,102,241,0.25);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-2.5 rounded-lg font-medium transition-colors;
+    border: 1px solid #27272a;
+    color: #fafafa;
+  }
+  .btn-secondary:hover {
+    border-color: #fafafa;
+  }
+
+  .card-dark {
+    @apply rounded-xl p-8 transition-all;
+    background: #111113;
+    border: 1px solid #27272a;
+  }
+  .card-dark:hover {
+    border-color: #6366f1;
+    box-shadow: 0 0 20px rgba(99,102,241,0.15);
+  }
+
+  .section-tag {
+    @apply text-xs font-semibold uppercase tracking-widest mb-3;
+    color: #a1a1aa;
+  }
+
+  .section-title {
+    @apply text-4xl font-bold tracking-tight mb-4;
+  }
+
+  .section-desc {
+    @apply text-lg max-w-xl leading-relaxed mb-12;
+    color: #a1a1aa;
+  }
+
+  .badge-low {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+    background: rgba(16,185,129,0.15);
+    color: #34d399;
+    border: 1px solid rgba(16,185,129,0.2);
+  }
+  .badge-medium {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+    background: rgba(234,179,8,0.15);
+    color: #facc15;
+    border: 1px solid rgba(234,179,8,0.2);
+  }
+  .badge-high {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+    background: rgba(239,68,68,0.15);
+    color: #f87171;
+    border: 1px solid rgba(239,68,68,0.2);
+  }
+  .badge-critical {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+    background: #dc2626;
+    color: white;
+  }
