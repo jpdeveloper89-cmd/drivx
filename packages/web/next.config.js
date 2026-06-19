@@ -2,7 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
-  basePath: '/drivx/app',
+  basePath: '',
+  assetPrefix: '/drivx/app',
   images: { unoptimized: true },
   eslint: { ignoreDuringBuilds: true },
   env: {
