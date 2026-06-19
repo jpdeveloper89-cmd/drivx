@@ -1,0 +1,208 @@
+
+> safedrive-backend@1.0.0 test
+> vitest run --reporter=verbose
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+[1m[7m[36m RUN [39m[27m[22m [36mv2.1.8 [39m[90mc:/Users/eeeaz/Downloads/test/test/backend[39m
+
+ [32m✓[39m src/services/wallet/AccountAbstractionService.test.ts[2m > [22mAccountAbstractionService[2m > [22mcreateWallet[2m > [22mshould create a wallet and return an address and tx hash
+ [32m✓[39m src/services/wallet/AccountAbstractionService.test.ts[2m > [22mAccountAbstractionService[2m > [22mcreateWallet[2m > [22mshould produce deterministic addresses for same credentials
+ [32m✓[39m src/services/wallet/AccountAbstractionService.test.ts[2m > [22mAccountAbstractionService[2m > [22mcreateWallet[2m > [22mshould produce different addresses for different credentials
+ [32m✓[39m src/services/wallet/AccountAbstractionService.test.ts[2m > [22mAccountAbstractionService[2m > [22mcreateWallet[2m > [22mshould not expose any private key or seed phrase in the result
+ [32m✓[39m src/services/wallet/AccountAbstractionService.test.ts[2m > [22mAccountAbstractionService[2m > [22mcreateWallet[2m > [22mshould normalize email and phone for salt generation
+ [32m✓[39m src/services/tripSubmission/TripSubmissionService.test.ts[2m > [22mTripSubmissionService[2m > [22msubmitTrip[2m > [22mshould verify and score a valid trip
+ [32m✓[39m src/services/tripSubmission/TripSubmissionService.test.ts[2m > [22mTripSubmissionService[2m > [22msubmitTrip[2m > [22mshould reject trip with insufficient GPS frequency
+ [32m✓[39m src/services/tripSubmission/TripSubmissionService.test.ts[2m > [22mTripSubmissionService[2m > [22msubmitTrip[2m > [22mshould reject trip with anomalies (excessive speed)
+ [32m✓[39m src/services/tripSubmission/TripSubmissionService.test.ts[2m > [22mTripSubmissionService[2m > [22msubmitTrip[2m > [22mshould return DVX reward between 0 and 50
+ [32m✓[39m src/services/tripSubmission/TripSubmissionService.test.ts[2m > [22mTripSubmissionService[2m > [22msubmitTrip[2m > [22mshould return grade A-F based on overall score
+ [32m✓[39m src/services/tripSubmission/TripSubmissionService.test.ts[2m > [22mTripSubmissionService[2m > [22msubmitTrip[2m > [22mshould include all factor scores in response
+ [32m✓[39m src/services/tripSubmission/TripSubmissionService.test.ts[2m > [22mTripSubmissionService[2m > [22msubmitTrip[2m > [22mshould use driver wallet address from parameter
+ [32m✓[39m src/services/tripSubmission/TripSubmissionService.test.ts[2m > [22mTripSubmissionService[2m > [22msubmitBatch[2m > [22mshould process multiple trips and return batch results
+ [32m✓[39m src/services/tripSubmission/TripSubmissionService.test.ts[2m > [22mTripSubmissionService[2m > [22msubmitBatch[2m > [22mshould continue processing after individual trip failure
+ [32m✓[39m src/services/tripSubmission/TripSubmissionService.test.ts[2m > [22mTripSubmissionService[2m > [22msubmitBatch[2m > [22mshould handle empty batch gracefully
+ [32m✓[39m src/services/tripSubmission/TripSubmissionService.test.ts[2m > [22mTripSubmissionService[2m > [22mGPS frequency validation[2m > [22mshould accept trip with exactly minimum required coordinates
+ [32m✓[39m src/services/tripSubmission/TripSubmissionService.test.ts[2m > [22mTripSubmissionService[2m > [22mGPS frequency validation[2m > [22mshould allow short trips with few coordinates
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeTripScore[2m > [22mshould compute a high score for a perfect trip
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeTripScore[2m > [22mshould return all factor scores within [0, 1000]
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeTripScore[2m > [22mshould penalize harsh braking events
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeTripScore[2m > [22mshould penalize harsh acceleration events
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeTripScore[2m > [22mshould penalize unsafe cornering events
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeTripScore[2m > [22mshould penalize phone usage during driving
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeTripScore[2m > [22mshould penalize speeding
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeTripScore[2m > [22mshould give maximum phone avoidance score when no phone events
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeOverallScore[2m > [22mshould compute weighted sum of factors
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeOverallScore[2m > [22mshould compute correct weighted sum for mixed factors
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeOverallScore[2m > [22mshould return 0 when all factors are 0
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeOverallScore[2m > [22mshould clamp score to [0, 1000]
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeGrade[2m > [22mshould return A for scores 900-1000
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeGrade[2m > [22mshould return B for scores 800-899
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeGrade[2m > [22mshould return C for scores 700-799
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeGrade[2m > [22mshould return D for scores 600-699
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeGrade[2m > [22mshould return F for scores 0-599
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeDvxReward[2m > [22mshould return max reward (50 DVX) for perfect score
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeDvxReward[2m > [22mshould return 0 for score of 0
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeDvxReward[2m > [22mshould return proportional reward for mid-range score
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeDvxReward[2m > [22mshould never exceed MAX_DVX_REWARD
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeDvxReward[2m > [22mshould never be negative
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeRollingAverage[2m > [22mshould return 0 for empty scores
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeRollingAverage[2m > [22mshould return the single score for one trip
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeRollingAverage[2m > [22mshould weight recent trips more heavily
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeRollingAverage[2m > [22mshould stay within [0, 1000]
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeRollingAverage[2m > [22mshould handle 100 trips (full window)
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeRollingAverage[2m > [22mshould produce higher score when recent trips improve
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mdetermineStatus[2m > [22mshould remain Provisional when below trip threshold
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mdetermineStatus[2m > [22mshould remain Provisional when below km threshold
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mdetermineStatus[2m > [22mshould transition to Verified when both thresholds met
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mdetermineStatus[2m > [22mshould transition to Verified when thresholds exceeded
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mdetermineStatus[2m > [22mshould remain Verified once verified
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mdetermineStatus[2m > [22mshould require exactly 10 trips and 100 km for transition
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mupdateSafetyScore[2m > [22mshould update driver score in database and on-chain
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mupdateSafetyScore[2m > [22mshould throw error for unknown driver
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mupdateSafetyScore[2m > [22mshould transition status to Verified when thresholds met
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mgetScoreBreakdown[2m > [22mshould return score breakdown for existing driver
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mgetScoreBreakdown[2m > [22mshould throw error for unknown driver
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeFactors[2m > [22mshould give max speed compliance for low speeds
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeFactors[2m > [22mshould give max braking score with no braking events
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeFactors[2m > [22mshould give max acceleration score with no harsh acceleration
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeFactors[2m > [22mshould give max cornering score with no unsafe cornering
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeFactors[2m > [22mshould handle empty speed readings gracefully
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mcomputeFactors[2m > [22mshould handle zero verified distance gracefully
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mweight validation[2m > [22mshould have weights that sum to 1.0
+ [32m✓[39m src/services/scoring/ScoringEngine.test.ts[2m > [22mScoringEngine[2m > [22mweight validation[2m > [22mshould have correct individual weights
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mverifyTripRecord[2m > [22mshould verify a valid trip successfully
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mverifyTripRecord[2m > [22mshould reject a trip with missing driverAddress
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mverifyTripRecord[2m > [22mshould reject a trip with endTime before startTime
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mverifyTripRecord[2m > [22mshould reject a trip with excessive speed
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mverifyTripRecord[2m > [22mshould store GPS data to object storage on valid trip
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mverifyTripRecord[2m > [22mshould store trip metadata to database
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mverifyTripRecord[2m > [22mshould store rejected trip metadata to database
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mverifyTripRecord[2m > [22mshould identify unverified segments from GPS gaps
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mdetectAnomalies[2m > [22mshould detect no anomalies in a valid trip
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mdetectAnomalies[2m > [22mshould detect excessive speed in speedReadings
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mdetectAnomalies[2m > [22mshould detect excessive speed in GPS point speed field
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mdetectAnomalies[2m > [22mshould detect GPS jumps > 5 km between consecutive 10-second readings
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mdetectAnomalies[2m > [22mshould not flag GPS jumps when time gap is larger than 10 seconds
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mdetectAnomalies[2m > [22mshould detect speed exactly at 250 km/h as valid (not anomalous)
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mdetectAnomalies[2m > [22mshould detect speed just above 250 km/h as anomalous
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateGPSData[2m > [22mshould return valid with no gaps for well-spaced coordinates
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateGPSData[2m > [22mshould mark segments as unverified when gap > 60 seconds
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateGPSData[2m > [22mshould not mark segments as unverified when gap is exactly 60 seconds
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateGPSData[2m > [22mshould mark segments as unverified when gap is 61 seconds
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateGPSData[2m > [22mshould detect multiple GPS gaps
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateGPSData[2m > [22mshould handle empty coordinates
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateGPSData[2m > [22mshould handle single coordinate
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateTripDataIntegrity[2m > [22mshould pass for a valid trip
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateTripDataIntegrity[2m > [22mshould detect missing driverAddress
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateTripDataIntegrity[2m > [22mshould detect invalid startTime
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateTripDataIntegrity[2m > [22mshould detect empty coordinates
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateTripDataIntegrity[2m > [22mshould detect invalid latitude
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateTripDataIntegrity[2m > [22mshould detect invalid longitude
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateTripDataIntegrity[2m > [22mshould detect out-of-order timestamps in coordinates
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateTripDataIntegrity[2m > [22mshould detect invalid distanceKm
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateTripDataIntegrity[2m > [22mshould detect missing category
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mhaversineDistanceKm[2m > [22mshould return 0 for same point
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mhaversineDistanceKm[2m > [22mshould calculate distance between known points correctly
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mhaversineDistanceKm[2m > [22mshould calculate short distances accurately
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateDurationAndDistance[2m > [22mshould pass for a trip with duration >= 60 seconds and distance >= 0.5 km
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateDurationAndDistance[2m > [22mshould reject a trip with duration < 60 seconds
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateDurationAndDistance[2m > [22mshould pass for a trip with exactly 60 seconds duration
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateDurationAndDistance[2m > [22mshould reject a trip with distance < 0.5 km
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateDurationAndDistance[2m > [22mshould pass for a trip with exactly 0.5 km distance
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateTimestamps[2m > [22mshould pass for valid timestamps in the past
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateTimestamps[2m > [22mshould reject a trip with startTime in the future (> server time + 5 min)
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateTimestamps[2m > [22mshould reject a trip with endTime in the future (> server time + 5 min)
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateTimestamps[2m > [22mshould reject a trip with a coordinate timestamp in the future
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateTimestamps[2m > [22mshould reject a trip with non-monotonic coordinate timestamps
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateTimestamps[2m > [22mshould reject a trip with equal consecutive timestamps (non-strictly-increasing)
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mvalidateTimestamps[2m > [22mshould allow timestamps within 5 minutes of server time
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mdetectSplitPoints[2m > [22mshould return single segment when no gaps > 300 seconds
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mdetectSplitPoints[2m > [22mshould split into two segments when gap > 300 seconds
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mdetectSplitPoints[2m > [22mshould not split when gap is exactly 300 seconds
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mdetectSplitPoints[2m > [22mshould split when gap is 301 seconds
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mdetectSplitPoints[2m > [22mshould handle multiple split points
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mverifyTripRecordWithSplitting[2m > [22mshould verify a normal trip without splitting
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mverifyTripRecordWithSplitting[2m > [22mshould split a trip with GPS gap > 300 seconds into separate trips
+ [32m✓[39m src/services/tripVerification/TripVerificationEngine.test.ts[2m > [22mTripVerificationEngine[2m > [22mverifyTripRecordWithSplitting[2m > [22mshould reject all sub-trips if integrity check fails
+ [32m✓[39m src/middleware/auth.test.ts[2m > [22mauthenticate middleware[2m > [22mshould reject requests without Authorization header
+ [32m✓[39m src/middleware/auth.test.ts[2m > [22mauthenticate middleware[2m > [22mshould reject requests with non-Bearer token
+ [32m✓[39m src/middleware/auth.test.ts[2m > [22mauthenticate middleware[2m > [22mshould reject requests with invalid token
+ [32m✓[39m src/middleware/auth.test.ts[2m > [22mauthenticate middleware[2m > [22mshould reject expired tokens
+ [32m✓[39m src/middleware/auth.test.ts[2m > [22mauthenticate middleware[2m > [22mshould accept valid tokens and attach user to request
+ [32m✓[39m src/middleware/auth.test.ts[2m > [22mauthorize middleware[2m > [22mshould reject requests without user context
+ [32m✓[39m src/middleware/auth.test.ts[2m > [22mauthorize middleware[2m > [22mshould reject users with insufficient role
+ [32m✓[39m src/middleware/auth.test.ts[2m > [22mauthorize middleware[2m > [22mshould allow users with matching role
+ [32m✓[39m src/middleware/auth.test.ts[2m > [22mauthorize middleware[2m > [22mshould allow Admin role when Admin is in allowed roles
+ [32m✓[39m src/middleware/auth.test.ts[2m > [22moptionalAuth middleware[2m > [22mshould proceed without user when no token provided
+ [32m✓[39m src/middleware/auth.test.ts[2m > [22moptionalAuth middleware[2m > [22mshould attach user when valid token provided
+ [32m✓[39m src/middleware/auth.test.ts[2m > [22moptionalAuth middleware[2m > [22mshould proceed without user when invalid token provided
+ [32m✓[39m src/middleware/auth.test.ts[2m > [22mgenerateToken[2m > [22mshould generate a valid JWT token
+ [32m✓[39m src/middleware/auth.test.ts[2m > [22mgenerateToken[2m > [22mshould include wallet address when provided
+ [32m✓[39m src/middleware/auth.test.ts[2m > [22mgenerateToken[2m > [22mshould set expiration based on config
+ [32m✓[39m src/services/auth/DriverRegistrationService.test.ts[2m > [22mDriverRegistrationService[2m > [22mregister[2m > [22mshould register a new driver with email and phone
+ [32m✓[39m src/services/auth/DriverRegistrationService.test.ts[2m > [22mDriverRegistrationService[2m > [22mregister[2m > [22mshould create an Account Abstraction wallet with email and phone
+ [32m✓[39m src/services/auth/DriverRegistrationService.test.ts[2m > [22mDriverRegistrationService[2m > [22mregister[2m > [22mshould normalize email to lowercase
+ [32m✓[39m src/services/auth/DriverRegistrationService.test.ts[2m > [22mDriverRegistrationService[2m > [22mregister[2m > [22mshould throw RegistrationError when email already exists
+ [32m✓[39m src/services/auth/DriverRegistrationService.test.ts[2m > [22mDriverRegistrationService[2m > [22mregister[2m > [22mshould throw when wallet creation fails
+ [32m✓[39m src/services/auth/DriverRegistrationService.test.ts[2m > [22mDriverRegistrationService[2m > [22mregister[2m > [22mshould return a JWT token with Driver role
+ [32m✓[39m src/config/env.test.ts[2m > [22mEnvironment Configuration[2m > [22mshould have valid server config defaults
+ [32m✓[39m src/config/env.test.ts[2m > [22mEnvironment Configuration[2m > [22mshould have valid database config defaults
+ [32m✓[39m src/config/env.test.ts[2m > [22mEnvironment Configuration[2m > [22mshould have valid redis config defaults
+ [32m✓[39m src/config/env.test.ts[2m > [22mEnvironment Configuration[2m > [22mshould have correct public rate limit (100 req/15min)
+ [32m✓[39m src/config/env.test.ts[2m > [22mEnvironment Configuration[2m > [22mshould have correct authenticated rate limit (1000 req/15min)
+ [32m✓[39m src/config/env.test.ts[2m > [22mEnvironment Configuration[2m > [22mshould have correct business rate limit (5000 req/15min)
+ [32m✓[39m src/config/env.test.ts[2m > [22mEnvironment Configuration[2m > [22mshould have JWT config with 30 minute session timeout
+ [32m✓[39m src/config/env.test.ts[2m > [22mEnvironment Configuration[2m > [22mshould have CORS origins configured
+ [32m✓[39m src/config/env.test.ts[2m > [22mEnvironment Configuration[2m > [22mshould have blockchain config with Base defaults
+ [32m✓[39m src/middleware/validation.test.ts[2m > [22mvalidate middleware[2m > [22mbody validation[2m > [22mshould pass valid body data
+ [32m✓[39m src/middleware/validation.test.ts[2m > [22mvalidate middleware[2m > [22mbody validation[2m > [22mshould reject invalid body data with 400 status
+ [32m✓[39m src/middleware/validation.test.ts[2m > [22mvalidate middleware[2m > [22mbody validation[2m > [22mshould reject missing required fields
+ [32m✓[39m src/middleware/validation.test.ts[2m > [22mvalidate middleware[2m > [22mparams validation[2m > [22mshould pass valid params
+ [32m✓[39m src/middleware/validation.test.ts[2m > [22mvalidate middleware[2m > [22mparams validation[2m > [22mshould reject invalid params
+ [32m✓[39m src/middleware/validation.test.ts[2m > [22mvalidate middleware[2m > [22mquery validation[2m > [22mshould pass valid query params
+ [32m✓[39m src/middleware/validation.test.ts[2m > [22mvalidate middleware[2m > [22mquery validation[2m > [22mshould reject invalid query params
+ [32m✓[39m src/routes/api.test.ts[2m > [22mAPI Routes[2m > [22mGET /api/v1/status[2m > [22mshould return API status without authentication
+ [32m✓[39m src/routes/api.test.ts[2m > [22mAPI Routes[2m > [22mPOST /api/v1/auth/register[2m > [22mshould validate registration input
+[90mstderr[2m | src/routes/api.test.ts[2m > [22m[2mAPI Routes[2m > [22m[2mPOST /api/v1/auth/register[2m > [22m[2mshould accept valid registration input and attempt registration
+[22m[39mRegistration error: TypeError: Cannot read properties of undefined (reading 'id')
+    at DriverRegistrationService.register [90m(c:\Users\eeeaz\Downloads\test\test\backend\[39msrc\services\auth\DriverRegistrationService.ts:84:22[90m)[39m
+[90m    at processTicksAndRejections (node:internal/process/task_queues:104:5)[39m
+    at [90mc:\Users\eeeaz\Downloads\test\test\backend\[39msrc\routes\api.ts:78:22
+
+ [32m✓[39m src/routes/api.test.ts[2m > [22mAPI Routes[2m > [22mPOST /api/v1/auth/register[2m > [22mshould accept valid registration input and attempt registration
+ [32m✓[39m src/routes/api.test.ts[2m > [22mAPI Routes[2m > [22mPOST /api/v1/auth/login[2m > [22mshould validate login input
+ [32m✓[39m src/routes/api.test.ts[2m > [22mAPI Routes[2m > [22mPOST /api/v1/auth/login[2m > [22mshould accept valid login input
+ [32m✓[39m src/routes/api.test.ts[2m > [22mAPI Routes[2m > [22mPOST /api/v1/trips/submit[2m > [22mshould reject unauthenticated requests
+ [32m✓[39m src/routes/api.test.ts[2m > [22mAPI Routes[2m > [22mPOST /api/v1/trips/submit[2m > [22mshould reject users without Driver role
+ [32m✓[39m src/routes/api.test.ts[2m > [22mAPI Routes[2m > [22mPOST /api/v1/trips/submit[2m > [22mshould validate trip data for authenticated drivers
+ [32m✓[39m src/routes/api.test.ts[2m > [22mAPI Routes[2m > [22mPOST /api/v1/trips/submit[2m > [22mshould accept valid trip data from authenticated drivers
+ [32m✓[39m src/routes/api.test.ts[2m > [22mAPI Routes[2m > [22mPOST /api/v1/trips/submit[2m > [22mshould reject trip with insufficient GPS frequency
+ [32m✓[39m src/routes/api.test.ts[2m > [22mAPI Routes[2m > [22mGET /api/v1/drivers/:address/score[2m > [22mshould validate Ethereum address format
+ [32m✓[39m src/routes/api.test.ts[2m > [22mAPI Routes[2m > [22mGET /api/v1/drivers/:address/score[2m > [22mshould accept valid Ethereum address
+ [32m✓[39m src/routes/api.test.ts[2m > [22mAPI Routes[2m > [22mConsent endpoints[2m > [22mshould reject unauthenticated consent requests
+ [32m✓[39m src/routes/api.test.ts[2m > [22mAPI Routes[2m > [22mConsent endpoints[2m > [22mshould reject non-Driver roles for consent endpoints
+ [32m✓[39m src/routes/api.test.ts[2m > [22mAPI Routes[2m > [22mConsent endpoints[2m > [22mshould allow Driver role for consent endpoints
+ [32m✓[39m src/routes/api.test.ts[2m > [22mAPI Routes[2m > [22mBusiness/Insurer endpoints[2m > [22mshould reject unauthenticated verify requests
+ [32m✓[39m src/routes/api.test.ts[2m > [22mAPI Routes[2m > [22mBusiness/Insurer endpoints[2m > [22mshould reject Driver role for verify endpoints
+ [32m✓[39m src/routes/api.test.ts[2m > [22mAPI Routes[2m > [22mBusiness/Insurer endpoints[2m > [22mshould allow Insurer role for verify endpoints
+ [32m✓[39m src/routes/api.test.ts[2m > [22mAPI Routes[2m > [22mBusiness/Insurer endpoints[2m > [22mshould reject Driver role for marketplace endpoints
+ [32m✓[39m src/routes/api.test.ts[2m > [22mAPI Routes[2m > [22mBusiness/Insurer endpoints[2m > [22mshould allow Business role for marketplace endpoints
+node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: Worker exited unexpectedly
+    at ChildProcess.onUnexpectedExit (file:///c:/Users/eeeaz/Downloads/test/test/backend/node_modules/tinypool/dist/index.js:118:30)
+    at ChildProcess.emit (node:events:521:24)
+    at ChildProcess._handle.onexit (node:internal/child_process:295:12)
+Emitted 'error' event on Tinypool instance at:
+    at EventEmitterReferencingAsyncResource.runInAsyncScope (node:async_hooks:227:14)
+    at Tinypool.emit (node:events:168:18)
+    at file:///c:/Users/eeeaz/Downloads/test/test/backend/node_modules/tinypool/dist/index.js:594:30
+    at ChildProcess.<anonymous> (file:///c:/Users/eeeaz/Downloads/test/test/backend/node_modules/tinypool/dist/index.js:162:34)
+    at ChildProcess.emit (node:events:509:28)
+    at ChildProcess.onUnexpectedExit (file:///c:/Users/eeeaz/Downloads/test/test/backend/node_modules/tinypool/dist/index.js:118:16)
+    at ChildProcess.emit (node:events:521:24)
+    at ChildProcess._handle.onexit (node:internal/child_process:295:12)
+
+Node.js v24.16.0

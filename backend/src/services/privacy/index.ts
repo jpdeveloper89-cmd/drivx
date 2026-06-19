@@ -1,0 +1,1 @@
+export { DataPrivacyService } from './DataPrivacyService';
