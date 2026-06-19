@@ -8,8 +8,6 @@ const links = [
   { href: '/#how', label: 'How It Works' },
   { href: '/#tokenomics', label: 'Tokenomics' },
   { href: '/#roadmap', label: 'Roadmap' },
-  { href: '/leaderboard', label: 'Leaderboard' },
-  { href: '/community', label: 'Community' },
 ];
 
 export function Nav() {
@@ -37,10 +35,13 @@ export function Nav() {
           ))}
         </div>
         <div className="flex items-center gap-3">
+          <a href="https://jpdeveloper89-cmd.github.io/drivx/DrivX_Whitepaper.html" target="_blank" rel="noopener noreferrer" className="btn-secondary text-sm py-2 px-4">
+            Whitepaper
+          </a>
           <a href="https://github.com/jpdeveloper89-cmd/drivx" target="_blank" rel="noopener noreferrer" className="btn-secondary text-sm py-2 px-4">
             GitHub
           </a>
-          <a href="https://twitter.com/drivx_" target="_blank" rel="noopener noreferrer" className="btn-primary text-sm py-2 px-4">
+          <a href="https://x.com/drivx_" target="_blank" rel="noopener noreferrer" className="btn-primary text-sm py-2 px-4">
             Follow Us
           </a>
         </div>
