@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrivX Protocol — Whitepaper v1.0</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Times New Roman', Georgia, serif;
+            font-size: 15px;
+            line-height: 1.75;
+            color: #111;
+            background: #fff;
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+        h1 { font-size: 2rem; font-weight: 700; margin-bottom: 4px; letter-spacing: -0.5px; }
+        h2 {
+            font-size: 1.25rem; font-weight: 700; margin-top: 48px; margin-bottom: 12px;
+            text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        h3 { font-size: 1.05rem; font-weight: 700; margin-top: 28px; margin-bottom: 8px; }
+        p { margin-bottom: 14px; text-align: justify; }
+        ul, ol { margin-left: 20px; margin-bottom: 14px; }
+        li { margin-bottom: 4px; }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.9rem; }
+        th, td { padding: 8px 12px; border: 1px solid #ccc; text-align: left; }
+        th { background: #f5f5f5; font-weight: 700; }
+        code { font-family: 'Courier New', monospace; font-size: 0.88rem; background: #f5f5f5; padding: 1px 4px; }
+        pre {
+            background: #f9f9f9; border: 1px solid #ddd; padding: 16px;
+            font-size: 0.82rem; overflow-x: auto; margin: 16px 0;
+            font-family: 'Courier New', monospace; line-height: 1.5;
+        }
+        .title-block { text-align: center; margin-bottom: 50px; padding-bottom: 30px; border-bottom: 1px solid #111; }
+        .title-block p { text-align: center; }
+        .abstract { font-style: italic; margin-bottom: 30px; }
+        hr { border: none; border-top: 1px solid #ccc; margin: 40px 0; }
+        a { color: #111; }
+        .toc { margin: 30px 0; }
+        .toc ol { list-style-type: decimal; }
+        .toc li { margin-bottom: 2px; }
+        .formula { text-align: center; margin: 16px 0; font-style: italic; }
+        @media print {
+            body { padding: 40px 30px; font-size: 12pt; max-width: 100%; }
+            h2 { page-break-after: avoid; }
+            h3 { page-break-after: avoid; }
+            table { page-break-inside: avoid; }
+            pre { page-break-inside: avoid; }
+            .title-block { page-break-after: always; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="title-block">
+    <h1>DrivX Protocol</h1>
+    <p><strong>Turning Safe Driving into a Verifiable, Revenue-Generating Asset</strong></p>
+    <p>Version 1.0 &mdash; May 2026</p>
+    <p>Authors: DrivX Core Team</p>
+</div>
+
+<p class="abstract"><strong>Abstract.</strong> DrivX Protocol is a decentralized, driver-owned system that converts verified safe driving behavior into a portable economic asset. The protocol deploys on Base (Ethereum L2), uses a fixed-supply DVX token with revenue-share mechanics, and distributes real protocol revenue&mdash;not inflationary emissions&mdash;to participants proportional to their on-chain Safety Score. This paper describes the protocol architecture, scoring methodology, token economics, smart contract design, and privacy model.</p>
+
+<div class="toc">
+<h2>Contents</h2>
+<ol>
+    <li>Introduction</li>
+    <li>Problem Analysis</li>
+    <li>Protocol Design</li>
+    <li>Scoring Methodology</li>
+    <li>On-Chain Architecture</li>
+    <li>How Value Flows: From Token Launch to Revenue Distribution</li>
+    <li>Token Economics</li>
+    <li>Revenue Model</li>
+    <li>Privacy &amp; Consent Layer</li>
+    <li>System Architecture</li>
+    <li>Security</li>
+    <li>Governance</li>
+    <li>Technical Roadmap: Toward Trustless Scoring</li>
+    <li>Roadmap</li>
+</ol>
+</div>
+
+<hr>
+
+<h2>1. Introduction</h2>
+
+<p>The global auto insurance market is valued at $950 billion (2025), projected to exceed $1.75 trillion by 2034. The ride-hailing and delivery market exceeds $200 billion annually with 18%+ CAGR. Usage-based insurance (UBI)&mdash;the segment most directly relevant to DrivX&mdash;is valued at $33&ndash;75 billion today and projected to reach $120&ndash;390 billion by 2034 (15&ndash;25% CAGR). An estimated 435 million people worldwide earn income through gig labor platforms.</p>
+
+<p>DrivX Protocol sits at the intersection of these three markets: insurance ($950B), mobility ($200B+), and gig labor (435M workers). The protocol captures value from all three by creating the infrastructure layer that connects them&mdash;a verifiable, portable driving identity owned by the driver, backed by real revenue mechanics.</p>
+
+<h3>1.1 Target Addressable Market</h3>
+
+<table>
+    <tr><th>Market</th><th>2025 Size</th><th>2034 Projection</th><th>DrivX Capture Mechanism</th></tr>
+    <tr><td>Auto Insurance</td><td>$950B</td><td>$1.75T</td><td>Verification fees from insurers accessing driver scores</td></tr>
+    <tr><td>Usage-Based Insurance (UBI)</td><td>$33&ndash;75B</td><td>$120&ndash;390B</td><td>Data infrastructure layer&mdash;DrivX provides the scoring UBI needs</td></tr>
+    <tr><td>Ride-Hailing &amp; Delivery</td><td>$200B+</td><td>$400B+</td><td>Marketplace fees (2&ndash;5%), portable reputation, direct-hire</td></tr>
+    <tr><td>Gig Workers</td><td>435M people</td><td>2B (est.)</td><td>Every gig driver is a potential protocol participant</td></tr>
+</table>
+
+<p>DrivX does not need to capture a large percentage of these markets to generate significant protocol revenue. Even 0.01% of the insurance market paying verification fees represents $95M in annual revenue flowing to stakers. Even 10,000 active marketplace deliveries per day at $20 average compensation and 3% protocol fee generates $2.2M annually.</p>
+
+<h3>1.2 What DrivX Is</h3>
+
+<p>DrivX is a decentralized protocol that measures safe driving behavior, stores it as a portable on-chain identity, and distributes real revenue&mdash;in WETH and USDC, not printed tokens&mdash;back to the drivers who generate the underlying value. The protocol operates at two layers:</p>
+
+<ul>
+    <li><strong>Layer 1 (Universal):</strong> Any driver builds a Safety Score (0&ndash;1000) from verified trip data, stakes DVX tokens, and receives weekly revenue distributions.</li>
+    <li><strong>Layer 2 (Delivery):</strong> Delivery drivers gain portable reputation, direct-hire marketplace access, and platform accountability tooling.</li>
+</ul>
+
+<p>The system is crypto-invisible to end users. Drivers register with email, never manage keys, and see earnings in familiar currency terms. The blockchain layer provides verifiability and portability without imposing cognitive overhead.</p>
+
+<h3>1.3 Core Thesis: Data Ownership Through On-Chain Identity</h3>
+
+<p>Every industry transformed by data follows the same pattern: whoever owns the data captures the value. Google owns search behavior. Meta owns social graphs. Uber owns ride data. In every case, the person who generates the data owns nothing.</p>
+
+<p>DrivX is built on the conviction that this pattern is not inevitable&mdash;it is an infrastructure problem. The reason drivers don&rsquo;t own their data today is not because they don&rsquo;t want to. It is because no infrastructure exists to make data ownership enforceable, portable, and monetizable simultaneously.</p>
+
+<p>On-chain identity solves this. When a driver&rsquo;s verified behavioral record lives on a public blockchain&mdash;owned by their wallet, gated by their consent, readable by any authorized party in under 3 seconds&mdash;the data becomes:</p>
+
+<ul>
+    <li><strong>Portable:</strong> Works across every insurer, employer, and platform without bilateral integration agreements. An insurer in Brazil can verify a driver&rsquo;s score the same way one in Germany does&mdash;by reading the same on-chain record.</li>
+    <li><strong>Composable:</strong> Other protocols and applications can build on top of it. DeFi insurance protocols can use Safety Scores for underwriting. Fleet management tools can query it. City planning systems can aggregate it. The identity becomes a primitive, not a product.</li>
+    <li><strong>Revenue-generating:</strong> Every party that accesses the data pays a fee. That fee flows to the driver through the Revenue Distributor&mdash;not to a middleman, not to a platform, not to a data broker.</li>
+    <li><strong>Irrevocable:</strong> No platform can delete it. No company can lock it. No intermediary is needed to verify it. The driver&rsquo;s 900 Safety Score and 3,000 verified trips exist on Base regardless of which app they use, which country they drive in, or which platform they work for.</li>
+</ul>
+
+<p>This is not a feature of DrivX. It is the reason DrivX exists. The protocol is infrastructure for driver-owned behavioral identity&mdash;and the economic layer that makes that identity worth building.</p>
+
+<h3>1.4 Why This Matters for DeFi</h3>
+
+<p>For DeFi participants evaluating DVX, the thesis reduces to this: DrivX creates a new category of on-chain identity that generates recurring revenue from off-chain economic actors (insurers, businesses, governments) who have no alternative source for this data. The token captures a share of that revenue through an immutable on-chain split. As the identity network grows (more drivers, more verified trips, more data consumers), revenue grows&mdash;without inflation, without emissions, and without dependency on speculative trading volume alone.</p>
+
+<p>The driving identity is the moat. The data is the asset. The token is the revenue-share instrument on that asset.</p>
+
+<h2>2. Problem Analysis</h2>
+
+<h3>2.1 The $340 Billion Mispricing</h3>
+<p>The global auto insurance market exceeds $950 billion annually. Industry data shows that the safest 30% of drivers subsidize the riskiest 20% by an estimated $340 billion per year in mispriced premiums. This mispricing persists because insurers lack real-time behavioral data and rely on demographic proxies (age, zip code, vehicle type, credit score). The economic signal of safe driving exists&mdash;it is simply not captured, verified, or returned to the driver.</p>
+
+<p>A safe driver overpays by an estimated $1,200&ndash;$3,400 per year. Across 400 million safe drivers globally, this represents $480B&ndash;$1.36T in annual value extraction from the people who keep roads safe.</p>
+
+<h3>2.2 Platform Exploitation is Structural</h3>
+<p>Delivery and rideshare platforms extract 20&ndash;35% commission from drivers. More critically, they set delivery time targets that mathematically require exceeding posted speed limits. Analysis of major delivery platforms shows that a significant percentage of delivery time windows are physically impossible to meet without speeding. Drivers bear the safety risk, the traffic violations, and the insurance consequences. Platforms bear none.</p>
+
+<p>Uber alone has 8.8 million active drivers. DoorDash, Grab, Rappi, Swiggy, and dozens of regional platforms add tens of millions more. These drivers cannot prove systemic pressure because the data is locked inside platform systems. No public accountability mechanism exists.</p>
+
+<h3>2.3 Reputation Lock-In</h3>
+<p>A driver with 5,000 five-star deliveries on Platform A starts at zero on Platform B. This is artificial lock-in by design. It suppresses driver bargaining power and prevents market competition for driver labor. No equivalent of a credit score exists for driving behavior&mdash;despite driving being one of the most data-rich, measurable activities a person performs daily.</p>
+
+<h3>2.4 Why Existing Solutions Fail</h3>
+
+<table>
+    <tr><th>Category</th><th>Examples</th><th>What They Do</th><th>Why They Fail</th></tr>
+    <tr><td>Telematics Insurance</td><td>Root, Metromile, Progressive Snapshot</td><td>Track driving to adjust premiums</td><td>Data owned by insurer. Not portable. Driver gets a discount, not revenue. Score locked to one company.</td></tr>
+    <tr><td>Drive-to-Earn (DePIN)</td><td>DIMO (~44K drivers), Hivemapper, Natix</td><td>Reward drivers/vehicles with tokens for data contribution</td><td>Inflationary token emissions as primary reward. No real revenue backing token value. When emissions slow, token collapses. DIMO focuses on vehicle data (OBD), not driver behavior scoring. No insurance integration. No revenue share to participants.</td></tr>
+    <tr><td>Gig Platforms</td><td>Uber, DoorDash, Instacart, Grab</td><td>Connect drivers to delivery/ride jobs</td><td>20&ndash;35% commission. Non-portable reputation. Dangerous speed targets. No driver ownership of data or score. No economic upside from safe behavior.</td></tr>
+    <tr><td>Blockchain Identity</td><td>Ceramic, Lens, Worldcoin</td><td>Portable on-chain identity</td><td>Generic identity with no domain-specific scoring. No revenue model tied to the identity. No insurance or employer integration.</td></tr>
+</table>
+
+<h3>2.5 How DrivX Is Different</h3>
+
+<p>No existing project combines all four of these properties simultaneously:</p>
+
+<ol>
+    <li><strong>Verified behavioral scoring</strong>&mdash;not self-reported, not demographic proxy, not vehicle OBD data. Actual driving behavior measured from phone sensors.</li>
+    <li><strong>On-chain portable identity</strong>&mdash;driver-owned, consent-gated, works across insurers, employers, and platforms. A CIBIL score for driving.</li>
+    <li><strong>Real revenue distribution</strong>&mdash;WETH + USDC from actual economic activity (trading fees, insurance verification fees, marketplace fees). Not inflationary token emissions.</li>
+    <li><strong>Platform accountability</strong>&mdash;immutable on-chain evidence of unsafe speed targets, published with k-anonymity guarantees.</li>
+</ol>
+
+<p>The closest comparable is DIMO, which has onboarded ~44,000 vehicles and raised $20.5M. But DIMO focuses on vehicle data (OBD port hardware), not driver behavior scoring. It does not provide insurance verification, does not have a revenue-share staking model, and does not address platform accountability. DrivX is complementary but fundamentally different in scope and economic model.</p>
+
+<table>
+    <tr><th>Dimension</th><th>DIMO</th><th>DrivX</th></tr>
+    <tr><td>Data Source</td><td>Vehicle OBD port (hardware dongle)</td><td>Phone sensors (no hardware needed)</td></tr>
+    <tr><td>Focus</td><td>Vehicle health, mileage, diagnostics</td><td>Driver behavior scoring (speed, braking, phone use)</td></tr>
+    <tr><td>Revenue Model</td><td>Data marketplace (sell vehicle data)</td><td>Insurance verification fees + marketplace fees + trading fees</td></tr>
+    <tr><td>Token Mechanics</td><td>Inflationary emissions to data contributors</td><td>Fixed supply, real revenue distribution (WETH+USDC), deflationary burns</td></tr>
+    <tr><td>Staking Yield</td><td>Token emissions</td><td>Real yield from protocol revenue (70% of all fees)</td></tr>
+    <tr><td>Insurance Integration</td><td>Indirect (data marketplace)</td><td>Direct verification API with per-query fees</td></tr>
+    <tr><td>Onboarding Barrier</td><td>Requires hardware ($30+ dongle)</td><td>Phone app only, email registration, no hardware</td></tr>
+    <tr><td>Accountability</td><td>None</td><td>On-chain reports exposing unsafe platform speed targets</td></tr>
+</table>
+
+<h2>3. Protocol Design &amp; Differentiation</h2>
+
+<h3>3.1 Core Architecture</h3>
+
+<p>The protocol addresses the failures above through four interlocking subsystems:</p>
+
+<ol>
+    <li><strong>Scoring Engine:</strong> Computes a composite Safety Score from verified sensor data, stored on-chain for portability.</li>
+    <li><strong>Revenue Distribution:</strong> Collects protocol revenue from multiple sources and distributes weekly to stakers, weighted by Safety Score.</li>
+    <li><strong>Driving Identity:</strong> An on-chain record functioning as a portable driving credit score&mdash;verifiable by any third party with driver consent.</li>
+    <li><strong>Accountability Engine:</strong> Aggregates anonymized delivery data to detect and publish evidence of unsafe platform speed targets.</li>
+</ol>
+
+<p>Each subsystem functions independently while creating network effects when combined. A driver benefits from scoring alone (insurance discounts); staking adds revenue; the marketplace adds earning opportunities; accountability adds collective leverage.</p>
+
+<h3>3.2 What Makes DrivX Structurally Different</h3>
+
+<table>
+    <tr><th>Dimension</th><th>Typical Drive-to-Earn</th><th>DrivX</th></tr>
+    <tr><td>Reward source</td><td>Newly minted tokens (inflation)</td><td>Real revenue: WETH + USDC from trading fees, insurance fees, marketplace fees</td></tr>
+    <tr><td>Token supply</td><td>Inflationary (emissions schedule)</td><td>Fixed 100B, deflationary (burn only)</td></tr>
+    <tr><td>What backs the token</td><td>Speculation + future utility promises</td><td>57% of every swap fee + protocol revenue from paying customers (insurers, businesses)</td></tr>
+    <tr><td>Driver data ownership</td><td>Platform owns data, driver gets tokens</td><td>Driver owns data on-chain, controls access via Consent Manager</td></tr>
+    <tr><td>Score portability</td><td>Locked to one app/platform</td><td>On-chain, verifiable by any party, open SDK</td></tr>
+    <tr><td>Revenue to drivers</td><td>Token emissions (sell pressure)</td><td>WETH + USDC distributions (real yield, no dilution)</td></tr>
+    <tr><td>Team allocation</td><td>10&ndash;30% of supply to team/investors</td><td>0%. Team funded from 20% treasury. No pre-allocation.</td></tr>
+    <tr><td>Sustainability</td><td>Collapses when emissions slow</td><td>Revenue grows with adoption (more insurers, more marketplace volume, more data licensing)</td></tr>
+</table>
+
+<h3>3.3 Why Now</h3>
+
+<p>Three converging factors make this protocol viable today but not two years ago:</p>
+
+<ol>
+    <li><strong>Base L2 cost structure:</strong> On-chain score updates at ~$0.01/tx make per-trip writes economically feasible. On Ethereum L1, this would cost $2&ndash;$50 per trip&mdash;impossible at scale.</li>
+    <li><strong>ERC-4337 maturity:</strong> Account abstraction enables email-based onboarding with gasless transactions. Drivers never see a seed phrase. This was not production-ready until 2024.</li>
+    <li><strong>Bankr/Doppler fair launch infrastructure:</strong> 100% supply into locked LP with fee-sharing to the creator. This eliminates the need for pre-sales, VCs, or team allocations&mdash;and provides instant revenue from block 1.</li>
+</ol>
+
+<p>The combination of cheap on-chain writes, invisible wallet UX, and fair-launch revenue mechanics creates a window where a driver-owned protocol can bootstrap without venture capital, without inflationary emissions, and without compromising on decentralization.</p>
+
+<h2>4. Scoring Methodology</h2>
+
+<h3>4.1 Data Collection</h3>
+<p>The mobile client uses device accelerometer, gyroscope, and GPS to auto-detect driving sessions. Detection triggers when velocity exceeds 15 km/h for 30 seconds. Sessions terminate after 2 minutes of stationary state. GPS coordinates are sampled at minimum 10-second intervals. A passenger detection heuristic (accelerometer pattern analysis) prompts confirmation when the user may not be the operator.</p>
+
+<h3>4.2 Scoring Formula</h3>
+<p>The Safety Score S &isin; [0, 1000] is a weighted composite of six behavioral factors:</p>
+
+<p class="formula">S = 0.25&middot;F<sub>speed</sub> + 0.20&middot;F<sub>braking</sub> + 0.15&middot;F<sub>accel</sub> + 0.15&middot;F<sub>cornering</sub> + 0.15&middot;F<sub>phone</sub> + 0.10&middot;F<sub>time</sub></p>
+
+<p>Each factor F<sub>i</sub> &isin; [0, 1000] is computed per-trip from raw sensor data:</p>
+
+<table>
+    <tr><th>Factor</th><th>Weight</th><th>Input Signal</th><th>Threshold</th></tr>
+    <tr><td>Speed Compliance</td><td>25%</td><td>GPS velocity vs. posted limits (map API)</td><td>Penalty per km/h over limit</td></tr>
+    <tr><td>Braking</td><td>20%</td><td>Deceleration events from accelerometer</td><td>Harsh = &gt;0.4g longitudinal</td></tr>
+    <tr><td>Acceleration</td><td>15%</td><td>Acceleration events from accelerometer</td><td>Aggressive = &gt;0.3g sustained &gt;2s</td></tr>
+    <tr><td>Cornering</td><td>15%</td><td>Lateral g-force from gyroscope</td><td>Unsafe = &gt;0.3g lateral</td></tr>
+    <tr><td>Phone Usage</td><td>15%</td><td>Screen-on events + motion patterns</td><td>Any interaction while v &gt; 5 km/h</td></tr>
+    <tr><td>Time-of-Day</td><td>10%</td><td>Trip start/end timestamps</td><td>Risk multiplier for 00:00&ndash;05:00</td></tr>
+</table>
+
+<h3>4.3 Rolling Average</h3>
+<p>The aggregate Safety Score uses a rolling weighted average over the most recent 100 trips with exponential decay (decay factor &lambda; = 0.97). This ensures recent behavior dominates while maintaining stability:</p>
+
+<p class="formula">S<sub>agg</sub> = &Sigma;<sub>i=1..N</sub> (&lambda;<sup>N-i</sup> &middot; S<sub>i</sub>) / &Sigma;<sub>i=1..N</sub> &lambda;<sup>N-i</sup> &nbsp;&nbsp; where N = min(trips, 100)</p>
+
+<h3>4.4 Verification Thresholds</h3>
+<p>A score is marked &ldquo;Provisional&rdquo; until the driver completes 10 verified trips totaling &ge;100 km. Trip records are rejected if they contain speeds &gt;250 km/h or GPS jumps &gt;5 km between consecutive 10-second readings. GPS gaps &gt;60 seconds are excluded from scoring.</p>
+
+<h2>5. On-Chain Architecture</h2>
+
+<p>All contracts deploy on Base (Ethereum L2). Base provides EVM compatibility, ~$0.01 transaction costs, and 2-second block times. The contract suite is non-upgradeable&mdash;no proxy patterns, no delegatecall, no admin keys.</p>
+
+<h3>5.1 Contract Overview</h3>
+
+<table>
+    <tr><th>Contract</th><th>Function</th><th>Mutability</th></tr>
+    <tr><td>DVX Token (ERC-20)</td><td>Fixed 100B supply, transfer, burn. Deployed by Bankr Bot.</td><td>Immutable. No mint().</td></tr>
+    <tr><td>Staking Contract</td><td>Stake/unstake DVX, accrue revenue, claim distributions.</td><td>Immutable. No owner.</td></tr>
+    <tr><td>Revenue Distributor</td><td>Collect revenue (WETH+USDC+DVX), execute weekly 70/20/10 split.</td><td>Immutable allocation. Params via governance.</td></tr>
+    <tr><td>DVX Buyback</td><td>Purchase DVX from Uniswap V4 using incentive pool, distribute to drivers.</td><td>Automated. TWAP oracle.</td></tr>
+    <tr><td>Safety Registry</td><td>Store Safety Score, trip count, tenure, verification status on-chain.</td><td>Write-restricted to protocol backend.</td></tr>
+    <tr><td>Consent Manager</td><td>Bitmask-based data permissions, grant/revoke, accountability opt-in.</td><td>Driver-controlled.</td></tr>
+    <tr><td>Marketplace</td><td>Job escrow, acceptance, completion proof, payment release.</td><td>Trustless escrow.</td></tr>
+</table>
+
+<h3>5.2 DVX Token</h3>
+<p>DVX is deployed externally via Bankr Bot using the Doppler Protocol. The protocol does not own or control the token contract. Key properties:</p>
+<ul>
+    <li>Fixed supply: 100,000,000,000 DVX. No <code>mint()</code> function exists.</li>
+    <li>100% of supply placed into a Uniswap V4 pool at deployment. No pre-allocations, no vesting, no team reserves.</li>
+    <li>Liquidity locked permanently by Doppler Protocol. Non-removable by any party.</li>
+    <li><code>burn()</code> reduces total supply permanently. Supply is monotonically decreasing.</li>
+</ul>
+
+<h3>5.3 Staking Contract</h3>
+<p>A standalone contract (not part of Bankr infrastructure) with the following mechanics:</p>
+<ul>
+    <li>Minimum stake: 100 DVX.</li>
+    <li>Revenue accrual begins at the next weekly distribution period after staking.</li>
+    <li>Unstaking initiates a 7-day cooldown. Revenue accrual stops immediately on unstake request. Tokens release after cooldown.</li>
+    <li>Accumulated revenue never forfeits regardless of claim timing.</li>
+    <li>Revenue distributed in three denominations: WETH (trading fees), USDC (protocol fees), DVX (trading fees).</li>
+</ul>
+
+<h3>5.4 Revenue Distributor</h3>
+<p>The core economic contract. Receives all protocol revenue and splits it:</p>
+<ul>
+    <li><strong>70%</strong> to stakers, weighted by Safety Score &times; stake amount.</li>
+    <li><strong>20%</strong> to protocol treasury (development, audits, operations).</li>
+    <li><strong>10%</strong> to Driver Incentive Pool (funds DVX Buyback).</li>
+</ul>
+<p>The 70/20/10 split is hardcoded with no admin function capable of modification. Distribution executes weekly. If accumulated revenue is below 100 USDC equivalent, distribution defers. After 4 consecutive deferrals, it executes regardless.</p>
+
+<h3>5.5 DVX Buyback</h3>
+<p>Funded by the 10% incentive pool allocation. Executes on a fixed 7-day schedule aligned with distributions. Uses a TWAP oracle (30-minute sampling window from the Uniswap V4 pool) to determine purchase price, preventing front-running and sandwich attacks. Purchased DVX is distributed to drivers as trip rewards (max 50 DVX per verified trip).</p>
+
+<h2>6. How Value Flows: From Token Launch to Revenue Distribution</h2>
+
+<p>This section explains, step by step, how the Bankr Bot token launch connects to the protocol&rsquo;s revenue and staking infrastructure. These are two independent systems linked by a single on-chain configuration. Understanding this relationship is critical for evaluating the protocol&rsquo;s economic model.</p>
+
+<h3>6.1 The Two Systems</h3>
+
+<p>The protocol consists of two distinct layers that operate independently but are economically connected:</p>
+
+<table>
+    <tr><th>System</th><th>Operated By</th><th>Purpose</th></tr>
+    <tr><td>Token + Liquidity Pool</td><td>Bankr Bot / Doppler Protocol (third-party infrastructure)</td><td>Deploys DVX, creates trading liquidity, collects swap fees</td></tr>
+    <tr><td>Revenue + Staking Contracts</td><td>DrivX Protocol (our contracts on Base)</td><td>Receives fees, distributes revenue to stakers weighted by Safety Score</td></tr>
+</table>
+
+<p>These systems are connected by exactly one parameter: the <strong>fee recipient address</strong> configured in Bankr Bot at launch time, which points to our Revenue Distributor contract.</p>
+
+<h3>6.2 Step-by-Step Value Flow</h3>
+
+<p>Here is the complete lifecycle of value from the moment a trade occurs to the moment a driver claims revenue:</p>
+
+<pre>
+STEP 1: TOKEN DEPLOYMENT (one-time event)
+─────────────────────────────────────────
+Bankr Bot mints 100B DVX → places 100% into Uniswap V4 pool on Base
+Liquidity is locked permanently by Doppler Protocol (non-removable by anyone)
+Fee recipient address is set to: Revenue Distributor contract [0x...]
+Result: DVX is immediately tradeable. No tokens held by team or protocol.
+
+STEP 2: TRADING GENERATES FEES (continuous)
+─────────────────────────────────────────
+Any user buys or sells DVX on Uniswap V4
+→ 1.2% swap fee is collected automatically by the pool
+→ Fee accumulates as WETH + DVX inside Bankr's fee infrastructure
+
+STEP 3: FEE SPLIT (handled by Bankr infrastructure)
+─────────────────────────────────────────
+Bankr's system splits the accumulated 1.2% fee:
+  57.0% → DrivX Revenue Distributor (our contract)
+  36.1% → Bankr
+   1.9% → Bankr Ecosystem
+   5.0% → Doppler Protocol
+
+STEP 4: REVENUE ACCUMULATES (7-day cycle)
+─────────────────────────────────────────
+Revenue Distributor contract receives:
+  - WETH + DVX from trading fees (Step 3)
+  - USDC from insurance verification fees, marketplace fees, etc.
+All revenue accumulates for 7 days.
+
+STEP 5: WEEKLY DISTRIBUTION (automated, on-chain)
+─────────────────────────────────────────
+Revenue Distributor executes the split:
+  70% → Staker pool (distributed to DVX stakers weighted by Safety Score)
+  20% → Protocol treasury (development, audits, operations)
+  10% → Driver Incentive Pool (funds DVX Buyback for trip rewards)
+
+STEP 6: STAKER CLAIMS (user-initiated)
+─────────────────────────────────────────
+A staker calls claimShare() on the Revenue Distributor
+→ Receives their proportional share in WETH + USDC + DVX
+→ Share = (their stake × their Safety Score) / Σ(all stakes × all scores)
+</pre>
+
+<h3>6.3 Why This Design Earns Trust</h3>
+
+<p>Investors and participants should evaluate the following verifiable guarantees:</p>
+
+<table>
+    <tr><th>Concern</th><th>Guarantee</th><th>How to Verify</th></tr>
+    <tr><td>Can the team drain the pool?</td><td>No. Liquidity is locked permanently by Doppler Protocol at deployment. No party&mdash;including the team&mdash;can remove it.</td><td>Verify LP lock on Basescan. No unlock function exists in Doppler&rsquo;s contract.</td></tr>
+    <tr><td>Can the team mint more tokens?</td><td>No. The DVX contract deployed by Bankr has no <code>mint()</code> function. Supply is fixed at 100B and can only decrease via burns.</td><td>Read the verified contract source on Basescan. Search for mint&mdash;it does not exist.</td></tr>
+    <tr><td>Can the team change the revenue split?</td><td>No. The 70/20/10 allocation is hardcoded in the Revenue Distributor with no admin function, no owner, and no governance mechanism to modify it.</td><td>Read the verified contract. No setter function for allocation percentages exists.</td></tr>
+    <tr><td>Can the team redirect fees to themselves?</td><td>The fee recipient address (pointing to Revenue Distributor) is set at Bankr launch. Changing it requires Bankr&rsquo;s fee recipient update mechanism with multisig approval from published treasury signers.</td><td>Verify the fee recipient address matches the Revenue Distributor. Monitor for changes via on-chain events.</td></tr>
+    <tr><td>Does the team hold hidden tokens?</td><td>No. 100% of supply goes into the Uniswap pool. Team wallets are published at TGE. On-chain tracking proves no DVX was received outside of open-market purchases.</td><td>Cross-reference team wallet addresses against all DVX transfer events from block 0.</td></tr>
+    <tr><td>Can staker funds be locked or seized?</td><td>No. The Staking Contract has no admin functions. Unstaking is always available (subject to 7-day cooldown). Accumulated revenue never forfeits.</td><td>Read the verified contract. No pause, freeze, or admin withdrawal function exists.</td></tr>
+    <tr><td>What if trading volume is zero?</td><td>Trading fee revenue would be zero, but the protocol also earns from insurance verification, marketplace fees, and data licensing. These are USDC-denominated and independent of DVX trading.</td><td>Revenue Distributor emits events for every deposit. All sources are independently trackable.</td></tr>
+</table>
+
+<h3>6.4 The Critical Distinction: Revenue vs. Emissions</h3>
+
+<p>Most token staking systems distribute newly minted tokens (inflationary emissions) as &ldquo;rewards.&rdquo; This dilutes holders and creates sell pressure. DrivX does the opposite:</p>
+
+<ul>
+    <li><strong>No inflation.</strong> There is no mint function. No new DVX is ever created.</li>
+    <li><strong>Real revenue.</strong> Stakers receive WETH and USDC generated from actual economic activity (trading fees, insurance fees, marketplace fees).</li>
+    <li><strong>Deflationary supply.</strong> The protocol actively buys DVX from the market and burns it, reducing total supply over time.</li>
+    <li><strong>Aligned incentives.</strong> Revenue share is weighted by Safety Score, meaning the protocol rewards the behavior that generates the underlying value (safe driving), not passive capital alone.</li>
+</ul>
+
+<p>A holder with 10,000 DVX staked but a Safety Score of 0 earns nothing. A driver with 1,000 DVX and a 900 Safety Score earns a meaningful share. This is by design: the protocol rewards value creation, not speculation.</p>
+
+<hr>
+
+<h2>7. Token Economics</h2>
+
+<h3>7.1 Launch Mechanics</h3>
+<p>DVX launches via Bankr Bot using the Doppler Protocol on Base. The entire fixed supply (100B tokens) is placed into a Uniswap V4 liquidity pool in a single atomic transaction. There are no pre-sales, no private rounds, no team allocations, and no vesting schedules. The team is funded exclusively from the 20% protocol development allocation distributed through the Revenue Distributor.</p>
+
+<h3>7.2 Fee Structure</h3>
+<p>The Uniswap V4 pool charges a 1.2% swap fee on every trade. This fee is split:</p>
+
+<table>
+    <tr><th>Recipient</th><th>Share</th><th>Denomination</th></tr>
+    <tr><td>DrivX Protocol (Revenue Distributor)</td><td>57%</td><td>WETH + DVX</td></tr>
+    <tr><td>Bankr</td><td>36.1%</td><td>WETH + DVX</td></tr>
+    <tr><td>Bankr Ecosystem</td><td>1.9%</td><td>WETH + DVX</td></tr>
+    <tr><td>Doppler Protocol</td><td>5%</td><td>WETH + DVX</td></tr>
+</table>
+
+<h3>7.3 Revenue-Weighted Staking</h3>
+<p>Unlike typical staking where rewards are proportional to stake alone, DrivX weights by both stake and Safety Score:</p>
+
+<p class="formula">share<sub>i</sub> = (stake<sub>i</sub> &times; score<sub>i</sub>) / &Sigma;<sub>j</sub>(stake<sub>j</sub> &times; score<sub>j</sub>)</p>
+
+<p>This creates a direct economic incentive to drive safely. A driver with a 900 Safety Score and 1,000 DVX staked earns more than a speculator with 10,000 DVX staked but a 0 Safety Score (who earns nothing).</p>
+
+<h3>7.4 Deflationary Pressure</h3>
+<p>Two mechanisms reduce circulating supply over time:</p>
+<ol>
+    <li><strong>Buyback &amp; Burn:</strong> A governance-configurable portion of the 20% treasury allocation purchases DVX from the open market and burns it permanently.</li>
+    <li><strong>Incentive Pool Buyback:</strong> The 10% Driver Incentive Pool continuously purchases DVX from the Uniswap V4 pool (creating buy pressure) and distributes to drivers as trip rewards.</li>
+</ol>
+<p>Since no <code>mint()</code> function exists, total supply is monotonically decreasing. Every burn is permanent and verifiable on-chain.</p>
+
+<h3>7.5 Early Contributor Incentive</h3>
+<p>The first 10,000 drivers who complete &ge;20 verified trips during Phase 2 receive a 500 DVX bonus. This bonus is purchased from the open market using accumulated Driver Incentive Pool funds&mdash;not minted. No bonuses distribute before revenue exists to fund them.</p>
+
+<h3>7.6 Team Alignment</h3>
+<p>No team member holds pre-allocated tokens, hidden wallets, or insider allocations. All team wallets are published at TGE with on-chain tracking. Team compensation comes exclusively from the 20% treasury allocation. Team members acquire DVX the same way any participant does: from the open market.</p>
+
+<h2>8. Revenue Model</h2>
+
+<p>The protocol generates revenue from five distinct sources, all denominated in WETH, DVX, or USDC:</p>
+
+<table>
+    <tr><th>Source</th><th>Mechanism</th><th>Expected Scale</th></tr>
+    <tr><td>Trading Fees</td><td>57% of 1.2% swap fee on every DVX trade</td><td>Scales with trading volume</td></tr>
+    <tr><td>Insurance Verification</td><td>Per-query fee (default 5 USDC) for Safety Score access</td><td>Scales with insurer adoption</td></tr>
+    <tr><td>Business Profile Access</td><td>30-day access to verified driver history (1&ndash;100 USDC)</td><td>Scales with marketplace activity</td></tr>
+    <tr><td>Marketplace Fees</td><td>2&ndash;5% of delivery compensation (escrow-based)</td><td>Scales with delivery volume</td></tr>
+    <tr><td>Data Licensing</td><td>Anonymized safety data for urban planning (k&ge;100)</td><td>Government contracts</td></tr>
+</table>
+
+<p>Revenue is collected continuously and distributed weekly. The minimum distribution threshold (100 USDC equivalent) prevents gas-inefficient micro-distributions. All collection and distribution transactions are published on-chain. Monthly treasury spending reports are published on-chain with recipient addresses, amounts, and purpose descriptions.</p>
+
+<h2>9. Privacy &amp; Consent Layer</h2>
+
+<h3>9.1 Data Sovereignty Model</h3>
+<p>Drivers own their data. The protocol enforces this through a layered architecture:</p>
+
+<ul>
+    <li><strong>Raw GPS data:</strong> Encrypted with the driver&rsquo;s key, stored in object storage. Only the driver can authorize decryption.</li>
+    <li><strong>Behavioral metrics:</strong> Stored in PostgreSQL with column-level encryption. Accessible only through consent-gated API.</li>
+    <li><strong>Safety Score:</strong> Stored on-chain (public by design for verifiability). Detailed breakdown requires consent.</li>
+</ul>
+
+<h3>9.2 Consent Manager (On-Chain)</h3>
+<p>The Consent Manager contract uses a bitmask system for data categories:</p>
+
+<pre>0x01 = Safety Score only
+0x02 = Trip history
+0x04 = Delivery metrics
+0x08 = Insurance data</pre>
+
+<p>Each consent grant specifies: authorized party (hashed identifier), data categories (bitmask), duration (max 12 months), and is recorded on-chain. Revocation is immediate (within one block, ~2 seconds on Base). Expired grants auto-deny without manual revocation.</p>
+
+<h3>9.3 Privacy Guarantees by Consumer</h3>
+
+<table>
+    <tr><th>Consumer</th><th>Access Level</th><th>Privacy Mechanism</th></tr>
+    <tr><td>Driver</td><td>Full own data</td><td>Key-based decryption</td></tr>
+    <tr><td>Insurer</td><td>Score + consented fields</td><td>Consent Manager bitmask</td></tr>
+    <tr><td>Business</td><td>Profile + consented fields</td><td>Consent Manager bitmask</td></tr>
+    <tr><td>Government</td><td>Anonymized aggregates</td><td>k-anonymity (k&ge;100) + differential privacy</td></tr>
+    <tr><td>Public</td><td>Leaderboard (anonymized)</td><td>Opt-in for named display</td></tr>
+    <tr><td>Accountability</td><td>Platform-level aggregates</td><td>k-anonymity (k&ge;50), min 50 unique drivers</td></tr>
+</table>
+
+<h3>9.4 Regulatory Compliance</h3>
+<p>The protocol supports GDPR and CCPA requirements: data export in machine-readable format within 72 hours of request, deletion of off-chain personal data within 30 days (on-chain records anonymized), and complete audit trail of all data access via the Consent Manager.</p>
+
+<h2>10. System Architecture</h2>
+
+<h3>10.1 Stack</h3>
+
+<table>
+    <tr><th>Layer</th><th>Technology</th><th>Rationale</th></tr>
+    <tr><td>Blockchain</td><td>Base (Ethereum L2)</td><td>~$0.01/tx, 2s blocks, EVM, Coinbase ecosystem</td></tr>
+    <tr><td>Smart Contracts</td><td>Solidity 0.8.x, Foundry (fuzz), Hardhat (integration)</td><td>Industry standard, formal verification compatible</td></tr>
+    <tr><td>Backend</td><td>Node.js, Express, PostgreSQL, Redis</td><td>High-throughput trip ingestion, relational analytics</td></tr>
+    <tr><td>Mobile</td><td>React Native + Expo</td><td>Single codebase iOS/Android, OTA updates, native sensor access</td></tr>
+    <tr><td>Web</td><td>Next.js, React, Tailwind CSS</td><td>SSR for public pages (SEO), SPA for dashboards</td></tr>
+    <tr><td>Account Abstraction</td><td>ERC-4337 (Bundler + Paymaster)</td><td>Gasless UX, email-based wallet creation</td></tr>
+    <tr><td>Storage</td><td>S3-compatible object storage (encrypted GPS)</td><td>Cost-efficient bulk storage, driver-key encryption</td></tr>
+</table>
+
+<h3>10.2 Backend Services</h3>
+
+<p>The backend decomposes into five services behind an API gateway with tiered rate limiting (100/1000/5000 req per 15 min for public/authenticated/business tiers):</p>
+
+<ul>
+    <li><strong>Trip Verification Engine:</strong> Validates GPS integrity, detects anomalies (speed &gt;250 km/h, GPS jumps &gt;5 km/10s), marks unverified segments, stores encrypted GPS data.</li>
+    <li><strong>Scoring Engine:</strong> Computes per-trip scores, updates rolling average, writes to Safety Registry on-chain.</li>
+    <li><strong>Accountability Engine:</strong> Aggregates anonymized delivery data per platform, detects unsafe speed targets (&gt;10% over limit across 100+ deliveries), publishes reports on-chain. Enforces k-anonymity (k&ge;50).</li>
+    <li><strong>Marketplace Service:</strong> Matches jobs to drivers within radius, manages escrow lifecycle, handles timeout/refund logic.</li>
+    <li><strong>Identity Service:</strong> Deploys AA wallets, manages KYC flow (3 attempts, 30-day window), generates verifiable credentials (30-day validity).</li>
+</ul>
+
+<h3>10.3 Mobile Client</h3>
+
+<p>Key technical decisions for the mobile client:</p>
+
+<ul>
+    <li><strong>Drive detection:</strong> Motion coprocessor (CMMotionActivityManager / Activity Recognition API) for low-power activity classification. GPS activates only when driving is confirmed. Target: &lt;5% battery per hour.</li>
+    <li><strong>Offline-first:</strong> SQLite stores up to 50 trips locally. Sync controller batch-uploads on connectivity restoration.</li>
+    <li><strong>Passenger detection:</strong> Accelerometer pattern heuristic distinguishes driver-side vs. passenger-side motion. Prompts confirmation within 10 minutes; discards unconfirmed trips after 24 hours.</li>
+    <li><strong>Localization:</strong> i18n framework with EN, ES, HI, PT at launch. New languages addable without app update (OTA string bundles).</li>
+</ul>
+
+<h3>10.4 Data Model</h3>
+
+<p>On-chain data is minimal (scores, stakes, consent, escrow). Off-chain data (trips, GPS, PII) is stored in PostgreSQL with column-level encryption and object storage with AES-256 driver-key encryption. The two layers maintain eventual consistency with max lag of one block confirmation (~2 seconds).</p>
+
+<h2>11. Security</h2>
+
+<h3>11.1 Smart Contract Security</h3>
+<ul>
+    <li><strong>No admin keys.</strong> Core contracts (Revenue Distributor, Staking, DVX Token) have no owner, no admin functions, no upgrade paths. The token contract is deployed externally by Bankr Bot&mdash;the protocol team cannot modify it.</li>
+    <li><strong>Non-upgradeable.</strong> No proxy patterns, no UUPS, no delegatecall. Contracts are verified on Basescan with source code.</li>
+    <li><strong>Reentrancy protection.</strong> All external calls follow checks-effects-interactions. OpenZeppelin ReentrancyGuard on all state-modifying functions.</li>
+    <li><strong>Flash-loan resistance.</strong> 7-day unstaking cooldown prevents flash-loan manipulation of revenue distribution weights.</li>
+    <li><strong>MEV protection.</strong> DVX Buyback uses TWAP oracle (30-minute window) rather than spot price, preventing sandwich attacks.</li>
+    <li><strong>Formal testing.</strong> Foundry fuzz testing with 100+ iterations per property. 29 correctness properties defined and tested.</li>
+</ul>
+
+<h3>11.2 Infrastructure Security</h3>
+<ul>
+    <li>TLS 1.3 on all endpoints. JWT sessions with 30-minute timeout.</li>
+    <li>Rate limiting at gateway level. IP allowlisting for business API access.</li>
+    <li>Database: at-rest encryption, column-level encryption for PII, read replicas for query isolation.</li>
+    <li>Key management via HSM/KMS. 90-day rotation for API signing keys.</li>
+    <li>Circuit breaker pattern for blockchain RPC failures. Dead letter queue after 5 retries.</li>
+</ul>
+
+<h3>11.3 User Security</h3>
+<ul>
+    <li>Account Abstraction eliminates seed phrase risk. No private keys exposed to users.</li>
+    <li>Paymaster with spending limits prevents gas griefing.</li>
+    <li>Identity verification (government ID + selfie) gates withdrawals and data sharing, not trip recording.</li>
+    <li>Failed revenue claims retain balance for retry&mdash;no forfeiture under any condition.</li>
+</ul>
+
+<h2>12. Governance</h2>
+
+<h3>12.1 Immutable Parameters</h3>
+<p>The following cannot be changed by any mechanism after deployment:</p>
+<ul>
+    <li>Revenue allocation: 70% stakers / 20% treasury / 10% incentive pool</li>
+    <li>Token supply: 100,000,000,000 DVX (no minting)</li>
+    <li>Liquidity lock: permanent, non-removable</li>
+    <li>Contract upgradeability: none</li>
+</ul>
+
+<h3>12.2 Governance-Controlled Parameters</h3>
+<p>Operational parameters modifiable via DVX staker vote with mandatory 48-hour timelock:</p>
+<ul>
+    <li>Minimum distribution threshold (default: 100 USDC equivalent)</li>
+    <li>Distribution frequency (default: 7 days)</li>
+    <li>Marketplace fee percentage (range: 2&ndash;5%)</li>
+    <li>Insurance verification fee (default: 5 USDC)</li>
+    <li>Buyback execution parameters</li>
+    <li>Incentive pool withdrawal address</li>
+</ul>
+
+<p>The 48-hour timelock ensures stakers can exit (unstake and sell) before any parameter change takes effect. This provides a credible exit guarantee against adverse governance decisions.</p>
+
+<h2>13. Technical Roadmap: Toward Trustless Scoring</h2>
+
+<h3>13.1 The Trust Assumption in V1</h3>
+
+<p>In the initial protocol version, the scoring engine runs on a centralized backend. The backend receives trip data from the mobile client, computes the Safety Score, and writes the result to the Safety Registry on-chain. This means participants must trust that:</p>
+
+<ol>
+    <li>The backend computes scores honestly (no manipulation).</li>
+    <li>The mobile client submits real sensor data (no GPS spoofing).</li>
+    <li>The trip was performed by a real, unique human (no bots, no Sybils).</li>
+</ol>
+
+<p>This is an acceptable trust model for launch&mdash;identical to what every telematics insurer operates today&mdash;but it is not the end state. The protocol&rsquo;s long-term technical roadmap systematically eliminates each trust assumption through cryptographic verification.</p>
+
+<h3>13.2 Phase A: Zero-Knowledge Score Proofs</h3>
+
+<p><strong>Goal:</strong> A driver proves &ldquo;my Safety Score is above 800&rdquo; without revealing the exact score, trip history, or any raw data.</p>
+
+<p><strong>Approach:</strong> ZK-SNARK circuits (using Noir or Circom) that take the driver&rsquo;s trip history as private input and produce a proof that the computed score satisfies a threshold. The verifier contract on Base checks the proof in constant time (~200K gas) without learning anything about the underlying data.</p>
+
+<p><strong>Impact:</strong> Insurers can verify risk category (Low/Medium/High) without accessing granular trip data. This eliminates the need for the Consent Manager in simple verification flows&mdash;the proof itself is the consent-free, privacy-preserving credential. It also makes the protocol GDPR-compliant by design: no personal data is ever transmitted to the verifier.</p>
+
+<h3>13.3 Phase B: Verifiable Computation (Trustless Scoring)</h3>
+
+<p><strong>Goal:</strong> Prove that the Safety Score was computed correctly from real sensor data, without trusting the backend.</p>
+
+<p><strong>Approach:</strong> The scoring algorithm is compiled into a zkVM program (RISC Zero or SP1). The mobile client submits encrypted trip data to a prover network. The prover executes the scoring algorithm inside the zkVM and produces a proof of correct execution. The Safety Registry contract verifies this proof before accepting the score update.</p>
+
+<p><strong>Impact:</strong> The backend is no longer trusted. Anyone can verify that a score was computed by the correct algorithm on the correct input. The protocol becomes trustless at the scoring layer&mdash;a property no telematics company or DePIN project currently offers. This is the technical moat: once scoring is verifiable, the on-chain identity becomes the only provably honest driving score in existence.</p>
+
+<h3>13.4 Phase C: On-Device Federated Scoring</h3>
+
+<p><strong>Goal:</strong> Raw GPS and sensor data never leaves the driver&rsquo;s device. Only the computed score (with proof) is transmitted.</p>
+
+<p><strong>Approach:</strong> The scoring algorithm runs locally on the mobile device. The device generates a ZK proof that the score was computed from valid sensor readings (accelerometer within physical bounds, GPS coordinates forming a plausible route, timestamps monotonically increasing). The proof is submitted to the Safety Registry. Raw data is never uploaded anywhere.</p>
+
+<p><strong>Impact:</strong> True data sovereignty. No server, no backend, no cloud storage ever sees the driver&rsquo;s location history. The driver&rsquo;s phone is the only system that processes their data. This is the strongest possible privacy guarantee&mdash;stronger than encryption, because the data simply does not exist outside the device.</p>
+
+<h3>13.5 Phase D: Sybil Resistance via Driving Proofs</h3>
+
+<p><strong>Goal:</strong> Prove that a unique human performed a unique trip in a real vehicle (not GPS spoofing, not emulators, not bots farming rewards).</p>
+
+<p><strong>Approach:</strong> Multi-signal attestation combining:</p>
+<ul>
+    <li><strong>Physics consistency:</strong> Accelerometer, gyroscope, and GPS must be mutually consistent (you cannot fake lateral g-force from a desk).</li>
+    <li><strong>Environmental correlation:</strong> Cross-reference reported speed with known road speed limits and traffic patterns for that time/location.</li>
+    <li><strong>Device attestation:</strong> Android SafetyNet / iOS DeviceCheck to verify the app runs on a real, non-rooted device.</li>
+    <li><strong>Proof-of-unique-human:</strong> Optional integration with proof-of-personhood protocols (e.g., World ID) for high-value actions (withdrawals, bonus claims).</li>
+</ul>
+
+<p><strong>Impact:</strong> The protocol can scale to millions of drivers without reward farming destroying the economic model. Each verified trip represents a real human driving a real vehicle on a real road.</p>
+
+<h3>13.6 Technical Innovation Summary</h3>
+
+<table>
+    <tr><th>Phase</th><th>Innovation</th><th>Trust Eliminated</th><th>Timeline</th></tr>
+    <tr><td>V1 (Launch)</td><td>Revenue-weighted staking, immutable splits, TWAP buyback</td><td>None (trusted backend)</td><td>Launch</td></tr>
+    <tr><td>Phase A</td><td>ZK score proofs</td><td>Verifiers don&rsquo;t need raw data</td><td>6&ndash;12 months post-launch</td></tr>
+    <tr><td>Phase B</td><td>Verifiable computation (zkVM)</td><td>Backend honesty assumption</td><td>12&ndash;18 months</td></tr>
+    <tr><td>Phase C</td><td>On-device federated scoring</td><td>Data ever leaving the device</td><td>18&ndash;24 months</td></tr>
+    <tr><td>Phase D</td><td>Sybil-resistant driving proofs</td><td>Fake trips / bot farming</td><td>12&ndash;24 months (parallel)</td></tr>
+</table>
+
+<p>The end state is a protocol where: the score is provably correct (Phase B), the data never leaves the device (Phase C), the trip is provably real (Phase D), and verification requires zero knowledge of the underlying data (Phase A). No existing telematics company, DePIN project, or insurance platform offers any of these properties. This is the long-term technical differentiation that makes DrivX&rsquo;s on-chain identity the only trustless driving credential in existence.</p>
+
+<h2>14. Roadmap</h2>
+
+<h3>Phase 1 &mdash; Foundation (Q3 2026)</h3>
+<p>Ship the mobile app with driving detection and scoring. No token, no blockchain visible to users. Objective: validate the scoring model against real driving data, build the initial driver base, and prove product-market fit for the Safety Score concept.</p>
+
+<h3>Phase 2 &mdash; Token Launch (Q4 2026)</h3>
+<p>Deploy DVX via Bankr Bot. Deploy Revenue Distributor, Staking Contract, and DVX Buyback on Base. Enable trip rewards. Early contributor bonus (500 DVX) for first 10,000 drivers completing 20+ verified trips. Objective: bootstrap the token economy with real revenue from day one.</p>
+
+<h3>Phase 3 &mdash; Insurance Integration (Q1 2027)</h3>
+<p>Launch the Insurance Verification API. Onboard insurer partners for score-based premium discounts. Enable Driving Identity sharing with full consent management. Objective: demonstrate tangible economic value of Safety Scores to drivers (lower premiums) and insurers (better risk data).</p>
+
+<h3>Phase 4 &mdash; Marketplace &amp; Scale (Q2 2027)</h3>
+<p>Launch the delivery driver marketplace (direct-hire with escrow). Deploy the Accountability Engine and public dashboard. Open infrastructure APIs. Government data licensing. Objective: full protocol utility with diversified revenue streams.</p>
+
+<h3>Phase 5 &mdash; Trustless Infrastructure (Q3 2027 onwards)</h3>
+<p>Deploy ZK score proofs for privacy-preserving verification. Migrate scoring to verifiable computation via zkVM. Implement on-device federated scoring where raw data never leaves the phone. Ship Sybil-resistant driving proofs combining physics consistency, environmental correlation, and device attestation. Objective: eliminate all trust assumptions and make DrivX the only provably honest, trustless driving credential in existence.</p>
+
+<hr>
+
+<h2>References</h2>
+<ol>
+    <li>ERC-4337: Account Abstraction Using Alt Mempool. Ethereum Foundation, 2023.</li>
+    <li>Uniswap V4 Core. Uniswap Labs, 2024.</li>
+    <li>Base: Ethereum L2 built by Coinbase. Coinbase, 2023.</li>
+    <li>Doppler Protocol: Liquidity Bootstrapping on Uniswap V4. Doppler Labs, 2024.</li>
+    <li>OpenZeppelin Contracts v5.x. OpenZeppelin, 2024.</li>
+    <li>Foundry Book: Fuzz Testing. Paradigm, 2024.</li>
+    <li>RISC Zero: General Purpose Verifiable Computing. RISC Zero, 2024.</li>
+    <li>SP1: Succinct Proofs for Arbitrary Programs. Succinct Labs, 2024.</li>
+    <li>Noir: Domain-Specific Language for ZK Circuits. Aztec, 2024.</li>
+</ol>
+
+<hr>
+
+<footer style="text-align:center; margin-top:40px; padding-top:20px; border-top:1px solid #ccc; font-size:0.85rem; color:#666;">
+    <p>&copy; 2026 DrivX Protocol</p>
+</footer>
+
+</div>
+</body>
+</html>
