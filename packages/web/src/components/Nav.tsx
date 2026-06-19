@@ -5,10 +5,11 @@ import { usePathname } from 'next/navigation';
 import { clsx } from 'clsx';
 
 const links = [
+  { href: '/#how', label: 'How It Works' },
+  { href: '/#tokenomics', label: 'Tokenomics' },
+  { href: '/#roadmap', label: 'Roadmap' },
   { href: '/leaderboard', label: 'Leaderboard' },
-  { href: '/accountability', label: 'Accountability' },
   { href: '/community', label: 'Community' },
-  { href: '/docs', label: 'API Docs' },
 ];
 
 export function Nav() {
@@ -36,12 +37,12 @@ export function Nav() {
           ))}
         </div>
         <div className="flex items-center gap-3">
-          <Link href="/insurer/verify" className="btn-secondary text-sm py-2 px-4">
-            Insurer Portal
-          </Link>
-          <Link href="/dashboard" className="btn-primary text-sm py-2 px-4">
-            Business Portal
-          </Link>
+          <a href="https://github.com/jpdeveloper89-cmd/drivx" target="_blank" rel="noopener noreferrer" className="btn-secondary text-sm py-2 px-4">
+            GitHub
+          </a>
+          <a href="https://twitter.com/drivx_" target="_blank" rel="noopener noreferrer" className="btn-primary text-sm py-2 px-4">
+            Follow Us
+          </a>
         </div>
       </div>
     </nav>

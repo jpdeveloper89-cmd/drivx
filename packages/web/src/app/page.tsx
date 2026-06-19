@@ -22,8 +22,8 @@ export default function HomePage() {
           DrivX turns safe driving into a verifiable on-chain identity. Earn real revenue — not printed tokens — from the value you create.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <Link href="/dashboard" className="btn-primary px-8 py-3.5 text-base">Get Started</Link>
-          <a href="#how" className="btn-secondary px-8 py-3.5 text-base">How It Works</a>
+          <a href="#how" className="btn-primary px-8 py-3.5 text-base">Get Started</a>
+          <a href="#tokenomics" className="btn-secondary px-8 py-3.5 text-base">Tokenomics</a>
         </div>
         <div className="mt-16 h-0.5 w-72 rounded-full"
           style={{ background: 'linear-gradient(90deg, transparent, #6366f1, #22d3ee, transparent)', animation: 'pulse-glow 3s ease-in-out infinite' }} />
@@ -182,8 +182,8 @@ export default function HomePage() {
         </h2>
         <p className="text-lg mb-8" style={{ color: '#a1a1aa' }}>Join the protocol. Own your data. Earn from the value you create.</p>
         <div className="flex gap-4 justify-center">
-          <Link href="/dashboard" className="btn-primary px-8 py-3.5 text-base">Launch App</Link>
-          <Link href="/leaderboard" className="btn-secondary px-8 py-3.5 text-base">View Leaderboard</Link>
+          <a href="https://twitter.com/drivx_" target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-3.5 text-base">Follow for Updates</a>
+          <a href="https://github.com/jpdeveloper89-cmd/drivx" target="_blank" rel="noopener noreferrer" className="btn-secondary px-8 py-3.5 text-base">View Source Code</a>
         </div>
       </section>
     </div>
