@@ -17,9 +17,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="border-t border-border mt-20 py-10 px-8 flex justify-between items-center text-sm text-muted max-w-6xl mx-auto">
           <span style={{ color: '#a1a1aa' }}>© 2026 DrivX Protocol</span>
           <div className="flex gap-6">
-            <a href="https://twitter.com/drivxprotocol" target="_blank" rel="noopener noreferrer"
+            <a href="https://x.com/drivx_" target="_blank" rel="noopener noreferrer"
               className="hover:text-text transition-colors" style={{ color: '#a1a1aa' }}>Twitter</a>
-            <a href="https://github.com/jpdeveloper89-cmd" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/jpdeveloper89-cmd/drivx" target="_blank" rel="noopener noreferrer"
               className="hover:text-text transition-colors" style={{ color: '#a1a1aa' }}>GitHub</a>
             <a href="/docs" className="hover:text-text transition-colors" style={{ color: '#a1a1aa' }}>API Docs</a>
           </div>

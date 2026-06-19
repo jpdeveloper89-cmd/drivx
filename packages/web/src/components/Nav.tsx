@@ -34,13 +34,15 @@ export function Nav() {
             </Link>
           ))}
         </div>
-        <div className="flex items-center gap-3">
-          <a href="https://jpdeveloper89-cmd.github.io/drivx/DrivX_Whitepaper.html" target="_blank" rel="noopener noreferrer" className="btn-secondary text-sm py-2 px-4">
+        <div className="flex items-center gap-6">
+          <a href="https://jpdeveloper89-cmd.github.io/drivx/DrivX_Whitepaper.html" target="_blank" rel="noopener noreferrer"
+            className="text-sm transition-colors" style={{ color: '#a1a1aa' }}>
             Whitepaper
           </a>
-          <a href="https://github.com/jpdeveloper89-cmd/drivx" target="_blank" rel="noopener noreferrer" className="btn-secondary text-sm py-2 px-4">
-            GitHub
-          </a>
+          <Link href="/explore" className="text-sm px-4 py-2 rounded-lg transition-all"
+            style={{ background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.3)', color: '#6366f1' }}>
+            Explore App
+          </Link>
           <a href="https://x.com/drivx_" target="_blank" rel="noopener noreferrer" className="btn-primary text-sm py-2 px-4">
             Follow Us
           </a>

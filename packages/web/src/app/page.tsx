@@ -6,9 +6,13 @@ export default function HomePage() {
     <div>
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className="min-h-screen flex flex-col justify-center items-center text-center px-8 py-32">
-        <div className="text-xs font-semibold uppercase tracking-widest mb-6" style={{ color: '#a1a1aa' }}>
-          Driver-Owned Protocol on Base
-        </div>
+        <a href="/explore#contracts"
+          className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm mb-6 transition-all duration-200"
+          style={{ background: 'rgba(34,211,238,0.1)', border: '1px solid rgba(34,211,238,0.3)', color: '#22d3ee' }}
+        >
+          <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: '#34d399' }}></span>
+          Testnet Live — 7 Contracts on Base Sepolia ↗
+        </a>
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight max-w-4xl mb-6"
           style={{
             background: 'linear-gradient(135deg, #fafafa 0%, #6366f1 50%, #22d3ee 100%)',
@@ -44,14 +48,6 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-      </div>
-
-      {/* Token address */}
-      <div className="text-center py-5 border-b border-border text-sm" style={{ color: '#a1a1aa' }}>
-        <span className="text-xs uppercase tracking-widest mr-3">$DVX Contract</span>
-        <code className="px-4 py-1.5 rounded text-sm" style={{ background: '#111113', border: '1px solid #27272a', color: '#22d3ee' }}>
-          TBA — Launching Soon
-        </code>
       </div>
 
       {/* ── How It Works ─────────────────────────────────────────────────── */}
@@ -182,7 +178,7 @@ export default function HomePage() {
         </h2>
         <p className="text-lg mb-8" style={{ color: '#a1a1aa' }}>Join the protocol. Own your data. Earn from the value you create.</p>
         <div className="flex gap-4 justify-center">
-          <a href="https://twitter.com/drivx_" target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-3.5 text-base">Follow for Updates</a>
+          <a href="https://x.com/drivx_" target="_blank" rel="noopener noreferrer" className="btn-primary px-8 py-3.5 text-base">Follow for Updates</a>
           <a href="https://github.com/jpdeveloper89-cmd/drivx" target="_blank" rel="noopener noreferrer" className="btn-secondary px-8 py-3.5 text-base">View Source Code</a>
         </div>
       </section>
