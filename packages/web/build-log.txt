@@ -1,0 +1,986 @@
+
+> @drivx/web@0.1.0 build
+> next build
+
+  ▲ Next.js 14.2.3
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+
+ ⚠ The Next.js plugin was not detected in your ESLint configuration. See https://nextjs.org/docs/basic-features/eslint#migrating-existing-config
+
+Failed to compile.
+
+./src/app/accountability/page.tsx
+1:18  Error: Delete `␍`  prettier/prettier
+2:4  Error: Replace `·id:·'1',·platform:·'QuickDeliver',·period:·'Apr·2026',·dataPoints:·1240,·avgRequiredSpeed:·67.4,·postedLimit:·60,·overLimitPct:·12.3,·severity:·'warning'·as·const,·publishedAt:·'2026-05-01'·},␍` with `⏎····id:·'1',⏎····platform:·'QuickDeliver',⏎····period:·'Apr·2026',⏎····dataPoints:·1240,⏎····avgRequiredSpeed:·67.4,⏎····postedLimit:·60,⏎····overLimitPct:·12.3,⏎····severity:·'warning'·as·const,⏎····publishedAt:·'2026-05-01',⏎··},`  prettier/prettier
+3:4  Error: Replace `·id:·'2',·platform:·'FastFood·Express',·period:·'Mar–Apr·2026',·dataPoints:·2891,·avgRequiredSpeed:·78.2,·postedLimit:·60,·overLimitPct:·30.3,·severity:·'critical'·as·const,·publishedAt:·'2026-05-03'·},␍` with `⏎····id:·'2',⏎····platform:·'FastFood·Express',⏎····period:·'Mar–Apr·2026',⏎····dataPoints:·2891,⏎····avgRequiredSpeed:·78.2,⏎····postedLimit:·60,⏎····overLimitPct:·30.3,⏎····severity:·'critical'·as·const,⏎····publishedAt:·'2026-05-03',⏎··},`  prettier/prettier
+4:4  Error: Replace `·id:·'3',·platform:·'CityCourier',·period:·'Apr·2026',·dataPoints:·543,·avgRequiredSpeed:·58.1,·postedLimit:·60,·overLimitPct:·0,·severity:·'safe'·as·const,·publishedAt:·'2026-05-05'·},␍` with `⏎····id:·'3',⏎····platform:·'CityCourier',⏎····period:·'Apr·2026',⏎····dataPoints:·543,⏎····avgRequiredSpeed:·58.1,⏎····postedLimit:·60,⏎····overLimitPct:·0,⏎····severity:·'safe'·as·const,⏎····publishedAt:·'2026-05-05',⏎··},`  prettier/prettier
+5:4  Error: Replace `·id:·'4',·platform:·'RushRiders',·period:·'Apr·2026',·dataPoints:·876,·avgRequiredSpeed:·68.8,·postedLimit:·60,·overLimitPct:·14.7,·severity:·'warning'·as·const,·publishedAt:·'2026-05-06'·},␍` with `⏎····id:·'4',⏎····platform:·'RushRiders',⏎····period:·'Apr·2026',⏎····dataPoints:·876,⏎····avgRequiredSpeed:·68.8,⏎····postedLimit:·60,⏎····overLimitPct:·14.7,⏎····severity:·'warning'·as·const,⏎····publishedAt:·'2026-05-06',⏎··},`  prettier/prettier
+6:3  Error: Delete `␍`  prettier/prettier
+7:1  Error: Delete `␍`  prettier/prettier
+8:25  Error: Delete `␍`  prettier/prettier
+9:14  Error: Replace `·label:·'Critical·Safety·Concern',·color:·'#dc2626',·bg:·'rgba(220,38,38,0.15)',·icon:·'🚨'·},␍` with `⏎····label:·'Critical·Safety·Concern',⏎····color:·'#dc2626',⏎····bg:·'rgba(220,38,38,0.15)',⏎····icon:·'🚨',⏎··},`  prettier/prettier
+10:95  Error: Delete `␍`  prettier/prettier
+11:90  Error: Delete `␍`  prettier/prettier
+12:3  Error: Delete `␍`  prettier/prettier
+13:1  Error: Delete `␍`  prettier/prettier
+14:47  Error: Delete `␍`  prettier/prettier
+15:11  Error: Delete `␍`  prettier/prettier
+16:51  Error: Delete `␍`  prettier/prettier
+17:30  Error: Delete `␍`  prettier/prettier
+18:56  Error: Delete `␍`  prettier/prettier
+19:93  Error: Replace `Platform·Accountability</h1>␍` with `⏎··········Platform·Accountability⏎········</h1>`  prettier/prettier
+20:87  Error: Delete `␍`  prettier/prettier
+21:94  Error: Replace `·drivers.␍⏎··········Reports·are·immutable·on-chain·records.·Minimum·50·unique·drivers·required·before·publishing.␍` with `⏎··········drivers.·Reports·are·immutable·on-chain·records.·Minimum·50·unique·drivers·required·before⏎··········publishing.`  prettier/prettier
+23:13  Error: Delete `␍`  prettier/prettier
+24:13  Error: Delete `␍`  prettier/prettier
+25:1  Error: Delete `␍`  prettier/prettier
+26:29  Error: Delete `␍`  prettier/prettier
+27:59  Error: Delete `␍`  prettier/prettier
+28:13  Error: Replace `·className="rounded-xl·p-5·mb-8·flex·items-start·gap-3·border"␍` with `⏎··········className="rounded-xl·p-5·mb-8·flex·items-start·gap-3·border"`  prettier/prettier
+29:92  Error: Replace `>␍` with `⏎········>`  prettier/prettier
+30:47  Error: Delete `␍`  prettier/prettier
+31:16  Error: Delete `␍`  prettier/prettier
+32:78  Error: Replace `Critical·Safety·Concern·detected</div>␍` with `⏎··············Critical·Safety·Concern·detected⏎············</div>`  prettier/prettier
+33:67  Error: Delete `␍`  prettier/prettier
+34:97  Error: Delete `␍`  prettier/prettier
+35:67  Error: Delete `␍`  prettier/prettier
+36:19  Error: Delete `␍`  prettier/prettier
+37:17  Error: Delete `␍`  prettier/prettier
+38:15  Error: Delete `␍`  prettier/prettier
+39:9  Error: Delete `␍`  prettier/prettier
+40:1  Error: Delete `␍`  prettier/prettier
+41:22  Error: Delete `␍`  prettier/prettier
+42:34  Error: Delete `␍`  prettier/prettier
+43:30  Error: Delete `␍`  prettier/prettier
+44:50  Error: Delete `␍`  prettier/prettier
+45:19  Error: Delete `␍`  prettier/prettier
+46:17  Error: Replace `·key={r.id}·className="rounded-xl·p-6·border·transition-all"␍` with `⏎··············key={r.id}⏎··············className="rounded-xl·p-6·border·transition-all"`  prettier/prettier
+47:72  Error: Replace `>␍` with `⏎············>`  prettier/prettier
+48:86  Error: Delete `␍`  prettier/prettier
+49:22  Error: Delete `␍`  prettier/prettier
+50:65  Error: Delete `␍`  prettier/prettier
+51:64  Error: Delete `␍`  prettier/prettier
+52:80  Error: Replace `{r.platform}</h3>␍` with `⏎······················{r.platform}⏎····················</h3>`  prettier/prettier
+53:26  Error: Replace `·className="text-xs·font-medium·px-2.5·py-0.5·rounded-full"␍` with `⏎······················className="text-xs·font-medium·px-2.5·py-0.5·rounded-full"`  prettier/prettier
+54:71  Error: Replace `>␍` with `⏎····················>`  prettier/prettier
+55:34  Error: Delete `␍`  prettier/prettier
+56:28  Error: Delete `␍`  prettier/prettier
+57:25  Error: Delete `␍`  prettier/prettier
+58:73  Error: Delete `␍`  prettier/prettier
+59:97  Error: Replace `·{r.publishedAt}␍` with `{'·'}⏎····················{r.publishedAt}`  prettier/prettier
+60:25  Error: Delete `␍`  prettier/prettier
+61:23  Error: Delete `␍`  prettier/prettier
+62:45  Error: Delete `␍`  prettier/prettier
+63:23  Error: Replace `·className="text-2xl·font-bold"·style={{·color:·r.overLimitPct·>·0·?·cfg.color·:·'#34d399'·}}>␍` with `⏎····················className="text-2xl·font-bold"⏎····················style={{·color:·r.overLimitPct·>·0·?·cfg.color·:·'#34d399'·}}⏎··················>`  prettier/prettier
+64:79  Error: Delete `␍`  prettier/prettier
+65:25  Error: Delete `␍`  prettier/prettier
+66:73  Error: Replace `over·posted·limit</div>␍` with `⏎····················over·posted·limit⏎··················</div>`  prettier/prettier
+67:23  Error: Delete `␍`  prettier/prettier
+68:21  Error: Delete `␍`  prettier/prettier
+69:1  Error: Delete `␍`  prettier/prettier
+70:67  Error: Delete `␍`  prettier/prettier
+71:19  Error: Delete `␍`  prettier/prettier
+72:88  Error: Delete `␍`  prettier/prettier
+73:77  Error: Delete `␍`  prettier/prettier
+74:82  Error: Delete `␍`  prettier/prettier
+75:31  Error: Delete `␍`  prettier/prettier
+76:99  Error: Delete `␍`  prettier/prettier
+77:81  Error: Replace `{s.value}</div>␍` with `⏎······················{s.value}⏎····················</div>`  prettier/prettier
+78:80  Error: Replace `{s.label}</div>␍` with `⏎······················{s.label}⏎····················</div>`  prettier/prettier
+79:25  Error: Delete `␍`  prettier/prettier
+80:20  Error: Delete `␍`  prettier/prettier
+81:21  Error: Delete `␍`  prettier/prettier
+82:19  Error: Delete `␍`  prettier/prettier
+83:13  Error: Delete `␍`  prettier/prettier
+84:12  Error: Delete `␍`  prettier/prettier
+85:13  Error: Delete `␍`  prettier/prettier
+86:1  Error: Delete `␍`  prettier/prettier
+87:76  Error: Delete `␍`  prettier/prettier
+88:96  Error: Replace `·weekly␍` with `⏎········weekly`  prettier/prettier
+89:11  Error: Delete `␍`  prettier/prettier
+90:11  Error: Delete `␍`  prettier/prettier
+91:5  Error: Delete `␍`  prettier/prettier
+92:2  Error: Delete `␍`  prettier/prettier
+
+./src/app/community/page.tsx
+1:42  Error: Delete `␍`  prettier/prettier
+2:18  Error: Delete `␍`  prettier/prettier
+3:91  Error: Delete `␍`  prettier/prettier
+4:97  Error: Delete `␍`  prettier/prettier
+5:6  Error: Replace `·label:·'Total·Distance',·value:·'48.2M·km',·delta:·'equiv.·1,205·Earth·orbits',·positive:·true·},␍` with `⏎······label:·'Total·Distance',⏎······value:·'48.2M·km',⏎······delta:·'equiv.·1,205·Earth·orbits',⏎······positive:·true,⏎····},`  prettier/prettier
+6:97  Error: Delete `␍`  prettier/prettier
+7:6  Error: Replace `·label:·'CO₂·Saved·(est.)',·value:·'1,240·tonnes',·delta:·'vs.·average·driving',·positive:·true·},␍` with `⏎······label:·'CO₂·Saved·(est.)',⏎······value:·'1,240·tonnes',⏎······delta:·'vs.·average·driving',⏎······positive:·true,⏎····},`  prettier/prettier
+8:6  Error: Replace `·label:·'Avg·Score·Improvement',·value:·'+67·pts',·delta:·'after·first·10·trips',·positive:·true·},␍` with `⏎······label:·'Avg·Score·Improvement',⏎······value:·'+67·pts',⏎······delta:·'after·first·10·trips',⏎······positive:·true,⏎····},`  prettier/prettier
+9:5  Error: Delete `␍`  prettier/prettier
+10:1  Error: Delete `␍`  prettier/prettier
+11:23  Error: Delete `␍`  prettier/prettier
+12:6  Error: Replace `·phase:·'Phase·1·—·Q3·2026',·title:·'Foundation',·icon:·'📱',·desc:·'Mobile·app·live·(iOS·+·Android).·Auto-detection,·scoring,·trip·history.·Build·driver·base.·No·crypto·visible.'·},␍` with `⏎······phase:·'Phase·1·—·Q3·2026',⏎······title:·'Foundation',⏎······icon:·'📱',⏎······desc:·'Mobile·app·live·(iOS·+·Android).·Auto-detection,·scoring,·trip·history.·Build·driver·base.·No·crypto·visible.',⏎····},`  prettier/prettier
+13:6  Error: Replace `·phase:·'Phase·2·—·Q4·2026',·title:·'Token·Launch',·icon:·'💎',·desc:·'DVX·deployed·via·Bankr·Bot·on·Base.·Revenue·Distributor,·Staking,·Buyback·contracts·live.·Trip·rewards·enabled.·Early·contributor·bonus·active.'·},␍` with `⏎······phase:·'Phase·2·—·Q4·2026',⏎······title:·'Token·Launch',⏎······icon:·'💎',⏎······desc:·'DVX·deployed·via·Bankr·Bot·on·Base.·Revenue·Distributor,·Staking,·Buyback·contracts·live.·Trip·rewards·enabled.·Early·contributor·bonus·active.',⏎····},`  prettier/prettier
+14:6  Error: Replace `·phase:·'Phase·3·—·Q1·2027',·title:·'Insurance·Integration',·icon:·'🛡️',·desc:·'Verification·API·live.·First·insurer·partnerships.·Drivers·unlock·premium·discounts·from·their·Safety·Score.·Consent·management·active.'·},␍` with `⏎······phase:·'Phase·3·—·Q1·2027',⏎······title:·'Insurance·Integration',⏎······icon:·'🛡️',⏎······desc:·'Verification·API·live.·First·insurer·partnerships.·Drivers·unlock·premium·discounts·from·their·Safety·Score.·Consent·management·active.',⏎····},`  prettier/prettier
+15:6  Error: Replace `·phase:·'Phase·4·—·Q2·2027',·title:·'Marketplace·&·Scale',·icon:·'🗺️',·desc:·'Direct-hire·delivery·marketplace.·Accountability·Engine·and·public·dashboard.·Infrastructure·APIs.·Government·data·licensing.'·},␍` with `⏎······phase:·'Phase·4·—·Q2·2027',⏎······title:·'Marketplace·&·Scale',⏎······icon:·'🗺️',⏎······desc:·'Direct-hire·delivery·marketplace.·Accountability·Engine·and·public·dashboard.·Infrastructure·APIs.·Government·data·licensing.',⏎····},`  prettier/prettier
+16:6  Error: Replace `·phase:·'Phase·5·—·Q3·2027+',·title:·'Trustless·Infrastructure',·icon:·'🔐',·desc:·'ZK·score·proofs.·Verifiable·computation·via·zkVM.·On-device·federated·scoring.·Sybil-resistant·driving·proofs.'·},␍` with `⏎······phase:·'Phase·5·—·Q3·2027+',⏎······title:·'Trustless·Infrastructure',⏎······icon:·'🔐',⏎······desc:·'ZK·score·proofs.·Verifiable·computation·via·zkVM.·On-device·federated·scoring.·Sybil-resistant·driving·proofs.',⏎····},`  prettier/prettier
+17:5  Error: Delete `␍`  prettier/prettier
+18:1  Error: Delete `␍`  prettier/prettier
+19:11  Error: Delete `␍`  prettier/prettier
+20:51  Error: Delete `␍`  prettier/prettier
+21:30  Error: Delete `␍`  prettier/prettier
+22:51  Error: Delete `␍`  prettier/prettier
+23:93  Error: Replace `Community·&·Impact</h1>␍` with `⏎··········Community·&·Impact⏎········</h1>`  prettier/prettier
+24:77  Error: Delete `␍`  prettier/prettier
+25:96  Error: Delete `␍`  prettier/prettier
+26:13  Error: Delete `␍`  prettier/prettier
+27:13  Error: Delete `␍`  prettier/prettier
+28:1  Error: Delete `␍`  prettier/prettier
+29:25  Error: Delete `␍`  prettier/prettier
+30:68  Error: Delete `␍`  prettier/prettier
+31:28  Error: Delete `␍`  prettier/prettier
+32:15  Error: Replace `·key={s.label}·className="rounded-xl·p-5·border"␍` with `⏎············key={s.label}⏎············className="rounded-xl·p-5·border"`  prettier/prettier
+33:70  Error: Replace `>␍` with `⏎··········>`  prettier/prettier
+34:83  Error: Replace `{s.value}</div>␍` with `⏎··············{s.value}⏎············</div>`  prettier/prettier
+35:84  Error: Replace `{s.label}</div>␍` with `⏎··············{s.label}⏎············</div>`  prettier/prettier
+36:92  Error: Replace `{s.delta}</div>␍` with `⏎··············{s.delta}⏎············</div>`  prettier/prettier
+37:17  Error: Delete `␍`  prettier/prettier
+38:12  Error: Delete `␍`  prettier/prettier
+39:13  Error: Delete `␍`  prettier/prettier
+40:1  Error: Delete `␍`  prettier/prettier
+41:31  Error: Delete `␍`  prettier/prettier
+42:30  Error: Delete `␍`  prettier/prettier
+43:78  Error: Replace `Protocol·Roadmap</h2>␍` with `⏎··········Protocol·Roadmap⏎········</h2>`  prettier/prettier
+44:94  Error: Delete `␍`  prettier/prettier
+45:38  Error: Delete `␍`  prettier/prettier
+46:47  Error: Delete `␍`  prettier/prettier
+47:19  Error: Replace `·className="absolute·-left-11·top-2·w-3·h-3·rounded-full·border-2"␍` with `⏎················className="absolute·-left-11·top-2·w-3·h-3·rounded-full·border-2"`  prettier/prettier
+48:74  Error: Replace `·/>␍` with `⏎··············/>`  prettier/prettier
+49:55  Error: Delete `␍`  prettier/prettier
+50:21  Error: Replace `·className="w-12·h-12·rounded-xl·flex·items-center·justify-center·text-xl·flex-shrink-0"␍` with `⏎··················className="w-12·h-12·rounded-xl·flex·items-center·justify-center·text-xl·flex-shrink-0"`  prettier/prettier
+51:66  Error: Replace `>␍` with `⏎················>`  prettier/prettier
+52:27  Error: Delete `␍`  prettier/prettier
+53:23  Error: Delete `␍`  prettier/prettier
+54:22  Error: Delete `␍`  prettier/prettier
+55:23  Error: Replace `·className="text-xs·font-semibold·uppercase·tracking-widest·mb-1"·style={{·color:·'#6366f1'·}}>{m.phase}</div>␍` with `⏎····················className="text-xs·font-semibold·uppercase·tracking-widest·mb-1"⏎····················style={{·color:·'#6366f1'·}}⏎··················>⏎····················{m.phase}⏎··················</div>`  prettier/prettier
+56:84  Error: Replace `{m.title}</div>␍` with `⏎····················{m.title}⏎··················</div>`  prettier/prettier
+57:89  Error: Replace `{m.desc}</div>␍` with `⏎····················{m.desc}⏎··················</div>`  prettier/prettier
+58:23  Error: Delete `␍`  prettier/prettier
+59:21  Error: Delete `␍`  prettier/prettier
+60:19  Error: Delete `␍`  prettier/prettier
+61:14  Error: Delete `␍`  prettier/prettier
+62:15  Error: Delete `␍`  prettier/prettier
+63:13  Error: Delete `␍`  prettier/prettier
+64:1  Error: Delete `␍`  prettier/prettier
+65:33  Error: Delete `␍`  prettier/prettier
+66:11  Error: Replace `·className="rounded-2xl·p-8·text-center"␍` with `⏎········className="rounded-2xl·p-8·text-center"`  prettier/prettier
+67:17  Error: Replace `·background:·'linear-gradient(135deg,·rgba(99,102,241,0.2),·rgba(34,211,238,0.1))',·border:·'1px·solid·rgba(99,102,241,0.3)'·}}>␍` with `⏎··········background:·'linear-gradient(135deg,·rgba(99,102,241,0.2),·rgba(34,211,238,0.1))',⏎··········border:·'1px·solid·rgba(99,102,241,0.3)',⏎········}}⏎······>`  prettier/prettier
+68:48  Error: Delete `␍`  prettier/prettier
+69:78  Error: Replace `Roads·are·getting·safer</h2>␍` with `⏎··········Roads·are·getting·safer⏎········</h2>`  prettier/prettier
+70:99  Error: Delete `␍`  prettier/prettier
+71:90  Error: Replace `␍⏎··········and·31%·reduction·in·phone·usage·while·driving·after·30·trips.␍` with `·and·31%⏎··········reduction·in·phone·usage·while·driving·after·30·trips.`  prettier/prettier
+73:13  Error: Delete `␍`  prettier/prettier
+74:49  Error: Delete `␍`  prettier/prettier
+75:13  Error: Delete `␍`  prettier/prettier
+76:60  Error: Delete `␍`  prettier/prettier
+77:56  Error: Delete `␍`  prettier/prettier
+78:61  Error: Delete `␍`  prettier/prettier
+79:25  Error: Delete `␍`  prettier/prettier
+80:32  Error: Delete `␍`  prettier/prettier
+81:80  Error: Replace `{s.value}</div>␍` with `⏎················{s.value}⏎··············</div>`  prettier/prettier
+82:74  Error: Replace `{s.label}</div>␍` with `⏎················{s.label}⏎··············</div>`  prettier/prettier
+83:19  Error: Delete `␍`  prettier/prettier
+84:14  Error: Delete `␍`  prettier/prettier
+85:15  Error: Delete `␍`  prettier/prettier
+86:13  Error: Delete `␍`  prettier/prettier
+87:11  Error: Delete `␍`  prettier/prettier
+88:5  Error: Delete `␍`  prettier/prettier
+89:2  Error: Delete `␍`  prettier/prettier
+
+./src/app/dashboard/page.tsx
+1:14  Error: Delete `␍`  prettier/prettier
+2:34  Error: Delete `␍`  prettier/prettier
+3:52  Error: Delete `␍`  prettier/prettier
+4:1  Error: Delete `␍`  prettier/prettier
+5:18  Error: Delete `␍`  prettier/prettier
+6:4  Error: Replace `·address:·'0x1a2b...3c4d',·score:·934,·trips:·847,·deliveries:·412,·onTimeRate:·97,·zone:·'Mumbai·Central',·category:·'food',·available:·true,·fee:·12·},␍` with `⏎····address:·'0x1a2b...3c4d',⏎····score:·934,⏎····trips:·847,⏎····deliveries:·412,⏎····onTimeRate:·97,⏎····zone:·'Mumbai·Central',⏎····category:·'food',⏎····available:·true,⏎····fee:·12,⏎··},`  prettier/prettier
+7:4  Error: Replace `·address:·'0x5e6f...7g8h',·score:·891,·trips:·623,·deliveries:·298,·onTimeRate:·94,·zone:·'Bandra·West',·category:·'grocery',·available:·true,·fee:·10·},␍` with `⏎····address:·'0x5e6f...7g8h',⏎····score:·891,⏎····trips:·623,⏎····deliveries:·298,⏎····onTimeRate:·94,⏎····zone:·'Bandra·West',⏎····category:·'grocery',⏎····available:·true,⏎····fee:·10,⏎··},`  prettier/prettier
+8:4  Error: Replace `·address:·'0x9i0j...1k2l',·score:·876,·trips:·1102,·deliveries:·634,·onTimeRate:·96,·zone:·'Andheri·East',·category:·'package',·available:·false,·fee:·11·},␍` with `⏎····address:·'0x9i0j...1k2l',⏎····score:·876,⏎····trips:·1102,⏎····deliveries:·634,⏎····onTimeRate:·96,⏎····zone:·'Andheri·East',⏎····category:·'package',⏎····available:·false,⏎····fee:·11,⏎··},`  prettier/prettier
+9:4  Error: Replace `·address:·'0x3m4n...5o6p',·score:·854,·trips:·445,·deliveries:·187,·onTimeRate:·91,·zone:·'Dadar',·category:·'food',·available:·true,·fee:·9·},␍` with `⏎····address:·'0x3m4n...5o6p',⏎····score:·854,⏎····trips:·445,⏎····deliveries:·187,⏎····onTimeRate:·91,⏎····zone:·'Dadar',⏎····category:·'food',⏎····available:·true,⏎····fee:·9,⏎··},`  prettier/prettier
+10:4  Error: Replace `·address:·'0x7q8r...9s0t',·score:·921,·trips:·789,·deliveries:·501,·onTimeRate:·98,·zone:·'Powai',·category:·'pharmacy',·available:·true,·fee:·14·},␍` with `⏎····address:·'0x7q8r...9s0t',⏎····score:·921,⏎····trips:·789,⏎····deliveries:·501,⏎····onTimeRate:·98,⏎····zone:·'Powai',⏎····category:·'pharmacy',⏎····available:·true,⏎····fee:·14,⏎··},`  prettier/prettier
+11:3  Error: Delete `␍`  prettier/prettier
+12:1  Error: Delete `␍`  prettier/prettier
+13:70  Error: Delete `␍`  prettier/prettier
+14:1  Error: Delete `␍`  prettier/prettier
+15:42  Error: Delete `␍`  prettier/prettier
+16:49  Error: Delete `␍`  prettier/prettier
+17:51  Error: Delete `␍`  prettier/prettier
+18:61  Error: Delete `␍`  prettier/prettier
+19:1  Error: Delete `␍`  prettier/prettier
+20:43  Error: Delete `␍`  prettier/prettier
+21:42  Error: Delete `␍`  prettier/prettier
+22:69  Error: Delete `␍`  prettier/prettier
+23:53  Error: Delete `␍`  prettier/prettier
+24:17  Error: Delete `␍`  prettier/prettier
+25:6  Error: Delete `␍`  prettier/prettier
+26:1  Error: Delete `␍`  prettier/prettier
+27:11  Error: Delete `␍`  prettier/prettier
+28:51  Error: Delete `␍`  prettier/prettier
+29:21  Error: Delete `␍`  prettier/prettier
+30:79  Error: Delete `␍`  prettier/prettier
+31:14  Error: Delete `␍`  prettier/prettier
+32:61  Error: Delete `␍`  prettier/prettier
+33:95  Error: Replace `Driver·Marketplace</h1>␍` with `⏎············Driver·Marketplace⏎··········</h1>`  prettier/prettier
+34:43  Error: Replace `Find·and·hire·verified·safe·drivers·for·your·deliveries.</p>␍` with `⏎············Find·and·hire·verified·safe·drivers·for·your·deliveries.⏎··········</p>`  prettier/prettier
+35:15  Error: Delete `␍`  prettier/prettier
+36:37  Error: Delete `␍`  prettier/prettier
+37:73  Error: Delete `␍`  prettier/prettier
+38:70  Error: Delete `␍`  prettier/prettier
+39:15  Error: Delete `␍`  prettier/prettier
+40:13  Error: Delete `␍`  prettier/prettier
+41:1  Error: Delete `␍`  prettier/prettier
+42:28  Error: Delete `␍`  prettier/prettier
+43:68  Error: Delete `␍`  prettier/prettier
+44:11  Error: Delete `␍`  prettier/prettier
+45:60  Error: Delete `␍`  prettier/prettier
+46:64  Error: Delete `␍`  prettier/prettier
+47:73  Error: Delete `␍`  prettier/prettier
+48:66  Error: Delete `␍`  prettier/prettier
+49:23  Error: Delete `␍`  prettier/prettier
+50:15  Error: Replace `·key={s.label}·className="rounded-xl·p-5·border·flex·items-center·gap-4"␍` with `⏎············key={s.label}⏎············className="rounded-xl·p-5·border·flex·items-center·gap-4"`  prettier/prettier
+51:70  Error: Replace `>␍` with `⏎··········>`  prettier/prettier
+52:55  Error: Delete `␍`  prettier/prettier
+53:18  Error: Delete `␍`  prettier/prettier
+54:80  Error: Replace `{s.value}</div>␍` with `⏎················{s.value}⏎··············</div>`  prettier/prettier
+55:76  Error: Replace `{s.label}</div>␍` with `⏎················{s.label}⏎··············</div>`  prettier/prettier
+56:19  Error: Delete `␍`  prettier/prettier
+57:17  Error: Delete `␍`  prettier/prettier
+58:12  Error: Delete `␍`  prettier/prettier
+59:13  Error: Delete `␍`  prettier/prettier
+60:1  Error: Delete `␍`  prettier/prettier
+61:22  Error: Delete `␍`  prettier/prettier
+62:11  Error: Replace `·className="rounded-xl·border·p-5·mb-6"␍` with `⏎········className="rounded-xl·border·p-5·mb-6"`  prettier/prettier
+63:66  Error: Replace `>␍` with `⏎······>`  prettier/prettier
+64:57  Error: Delete `␍`  prettier/prettier
+65:16  Error: Delete `␍`  prettier/prettier
+66:19  Error: Replace `·className="block·text-xs·font-medium·mb-2·uppercase·tracking-widest"·style={{·color:·'#a1a1aa'·}}>␍` with `⏎··············className="block·text-xs·font-medium·mb-2·uppercase·tracking-widest"⏎··············style={{·color:·'#a1a1aa'·}}⏎············>`  prettier/prettier
+67:31  Error: Delete `␍`  prettier/prettier
+68:21  Error: Delete `␍`  prettier/prettier
+69:54  Error: Delete `␍`  prettier/prettier
+70:21  Error: Delete `␍`  prettier/prettier
+71:29  Error: Replace `·min={500}·max={1000}·step={10}·value={minScore}␍` with `⏎················min={500}⏎················max={1000}⏎················step={10}⏎················value={minScore}`  prettier/prettier
+72:70  Error: Delete `␍`  prettier/prettier
+73:33  Error: Replace `·style={{·accentColor:·'#6366f1'·}}␍` with `⏎················style={{·accentColor:·'#6366f1'·}}`  prettier/prettier
+74:17  Error: Delete `␍`  prettier/prettier
+75:77  Error: Replace `{minScore}</span>␍` with `⏎················{minScore}⏎··············</span>`  prettier/prettier
+76:19  Error: Delete `␍`  prettier/prettier
+77:17  Error: Delete `␍`  prettier/prettier
+78:16  Error: Delete `␍`  prettier/prettier
+79:19  Error: Replace `·className="block·text-xs·font-medium·mb-2·uppercase·tracking-widest"·style={{·color:·'#a1a1aa'·}}>␍` with `⏎··············className="block·text-xs·font-medium·mb-2·uppercase·tracking-widest"⏎··············style={{·color:·'#a1a1aa'·}}⏎············>`  prettier/prettier
+80:23  Error: Delete `␍`  prettier/prettier
+81:21  Error: Delete `␍`  prettier/prettier
+82:51  Error: Delete `␍`  prettier/prettier
+83:39  Error: Delete `␍`  prettier/prettier
+84:24  Error: Replace `·key={c}·onClick={()·=>·setCategory(c)}␍` with `⏎··················key={c}⏎··················onClick={()·=>·setCategory(c)}`  prettier/prettier
+85:97  Error: Delete `␍`  prettier/prettier
+86:26  Error: Replace `category·===·c␍` with `⏎····················category·===·c`  prettier/prettier
+87:1  Error: Replace `····················?·{·background:·'#6366f1',·color:·'#fff',·borderColor:·'#6366f1'·}␍` with `······················?·{·background:·'#6366f1',·color:·'#fff',·borderColor:·'#6366f1'·}`  prettier/prettier
+88:21  Error: Replace `:·{·background:·'transparent',·color:·'#a1a1aa',·borderColor:·'#27272a'·}}>␍` with `··:·{·background:·'transparent',·color:·'#a1a1aa',·borderColor:·'#27272a'·}⏎··················}⏎················>`  prettier/prettier
+89:22  Error: Delete `␍`  prettier/prettier
+90:26  Error: Delete `␍`  prettier/prettier
+91:18  Error: Delete `␍`  prettier/prettier
+92:19  Error: Delete `␍`  prettier/prettier
+93:17  Error: Delete `␍`  prettier/prettier
+94:52  Error: Delete `␍`  prettier/prettier
+95:19  Error: Replace `·type="checkbox"·id="available"·checked={onlyAvailable}␍` with `⏎··············type="checkbox"⏎··············id="available"⏎··············checked={onlyAvailable}`  prettier/prettier
+96:67  Error: Delete `␍`  prettier/prettier
+97:49  Error: Replace `·/>␍` with `⏎············/>`  prettier/prettier
+98:89  Error: Replace `Available·now·only</label>␍` with `⏎··············Available·now·only⏎············</label>`  prettier/prettier
+99:17  Error: Delete `␍`  prettier/prettier
+100:73  Error: Delete `␍`  prettier/prettier
+101:77  Error: Delete `␍`  prettier/prettier
+102:17  Error: Delete `␍`  prettier/prettier
+103:15  Error: Delete `␍`  prettier/prettier
+104:13  Error: Delete `␍`  prettier/prettier
+105:1  Error: Delete `␍`  prettier/prettier
+106:27  Error: Delete `␍`  prettier/prettier
+107:11  Error: Replace `·className="rounded-xl·border·overflow-hidden"␍` with `⏎········className="rounded-xl·border·overflow-hidden"`  prettier/prettier
+108:66  Error: Replace `>␍` with `⏎······>`  prettier/prettier
+109:35  Error: Delete `␍`  prettier/prettier
+110:18  Error: Delete `␍`  prettier/prettier
+111:16  Error: Replace `·className="border-b·text-xs·uppercase·tracking-widest"␍` with `⏎··············className="border-b·text-xs·uppercase·tracking-widest"`  prettier/prettier
+112:90  Error: Replace `>␍` with `⏎············>`  prettier/prettier
+113:62  Error: Delete `␍`  prettier/prettier
+114:68  Error: Delete `␍`  prettier/prettier
+115:87  Error: Delete `␍`  prettier/prettier
+116:84  Error: Delete `␍`  prettier/prettier
+117:81  Error: Delete `␍`  prettier/prettier
+118:62  Error: Delete `␍`  prettier/prettier
+119:63  Error: Delete `␍`  prettier/prettier
+120:18  Error: Delete `␍`  prettier/prettier
+121:19  Error: Delete `␍`  prettier/prettier
+122:18  Error: Delete `␍`  prettier/prettier
+123:39  Error: Delete `␍`  prettier/prettier
+124:19  Error: Delete `␍`  prettier/prettier
+125:100  Error: Delete `␍`  prettier/prettier
+126:81  Error: Delete `␍`  prettier/prettier
+127:22  Error: Delete `␍`  prettier/prettier
+128:20  Error: Delete `␍`  prettier/prettier
+129:18  Error: Delete `␍`  prettier/prettier
+130:36  Error: Delete `␍`  prettier/prettier
+131:20  Error: Replace `·key={d.address}·className="border-b·transition-colors"␍` with `⏎··················key={d.address}⏎··················className="border-b·transition-colors"`  prettier/prettier
+132:53  Error: Delete `␍`  prettier/prettier
+133:87  Error: Delete `␍`  prettier/prettier
+134:91  Error: Replace `>␍` with `⏎················>`  prettier/prettier
+135:45  Error: Delete `␍`  prettier/prettier
+136:85  Error: Replace `{d.address}</div>␍` with `⏎······················{d.address}⏎····················</div>`  prettier/prettier
+137:93  Error: Delete `␍`  prettier/prettier
+138:64  Error: Delete `␍`  prettier/prettier
+139:27  Error: Delete `␍`  prettier/prettier
+140:24  Error: Delete `␍`  prettier/prettier
+141:45  Error: Delete `␍`  prettier/prettier
+142:62  Error: Delete `␍`  prettier/prettier
+143:62  Error: Delete `␍`  prettier/prettier
+144:80  Error: Replace `{d.score}</span>␍` with `⏎························{d.score}⏎······················</span>`  prettier/prettier
+145:27  Error: Delete `␍`  prettier/prettier
+146:24  Error: Delete `␍`  prettier/prettier
+147:22  Error: Replace `·className="py-4·px-6·hidden·sm:table-cell·text-sm"·style={{·color:·'#a1a1aa'·}}>{d.deliveries}</td>␍` with `⏎····················className="py-4·px-6·hidden·sm:table-cell·text-sm"⏎····················style={{·color:·'#a1a1aa'·}}⏎··················>⏎····················{d.deliveries}⏎··················</td>`  prettier/prettier
+148:66  Error: Delete `␍`  prettier/prettier
+149:26  Error: Replace `·className="text-sm·font-medium"␍` with `⏎······················className="text-sm·font-medium"`  prettier/prettier
+150:84  Error: Replace `>␍` with `⏎····················>`  prettier/prettier
+151:38  Error: Delete `␍`  prettier/prettier
+152:28  Error: Delete `␍`  prettier/prettier
+153:24  Error: Delete `␍`  prettier/prettier
+154:22  Error: Replace `·className="py-4·px-6·hidden·lg:table-cell·text-sm"·style={{·color:·'#a1a1aa'·}}>{d.zone}</td>␍` with `⏎····················className="py-4·px-6·hidden·lg:table-cell·text-sm"⏎····················style={{·color:·'#a1a1aa'·}}⏎··················>⏎····················{d.zone}⏎··················</td>`  prettier/prettier
+155:45  Error: Delete `␍`  prettier/prettier
+156:26  Error: Replace `·className="text-xs·font-medium·px-2.5·py-1·rounded-full"␍` with `⏎······················className="text-xs·font-medium·px-2.5·py-1·rounded-full"`  prettier/prettier
+157:30  Error: Replace `d.available␍` with `⏎························d.available`  prettier/prettier
+158:1  Error: Replace `························?·{·background:·'rgba(16,185,129,0.15)',·color:·'#34d399'·}␍` with `··························?·{·background:·'rgba(16,185,129,0.15)',·color:·'#34d399'·}`  prettier/prettier
+159:1  Error: Replace `························:·{·color:·'#a1a1aa'·}}>␍` with `··························:·{·color:·'#a1a1aa'·}⏎······················}⏎····················>`  prettier/prettier
+160:59  Error: Delete `␍`  prettier/prettier
+161:28  Error: Delete `␍`  prettier/prettier
+162:24  Error: Delete `␍`  prettier/prettier
+163:56  Error: Delete `␍`  prettier/prettier
+164:28  Error: Delete `␍`  prettier/prettier
+165:95  Error: Delete `␍`  prettier/prettier
+166:46  Error: Delete `␍`  prettier/prettier
+167:30  Error: Replace `d.available␍` with `⏎························d.available`  prettier/prettier
+168:1  Error: Replace `························?·{·background:·'#6366f1',·color:·'#fff',·cursor:·'pointer'·}␍` with `··························?·{·background:·'#6366f1',·color:·'#fff',·cursor:·'pointer'·}`  prettier/prettier
+169:1  Error: Replace `························:·{·background:·'#27272a',·color:·'#a1a1aa',·cursor:·'not-allowed'·}}>␍` with `··························:·{·background:·'#27272a',·color:·'#a1a1aa',·cursor:·'not-allowed'·}⏎······················}⏎····················>`  prettier/prettier
+170:43  Error: Delete `␍`  prettier/prettier
+171:30  Error: Delete `␍`  prettier/prettier
+172:24  Error: Delete `␍`  prettier/prettier
+173:22  Error: Delete `␍`  prettier/prettier
+174:17  Error: Delete `␍`  prettier/prettier
+175:15  Error: Delete `␍`  prettier/prettier
+176:19  Error: Delete `␍`  prettier/prettier
+177:17  Error: Delete `␍`  prettier/prettier
+178:13  Error: Replace `·className="px-6·py-3·text-xs·border-t"·style={{·borderColor:·'#27272a',·color:·'#a1a1aa'·}}>␍` with `⏎··········className="px-6·py-3·text-xs·border-t"⏎··········style={{·borderColor:·'#27272a',·color:·'#a1a1aa'·}}⏎········>`  prettier/prettier
+179:94  Error: Replace `·production␍` with `⏎··········production`  prettier/prettier
+180:15  Error: Delete `␍`  prettier/prettier
+181:13  Error: Delete `␍`  prettier/prettier
+182:11  Error: Delete `␍`  prettier/prettier
+183:5  Error: Delete `␍`  prettier/prettier
+184:2  Error: Delete `␍`  prettier/prettier
+
+./src/app/docs/page.tsx
+1:30  Error: Delete `␍`  prettier/prettier
+2:1  Error: Delete `␍`  prettier/prettier
+3:37  Error: Delete `␍`  prettier/prettier
+4:11  Error: Delete `␍`  prettier/prettier
+5:100  Error: Delete `␍`  prettier/prettier
+6:46  Error: Delete `␍`  prettier/prettier
+7:11  Error: Replace `·className="text-xs·font-semibold·uppercase·tracking-widest·mb-4"·style={{·color:·'#a1a1aa'·}}>␍` with `⏎········className="text-xs·font-semibold·uppercase·tracking-widest·mb-4"⏎········style={{·color:·'#a1a1aa'·}}⏎······>`  prettier/prettier
+8:26  Error: Delete `␍`  prettier/prettier
+9:13  Error: Delete `␍`  prettier/prettier
+10:91  Error: Delete `␍`  prettier/prettier
+11:26  Error: Delete `␍`  prettier/prettier
+12:12  Error: Delete `␍`  prettier/prettier
+13:89  Error: Delete `␍`  prettier/prettier
+14:74  Error: Replace `␍⏎········Safety·Registry,·Insurance·Verification,·and·Marketplace·APIs.␍` with `·Safety·Registry,·Insurance⏎········Verification,·and·Marketplace·APIs.`  prettier/prettier
+16:11  Error: Delete `␍`  prettier/prettier
+17:11  Error: Replace `·className="p-6·rounded-xl·border·border-border·mb-8·text-left·max-w-md·w-full"·style={{·background:·'#111113'·}}>␍` with `⏎········className="p-6·rounded-xl·border·border-border·mb-8·text-left·max-w-md·w-full"⏎········style={{·background:·'#111113'·}}⏎······>`  prettier/prettier
+18:94  Error: Replace `Available·endpoints·(Phase·1–2)</div>␍` with `⏎··········Available·endpoints·(Phase·1–2)⏎········</div>`  prettier/prettier
+19:11  Error: Delete `␍`  prettier/prettier
+20:40  Error: Delete `␍`  prettier/prettier
+21:37  Error: Delete `␍`  prettier/prettier
+22:39  Error: Delete `␍`  prettier/prettier
+23:49  Error: Delete `␍`  prettier/prettier
+24:41  Error: Delete `␍`  prettier/prettier
+25:24  Error: Delete `␍`  prettier/prettier
+26:65  Error: Delete `␍`  prettier/prettier
+27:18  Error: Replace `·className="text-sm"·style={{·color:·'#22d3ee',·fontFamily:·'"Courier·New",·monospace'·}}>{ep}</code>␍` with `⏎··············className="text-sm"⏎··············style={{·color:·'#22d3ee',·fontFamily:·'"Courier·New",·monospace'·}}⏎············>⏎··············{ep}⏎············</code>`  prettier/prettier
+28:17  Error: Delete `␍`  prettier/prettier
+29:12  Error: Delete `␍`  prettier/prettier
+30:13  Error: Delete `␍`  prettier/prettier
+31:48  Error: Replace `←·Back·to·Home</Link>␍` with `⏎········←·Back·to·Home⏎······</Link>`  prettier/prettier
+32:11  Error: Delete `␍`  prettier/prettier
+33:5  Error: Delete `␍`  prettier/prettier
+34:2  Error: Delete `␍`  prettier/prettier
+
+./src/app/insurer/verify/page.tsx
+1:30  Error: Delete `␍`  prettier/prettier
+2:1  Error: Delete `␍`  prettier/prettier
+3:46  Error: Delete `␍`  prettier/prettier
+4:11  Error: Delete `␍`  prettier/prettier
+5:100  Error: Delete `␍`  prettier/prettier
+6:47  Error: Delete `␍`  prettier/prettier
+7:11  Error: Replace `·className="text-xs·font-semibold·uppercase·tracking-widest·mb-4"·style={{·color:·'#a1a1aa'·}}>␍` with `⏎········className="text-xs·font-semibold·uppercase·tracking-widest·mb-4"⏎········style={{·color:·'#a1a1aa'·}}⏎······>`  prettier/prettier
+8:26  Error: Delete `␍`  prettier/prettier
+9:13  Error: Delete `␍`  prettier/prettier
+10:91  Error: Delete `␍`  prettier/prettier
+11:23  Error: Delete `␍`  prettier/prettier
+12:12  Error: Delete `␍`  prettier/prettier
+13:89  Error: Delete `␍`  prettier/prettier
+14:83  Error: Replace `␍⏎········and·consent-gated·data·access.·Coming·in·Phase·3.␍` with `·and·consent-gated⏎········data·access.·Coming·in·Phase·3.`  prettier/prettier
+16:11  Error: Delete `␍`  prettier/prettier
+17:11  Error: Replace `·className="p-6·rounded-xl·border·border-border·mb-8·text-left·max-w-md·w-full"·style={{·background:·'#111113'·}}>␍` with `⏎········className="p-6·rounded-xl·border·border-border·mb-8·text-left·max-w-md·w-full"⏎········style={{·background:·'#111113'·}}⏎······>`  prettier/prettier
+18:94  Error: Replace `What's·coming</div>␍` with `⏎··········What's·coming⏎········</div>`  prettier/prettier
+19:11  Error: Delete `␍`  prettier/prettier
+20:63  Error: Delete `␍`  prettier/prettier
+21:63  Error: Delete `␍`  prettier/prettier
+22:50  Error: Delete `␍`  prettier/prettier
+23:41  Error: Delete `␍`  prettier/prettier
+24:64  Error: Delete `␍`  prettier/prettier
+25:26  Error: Delete `␍`  prettier/prettier
+26:15  Error: Replace `·key={item}·className="flex·items-start·gap-2·py-2·border-b·border-border·text-sm"·style={{·color:·'#a1a1aa'·}}>␍` with `⏎············key={item}⏎············className="flex·items-start·gap-2·py-2·border-b·border-border·text-sm"⏎············style={{·color:·'#a1a1aa'·}}⏎··········>`  prettier/prettier
+27:63  Error: Delete `␍`  prettier/prettier
+28:17  Error: Delete `␍`  prettier/prettier
+29:12  Error: Delete `␍`  prettier/prettier
+30:13  Error: Delete `␍`  prettier/prettier
+31:48  Error: Replace `←·Back·to·Home</Link>␍` with `⏎········←·Back·to·Home⏎······</Link>`  prettier/prettier
+32:11  Error: Delete `␍`  prettier/prettier
+33:5  Error: Delete `␍`  prettier/prettier
+34:2  Error: Delete `␍`  prettier/prettier
+
+./src/app/layout.tsx
+1:38  Error: Delete `␍`  prettier/prettier
+2:24  Error: Delete `␍`  prettier/prettier
+3:40  Error: Delete `␍`  prettier/prettier
+4:1  Error: Delete `␍`  prettier/prettier
+5:36  Error: Delete `␍`  prettier/prettier
+6:27  Error: Delete `␍`  prettier/prettier
+7:97  Error: Delete `␍`  prettier/prettier
+8:3  Error: Delete `␍`  prettier/prettier
+9:1  Error: Delete `␍`  prettier/prettier
+10:82  Error: Delete `␍`  prettier/prettier
+11:11  Error: Delete `␍`  prettier/prettier
+12:21  Error: Delete `␍`  prettier/prettier
+13:85  Error: Delete `␍`  prettier/prettier
+14:36  Error: Delete `␍`  prettier/prettier
+15:16  Error: Delete `␍`  prettier/prettier
+16:50  Error: Delete `␍`  prettier/prettier
+17:140  Error: Delete `␍`  prettier/prettier
+18:74  Error: Delete `␍`  prettier/prettier
+19:39  Error: Delete `␍`  prettier/prettier
+20:15  Error: Replace `·href="https://twitter.com/drivxprotocol"·target="_blank"·rel="noopener·noreferrer"␍` with `⏎··············href="https://twitter.com/drivxprotocol"⏎··············target="_blank"⏎··············rel="noopener·noreferrer"`  prettier/prettier
+21:60  Error: Replace `·style={{·color:·'#a1a1aa'·}}>Twitter</a>␍` with `⏎··············style={{·color:·'#a1a1aa'·}}⏎············>⏎··············Twitter⏎············</a>`  prettier/prettier
+22:15  Error: Replace `·href="https://github.com/jpdeveloper89-cmd"·target="_blank"·rel="noopener·noreferrer"␍` with `⏎··············href="https://github.com/jpdeveloper89-cmd"⏎··············target="_blank"⏎··············rel="noopener·noreferrer"`  prettier/prettier
+23:60  Error: Replace `·style={{·color:·'#a1a1aa'·}}>GitHub</a>␍` with `⏎··············style={{·color:·'#a1a1aa'·}}⏎············>⏎··············GitHub⏎············</a>`  prettier/prettier
+24:15  Error: Replace `·href="/docs"·className="hover:text-text·transition-colors"·style={{·color:·'#a1a1aa'·}}>API·Docs</a>␍` with `⏎··············href="/docs"⏎··············className="hover:text-text·transition-colors"⏎··············style={{·color:·'#a1a1aa'·}}⏎············>⏎··············API·Docs⏎············</a>`  prettier/prettier
+25:17  Error: Delete `␍`  prettier/prettier
+26:18  Error: Delete `␍`  prettier/prettier
+27:14  Error: Delete `␍`  prettier/prettier
+28:12  Error: Delete `␍`  prettier/prettier
+29:5  Error: Delete `␍`  prettier/prettier
+30:2  Error: Delete `␍`  prettier/prettier
+
+./src/app/leaderboard/page.tsx
+1:52  Error: Delete `␍`  prettier/prettier
+2:1  Error: Delete `␍`  prettier/prettier
+3:22  Error: Delete `␍`  prettier/prettier
+4:4  Error: Replace `·rank:·1,·handle:·'SafeDriver_Mumbai',·score:·982,·trips:·847,·km:·12400,·region:·'Mumbai,·IN',·verified:·true·},␍` with `⏎····rank:·1,⏎····handle:·'SafeDriver_Mumbai',⏎····score:·982,⏎····trips:·847,⏎····km:·12400,⏎····region:·'Mumbai,·IN',⏎····verified:·true,⏎··},`  prettier/prettier
+5:4  Error: Replace `·rank:·2,·handle:·'Anonymous·Driver',·score:·978,·trips:·1200,·km:·18900,·region:·'São·Paulo,·BR',·verified:·true·},␍` with `⏎····rank:·2,⏎····handle:·'Anonymous·Driver',⏎····score:·978,⏎····trips:·1200,⏎····km:·18900,⏎····region:·'São·Paulo,·BR',⏎····verified:·true,⏎··},`  prettier/prettier
+6:4  Error: Replace `·rank:·3,·handle:·'CarefulCommuter',·score:·971,·trips:·634,·km:·9800,·region:·'London,·UK',·verified:·true·},␍` with `⏎····rank:·3,⏎····handle:·'CarefulCommuter',⏎····score:·971,⏎····trips:·634,⏎····km:·9800,⏎····region:·'London,·UK',⏎····verified:·true,⏎··},`  prettier/prettier
+7:4  Error: Replace `·rank:·4,·handle:·'Anonymous·Driver',·score:·968,·trips:·412,·km:·6200,·region:·'Toronto,·CA',·verified:·true·},␍` with `⏎····rank:·4,⏎····handle:·'Anonymous·Driver',⏎····score:·968,⏎····trips:·412,⏎····km:·6200,⏎····region:·'Toronto,·CA',⏎····verified:·true,⏎··},`  prettier/prettier
+8:4  Error: Replace `·rank:·5,·handle:·'NightOwlDriver',·score:·961,·trips:·923,·km:·14100,·region:·'Chicago,·US',·verified:·true·},␍` with `⏎····rank:·5,⏎····handle:·'NightOwlDriver',⏎····score:·961,⏎····trips:·923,⏎····km:·14100,⏎····region:·'Chicago,·US',⏎····verified:·true,⏎··},`  prettier/prettier
+9:4  Error: Replace `·rank:·6,·handle:·'Anonymous·Driver',·score:·958,·trips:·287,·km:·4300,·region:·'Berlin,·DE',·verified:·true·},␍` with `⏎····rank:·6,⏎····handle:·'Anonymous·Driver',⏎····score:·958,⏎····trips:·287,⏎····km:·4300,⏎····region:·'Berlin,·DE',⏎····verified:·true,⏎··},`  prettier/prettier
+10:4  Error: Replace `·rank:·7,·handle:·'SmoothOperator_DXB',·score:·954,·trips:·1089,·km:·16700,·region:·'Dubai,·AE',·verified:·true·},␍` with `⏎····rank:·7,⏎····handle:·'SmoothOperator_DXB',⏎····score:·954,⏎····trips:·1089,⏎····km:·16700,⏎····region:·'Dubai,·AE',⏎····verified:·true,⏎··},`  prettier/prettier
+11:4  Error: Replace `·rank:·8,·handle:·'Anonymous·Driver',·score:·949,·trips:·756,·km:·11200,·region:·'Sydney,·AU',·verified:·true·},␍` with `⏎····rank:·8,⏎····handle:·'Anonymous·Driver',⏎····score:·949,⏎····trips:·756,⏎····km:·11200,⏎····region:·'Sydney,·AU',⏎····verified:·true,⏎··},`  prettier/prettier
+12:4  Error: Replace `·rank:·9,·handle:·'QuiteCautious',·score:·943,·trips:·334,·km:·5100,·region:·'Singapore,·SG',·verified:·true·},␍` with `⏎····rank:·9,⏎····handle:·'QuiteCautious',⏎····score:·943,⏎····trips:·334,⏎····km:·5100,⏎····region:·'Singapore,·SG',⏎····verified:·true,⏎··},`  prettier/prettier
+13:4  Error: Replace `·rank:·10,·handle:·'Anonymous·Driver',·score:·939,·trips:·678,·km:·9900,·region:·'Mexico·City,·MX',·verified:·true·},␍` with `⏎····rank:·10,⏎····handle:·'Anonymous·Driver',⏎····score:·939,⏎····trips:·678,⏎····km:·9900,⏎····region:·'Mexico·City,·MX',⏎····verified:·true,⏎··},`  prettier/prettier
+14:3  Error: Delete `␍`  prettier/prettier
+15:1  Error: Delete `␍`  prettier/prettier
+16:44  Error: Delete `␍`  prettier/prettier
+17:11  Error: Delete `␍`  prettier/prettier
+18:51  Error: Delete `␍`  prettier/prettier
+19:30  Error: Delete `␍`  prettier/prettier
+20:53  Error: Delete `␍`  prettier/prettier
+21:62  Error: Delete `␍`  prettier/prettier
+22:44  Error: Delete `␍`  prettier/prettier
+23:99  Error: Replace `·your·handle.␍` with `⏎··········your·handle.`  prettier/prettier
+24:13  Error: Delete `␍`  prettier/prettier
+25:13  Error: Delete `␍`  prettier/prettier
+26:1  Error: Delete `␍`  prettier/prettier
+27:61  Error: Delete `␍`  prettier/prettier
+28:93  Error: Delete `␍`  prettier/prettier
+29:18  Error: Replace `·key={r}·className={`px-4·py-2·rounded-lg·text-sm·font-medium·whitespace-nowrap·border·transition-colors·${␍` with `⏎············key={r}⏎············className={`px-4·py-2·rounded-lg·text-sm·font-medium·whitespace-nowrap·border·transition-colors·${`  prettier/prettier
+30:1  Error: Replace `············r·===·'All·Regions'␍` with `··············r·===·'All·Regions'`  prettier/prettier
+31:1  Error: Replace `··············?·'bg-accent·border-accent·text-white'␍` with `················?·'bg-accent·border-accent·text-white'`  prettier/prettier
+32:15  Error: Replace `:·'border-border·text-muted·hover:text-text·hover:border-text'␍` with `··:·'border-border·text-muted·hover:text-text·hover:border-text'`  prettier/prettier
+33:1  Error: Replace `··········}`}>␍` with `············}`}⏎··········>`  prettier/prettier
+34:16  Error: Delete `␍`  prettier/prettier
+35:20  Error: Delete `␍`  prettier/prettier
+36:12  Error: Delete `␍`  prettier/prettier
+37:13  Error: Delete `␍`  prettier/prettier
+38:1  Error: Delete `␍`  prettier/prettier
+39:11  Error: Replace `·className="rounded-xl·border·border-border·overflow-hidden"·style={{·background:·'#111113'·}}>␍` with `⏎········className="rounded-xl·border·border-border·overflow-hidden"⏎········style={{·background:·'#111113'·}}⏎······>`  prettier/prettier
+40:35  Error: Delete `␍`  prettier/prettier
+41:18  Error: Delete `␍`  prettier/prettier
+42:97  Error: Delete `␍`  prettier/prettier
+43:60  Error: Delete `␍`  prettier/prettier
+44:62  Error: Delete `␍`  prettier/prettier
+45:68  Error: Delete `␍`  prettier/prettier
+46:82  Error: Delete `␍`  prettier/prettier
+47:85  Error: Delete `␍`  prettier/prettier
+48:83  Error: Delete `␍`  prettier/prettier
+49:18  Error: Delete `␍`  prettier/prettier
+50:19  Error: Delete `␍`  prettier/prettier
+51:18  Error: Delete `␍`  prettier/prettier
+52:38  Error: Delete `␍`  prettier/prettier
+53:18  Error: Replace `·key={d.rank}·className="border-b·border-border·hover:bg-white/5·transition-colors">␍` with `⏎················key={d.rank}⏎················className="border-b·border-border·hover:bg-white/5·transition-colors"⏎··············>`  prettier/prettier
+54:43  Error: Delete `␍`  prettier/prettier
+55:24  Error: Replace `·className={`font-bold·text-lg·${d.rank·<=·3·?·''·:·'text-muted'}`}␍` with `⏎····················className={`font-bold·text-lg·${d.rank·<=·3·?·''·:·'text-muted'}`}`  prettier/prettier
+56:68  Error: Replace `>␍` with `⏎··················>`  prettier/prettier
+57:82  Error: Delete `␍`  prettier/prettier
+58:26  Error: Delete `␍`  prettier/prettier
+59:22  Error: Delete `␍`  prettier/prettier
+60:43  Error: Delete `␍`  prettier/prettier
+61:60  Error: Delete `␍`  prettier/prettier
+62:25  Error: Replace `·className="w-9·h-9·rounded-full·flex·items-center·justify-center·text-sm·font-semibold"␍` with `⏎······················className="w-9·h-9·rounded-full·flex·items-center·justify-center·text-sm·font-semibold"`  prettier/prettier
+63:88  Error: Replace `>␍` with `⏎····················>`  prettier/prettier
+64:36  Error: Delete `␍`  prettier/prettier
+65:27  Error: Delete `␍`  prettier/prettier
+66:26  Error: Delete `␍`  prettier/prettier
+67:86  Error: Delete `␍`  prettier/prettier
+68:38  Error: Replace `<span·className="text-xs"·style={{·color:·'#22d3ee'·}}>✓·Verified</span>}␍` with `(⏎························<span·className="text-xs"·style={{·color:·'#22d3ee'·}}>⏎··························✓·Verified⏎························</span>⏎······················)}`  prettier/prettier
+69:27  Error: Delete `␍`  prettier/prettier
+70:25  Error: Delete `␍`  prettier/prettier
+71:22  Error: Delete `␍`  prettier/prettier
+72:43  Error: Delete `␍`  prettier/prettier
+73:60  Error: Delete `␍`  prettier/prettier
+74:60  Error: Delete `␍`  prettier/prettier
+75:75  Error: Delete `␍`  prettier/prettier
+76:25  Error: Delete `␍`  prettier/prettier
+77:22  Error: Delete `␍`  prettier/prettier
+78:83  Error: Replace `{d.trips.toLocaleString()}</td>␍` with `⏎··················{d.trips.toLocaleString()}⏎················</td>`  prettier/prettier
+79:83  Error: Replace `{d.km.toLocaleString()}·km</td>␍` with `⏎··················{d.km.toLocaleString()}·km⏎················</td>`  prettier/prettier
+80:98  Error: Delete `␍`  prettier/prettier
+81:20  Error: Delete `␍`  prettier/prettier
+82:16  Error: Delete `␍`  prettier/prettier
+83:19  Error: Delete `␍`  prettier/prettier
+84:17  Error: Delete `␍`  prettier/prettier
+85:13  Error: Delete `␍`  prettier/prettier
+86:1  Error: Delete `␍`  prettier/prettier
+87:58  Error: Delete `␍`  prettier/prettier
+88:96  Error: Delete `␍`  prettier/prettier
+89:11  Error: Delete `␍`  prettier/prettier
+90:11  Error: Delete `␍`  prettier/prettier
+91:5  Error: Delete `␍`  prettier/prettier
+92:2  Error: Delete `␍`  prettier/prettier
+
+./src/app/metrics/page.tsx
+1:30  Error: Delete `␍`  prettier/prettier
+2:1  Error: Delete `␍`  prettier/prettier
+3:62  Error: Delete `␍`  prettier/prettier
+4:18  Error: Delete `␍`  prettier/prettier
+5:34  Error: Delete `␍`  prettier/prettier
+6:33  Error: Delete `␍`  prettier/prettier
+7:32  Error: Delete `␍`  prettier/prettier
+8:29  Error: Delete `␍`  prettier/prettier
+9:41  Error: Delete `␍`  prettier/prettier
+10:46  Error: Delete `␍`  prettier/prettier
+11:40  Error: Delete `␍`  prettier/prettier
+12:34  Error: Delete `␍`  prettier/prettier
+13:34  Error: Delete `␍`  prettier/prettier
+14:3  Error: Delete `␍`  prettier/prettier
+15:1  Error: Delete `␍`  prettier/prettier
+16:22  Error: Delete `␍`  prettier/prettier
+17:71  Error: Delete `␍`  prettier/prettier
+18:67  Error: Delete `␍`  prettier/prettier
+19:65  Error: Delete `␍`  prettier/prettier
+20:3  Error: Delete `␍`  prettier/prettier
+21:1  Error: Delete `␍`  prettier/prettier
+22:40  Error: Delete `␍`  prettier/prettier
+23:11  Error: Delete `␍`  prettier/prettier
+24:51  Error: Delete `␍`  prettier/prettier
+25:30  Error: Delete `␍`  prettier/prettier
+26:56  Error: Delete `␍`  prettier/prettier
+27:93  Error: Replace `Token·Metrics</h1>␍` with `⏎··········Token·Metrics⏎········</h1>`  prettier/prettier
+28:77  Error: Delete `␍`  prettier/prettier
+29:88  Error: Replace `␍⏎··········All·data·verifiable·on-chain·via·Basescan.␍` with `·All·data⏎··········verifiable·on-chain·via·Basescan.`  prettier/prettier
+31:13  Error: Delete `␍`  prettier/prettier
+32:13  Error: Delete `␍`  prettier/prettier
+33:1  Error: Delete `␍`  prettier/prettier
+34:32  Error: Delete `␍`  prettier/prettier
+35:68  Error: Delete `␍`  prettier/prettier
+36:11  Error: Delete `␍`  prettier/prettier
+37:12  Error: Replace `·label:·'Total·Supply·(Fixed)',·value:·metrics.totalSupply,·sub:·'DVX···No·mint·function'·},␍` with `⏎············label:·'Total·Supply·(Fixed)',⏎············value:·metrics.totalSupply,⏎············sub:·'DVX···No·mint·function',⏎··········},`  prettier/prettier
+38:12  Error: Replace `·label:·'In·Uniswap·V4·Pool',·value:·metrics.poolBalance,·sub:·'DVX···Liquidity·locked'·},␍` with `⏎············label:·'In·Uniswap·V4·Pool',⏎············value:·metrics.poolBalance,⏎············sub:·'DVX···Liquidity·locked',⏎··········},`  prettier/prettier
+39:95  Error: Delete `␍`  prettier/prettier
+40:99  Error: Delete `␍`  prettier/prettier
+41:100  Error: Delete `␍`  prettier/prettier
+42:12  Error: Replace `·label:·'Trading·Fee·Revenue',·value:·metrics.tradingFeeRevenue,·sub:·'WETH·+·DVX···All-time'·},␍` with `⏎············label:·'Trading·Fee·Revenue',⏎············value:·metrics.tradingFeeRevenue,⏎············sub:·'WETH·+·DVX···All-time',⏎··········},`  prettier/prettier
+43:23  Error: Delete `␍`  prettier/prettier
+44:15  Error: Replace `·key={m.label}·className="rounded-xl·p-5·border"␍` with `⏎············key={m.label}⏎············className="rounded-xl·p-5·border"`  prettier/prettier
+45:70  Error: Replace `>␍` with `⏎··········>`  prettier/prettier
+46:98  Error: Replace `{m.label}</div>␍` with `⏎··············{m.label}⏎············</div>`  prettier/prettier
+47:82  Error: Replace `{m.value}</div>␍` with `⏎··············{m.value}⏎············</div>`  prettier/prettier
+48:67  Error: Replace `{m.sub}</div>␍` with `⏎··············{m.sub}⏎············</div>`  prettier/prettier
+49:17  Error: Delete `␍`  prettier/prettier
+50:12  Error: Delete `␍`  prettier/prettier
+51:13  Error: Delete `␍`  prettier/prettier
+52:1  Error: Delete `␍`  prettier/prettier
+53:35  Error: Delete `␍`  prettier/prettier
+54:11  Error: Replace `·className="rounded-xl·p-6·border·mb-12"·style={{·background:·'#111113',·borderColor:·'#27272a'·}}>␍` with `⏎········className="rounded-xl·p-6·border·mb-12"⏎········style={{·background:·'#111113',·borderColor:·'#27272a'·}}⏎······>`  prettier/prettier
+55:83  Error: Replace `Revenue·Allocation·(Immutable)</h3>␍` with `⏎··········Revenue·Allocation·(Immutable)⏎········</h3>`  prettier/prettier
+56:69  Error: Delete `␍`  prettier/prettier
+57:66  Error: Delete `␍`  prettier/prettier
+58:66  Error: Delete `␍`  prettier/prettier
+59:66  Error: Delete `␍`  prettier/prettier
+60:15  Error: Delete `␍`  prettier/prettier
+61:74  Error: Delete `␍`  prettier/prettier
+62:55  Error: Replace `<span·className="w-2·h-2·rounded-sm·inline-block"·style={{·background:·'#6366f1'·}}·/>70%·DVX·Stakers</span>␍` with `⏎············<span·className="w-2·h-2·rounded-sm·inline-block"·style={{·background:·'#6366f1'·}}·/>⏎············70%·DVX·Stakers⏎··········</span>`  prettier/prettier
+63:55  Error: Replace `<span·className="w-2·h-2·rounded-sm·inline-block"·style={{·background:·'#22d3ee'·}}·/>20%·Protocol·Dev</span>␍` with `⏎············<span·className="w-2·h-2·rounded-sm·inline-block"·style={{·background:·'#22d3ee'·}}·/>⏎············20%·Protocol·Dev⏎··········</span>`  prettier/prettier
+64:55  Error: Replace `<span·className="w-2·h-2·rounded-sm·inline-block"·style={{·background:·'#a78bfa'·}}·/>10%·Driver·Incentive</span>␍` with `⏎············<span·className="w-2·h-2·rounded-sm·inline-block"·style={{·background:·'#a78bfa'·}}·/>⏎············10%·Driver·Incentive⏎··········</span>`  prettier/prettier
+65:15  Error: Delete `␍`  prettier/prettier
+66:66  Error: Delete `␍`  prettier/prettier
+67:77  Error: Delete `␍`  prettier/prettier
+68:73  Error: Replace `{metrics.revenueDistributorBalance}</div>␍` with `⏎··············{metrics.revenueDistributorBalance}⏎············</div>`  prettier/prettier
+69:72  Error: Replace `Awaiting·distribution</div>␍` with `⏎··············Awaiting·distribution⏎············</div>`  prettier/prettier
+70:17  Error: Delete `␍`  prettier/prettier
+71:77  Error: Delete `␍`  prettier/prettier
+72:73  Error: Replace `{metrics.lastDistribution}</div>␍` with `⏎··············{metrics.lastDistribution}⏎············</div>`  prettier/prettier
+73:72  Error: Replace `Last·distribution</div>␍` with `⏎··············Last·distribution⏎············</div>`  prettier/prettier
+74:17  Error: Delete `␍`  prettier/prettier
+75:77  Error: Delete `␍`  prettier/prettier
+76:73  Error: Replace `{metrics.nextDistribution}</div>␍` with `⏎··············{metrics.nextDistribution}⏎············</div>`  prettier/prettier
+77:72  Error: Replace `Next·distribution</div>␍` with `⏎··············Next·distribution⏎············</div>`  prettier/prettier
+78:17  Error: Delete `␍`  prettier/prettier
+79:15  Error: Delete `␍`  prettier/prettier
+80:13  Error: Delete `␍`  prettier/prettier
+81:1  Error: Delete `␍`  prettier/prettier
+82:27  Error: Delete `␍`  prettier/prettier
+83:11  Error: Replace `·className="rounded-xl·p-6·border·mb-12"·style={{·background:·'#111113',·borderColor:·'#27272a'·}}>␍` with `⏎········className="rounded-xl·p-6·border·mb-12"⏎········style={{·background:·'#111113',·borderColor:·'#27272a'·}}⏎······>`  prettier/prettier
+84:83  Error: Replace `Team·Wallets·(Public)</h3>␍` with `⏎··········Team·Wallets·(Public)⏎········</h3>`  prettier/prettier
+85:66  Error: Delete `␍`  prettier/prettier
+86:95  Error: Replace `·published.␍` with `⏎··········published.`  prettier/prettier
+87:13  Error: Delete `␍`  prettier/prettier
+88:34  Error: Delete `␍`  prettier/prettier
+89:15  Error: Replace `·key={w.label}·className="flex·justify-between·items-center·py-3·border-b"·style={{·borderColor:·'#27272a'·}}>␍` with `⏎············key={w.label}⏎············className="flex·justify-between·items-center·py-3·border-b"⏎············style={{·borderColor:·'#27272a'·}}⏎··········>`  prettier/prettier
+90:68  Error: Replace `{w.label}</span>␍` with `⏎··············{w.label}⏎············</span>`  prettier/prettier
+91:18  Error: Replace `·className="text-sm"·style={{·color:·'#22d3ee',·fontFamily:·'"Courier·New",·monospace'·}}>{w.address}</code>␍` with `⏎··············className="text-sm"⏎··············style={{·color:·'#22d3ee',·fontFamily:·'"Courier·New",·monospace'·}}⏎············>⏎··············{w.address}⏎············</code>`  prettier/prettier
+92:17  Error: Delete `␍`  prettier/prettier
+93:12  Error: Delete `␍`  prettier/prettier
+94:13  Error: Delete `␍`  prettier/prettier
+95:1  Error: Delete `␍`  prettier/prettier
+96:36  Error: Delete `␍`  prettier/prettier
+97:50  Error: Replace `←·Back·to·Home</Link>␍` with `⏎··········←·Back·to·Home⏎········</Link>`  prettier/prettier
+98:13  Error: Delete `␍`  prettier/prettier
+99:11  Error: Delete `␍`  prettier/prettier
+100:5  Error: Delete `␍`  prettier/prettier
+101:2  Error: Delete `␍`  prettier/prettier
+
+./src/app/page.tsx
+1:30  Error: Delete `␍`  prettier/prettier
+2:8  Error: 'Image' is defined but never used.  @typescript-eslint/no-unused-vars
+2:32  Error: Delete `␍`  prettier/prettier
+3:1  Error: Delete `␍`  prettier/prettier
+4:37  Error: Delete `␍`  prettier/prettier
+5:11  Error: Delete `␍`  prettier/prettier
+6:10  Error: Delete `␍`  prettier/prettier
+7:82  Error: Delete `␍`  prettier/prettier
+8:106  Error: Delete `␍`  prettier/prettier
+9:13  Error: Replace `·className="text-xs·font-semibold·uppercase·tracking-widest·mb-6"·style={{·color:·'#a1a1aa'·}}>␍` with `⏎··········className="text-xs·font-semibold·uppercase·tracking-widest·mb-6"⏎··········style={{·color:·'#a1a1aa'·}}⏎········>`  prettier/prettier
+10:40  Error: Delete `␍`  prettier/prettier
+11:15  Error: Delete `␍`  prettier/prettier
+12:12  Error: Replace `·className="text-5xl·md:text-7xl·font-bold·tracking-tight·leading-tight·max-w-4xl·mb-6"␍` with `⏎··········className="text-5xl·md:text-7xl·font-bold·tracking-tight·leading-tight·max-w-4xl·mb-6"`  prettier/prettier
+13:19  Error: Delete `␍`  prettier/prettier
+14:90  Error: Delete `␍`  prettier/prettier
+15:42  Error: Delete `␍`  prettier/prettier
+16:48  Error: Delete `␍`  prettier/prettier
+17:36  Error: Delete `␍`  prettier/prettier
+18:13  Error: Replace `>␍` with `⏎········>`  prettier/prettier
+19:55  Error: Delete `␍`  prettier/prettier
+20:14  Error: Delete `␍`  prettier/prettier
+21:92  Error: Delete `␍`  prettier/prettier
+22:96  Error: Replace `·printed·tokens·—·from·the·value·you·create.␍` with `⏎··········printed·tokens·—·from·the·value·you·create.`  prettier/prettier
+23:13  Error: Delete `␍`  prettier/prettier
+24:58  Error: Delete `␍`  prettier/prettier
+25:81  Error: Replace `Get·Started</Link>␍` with `⏎············Get·Started⏎··········</Link>`  prettier/prettier
+26:74  Error: Replace `How·It·Works</a>␍` with `⏎············How·It·Works⏎··········</a>`  prettier/prettier
+27:15  Error: Delete `␍`  prettier/prettier
+28:13  Error: Replace `·className="mt-16·h-0.5·w-72·rounded-full"␍` with `⏎··········className="mt-16·h-0.5·w-72·rounded-full"`  prettier/prettier
+29:19  Error: Replace `·background:·'linear-gradient(90deg,·transparent,·#6366f1,·#22d3ee,·transparent)',·animation:·'pulse-glow·3s·ease-in-out·infinite'·}}·/>␍` with `⏎············background:·'linear-gradient(90deg,·transparent,·#6366f1,·#22d3ee,·transparent)',⏎············animation:·'pulse-glow·3s·ease-in-out·infinite',⏎··········}}⏎········/>`  prettier/prettier
+30:17  Error: Delete `␍`  prettier/prettier
+31:1  Error: Delete `␍`  prettier/prettier
+32:82  Error: Delete `␍`  prettier/prettier
+33:47  Error: Delete `␍`  prettier/prettier
+34:105  Error: Delete `␍`  prettier/prettier
+35:13  Error: Delete `␍`  prettier/prettier
+36:59  Error: Delete `␍`  prettier/prettier
+37:62  Error: Delete `␍`  prettier/prettier
+38:58  Error: Delete `␍`  prettier/prettier
+39:59  Error: Delete `␍`  prettier/prettier
+40:25  Error: Delete `␍`  prettier/prettier
+41:32  Error: Delete `␍`  prettier/prettier
+42:95  Error: Replace `{s.value}</div>␍` with `⏎················{s.value}⏎··············</div>`  prettier/prettier
+43:100  Error: Replace `{s.label}</div>␍` with `⏎················{s.label}⏎··············</div>`  prettier/prettier
+44:19  Error: Delete `␍`  prettier/prettier
+45:14  Error: Delete `␍`  prettier/prettier
+46:15  Error: Delete `␍`  prettier/prettier
+47:13  Error: Delete `␍`  prettier/prettier
+48:1  Error: Delete `␍`  prettier/prettier
+49:28  Error: Delete `␍`  prettier/prettier
+50:101  Error: Delete `␍`  prettier/prettier
+51:86  Error: Delete `␍`  prettier/prettier
+52:14  Error: Replace `·className="px-4·py-1.5·rounded·text-sm"·style={{·background:·'#111113',·border:·'1px·solid·#27272a',·color:·'#22d3ee'·}}>␍` with `⏎··········className="px-4·py-1.5·rounded·text-sm"⏎··········style={{·background:·'#111113',·border:·'1px·solid·#27272a',·color:·'#22d3ee'·}}⏎········>`  prettier/prettier
+53:31  Error: Delete `␍`  prettier/prettier
+54:16  Error: Delete `␍`  prettier/prettier
+55:13  Error: Delete `␍`  prettier/prettier
+56:1  Error: Delete `␍`  prettier/prettier
+57:82  Error: Delete `␍`  prettier/prettier
+58:66  Error: Delete `␍`  prettier/prettier
+59:56  Error: Delete `␍`  prettier/prettier
+60:63  Error: Delete `␍`  prettier/prettier
+61:37  Error: Replace `No·hardware.·No·seed·phrases.·No·crypto·knowledge·needed.·Just·drive·safely·and·let·the·protocol·handle·the·rest.</p>␍` with `⏎··········No·hardware.·No·seed·phrases.·No·crypto·knowledge·needed.·Just·drive·safely·and·let·the⏎··········protocol·handle·the·rest.⏎········</p>`  prettier/prettier
+62:52  Error: Delete `␍`  prettier/prettier
+63:13  Error: Delete `␍`  prettier/prettier
+64:14  Error: Replace `·n:·'01',·title:·'Drive',·desc:·'The·app·auto-detects·your·driving·using·phone·sensors.·No·manual·start,·no·dongles.·Just·drive·normally.'·},␍` with `⏎··············n:·'01',⏎··············title:·'Drive',⏎··············desc:·'The·app·auto-detects·your·driving·using·phone·sensors.·No·manual·start,·no·dongles.·Just·drive·normally.',⏎············},`  prettier/prettier
+65:14  Error: Replace `·n:·'02',·title:·'Build·Your·Score',·desc:·'Every·trip·builds·your·on-chain·Safety·Score·(0–1000).·Speed,·braking,·cornering,·phone·usage·—·all·measured,·all·verified.'·},␍` with `⏎··············n:·'02',⏎··············title:·'Build·Your·Score',⏎··············desc:·'Every·trip·builds·your·on-chain·Safety·Score·(0–1000).·Speed,·braking,·cornering,·phone·usage·—·all·measured,·all·verified.',⏎············},`  prettier/prettier
+66:14  Error: Replace `·n:·'03',·title:·'Own·Your·Identity',·desc:·'Your·Driving·Identity·lives·on-chain.·Portable·across·insurers,·employers,·and·platforms.·You·control·who·sees·it.'·},␍` with `⏎··············n:·'03',⏎··············title:·'Own·Your·Identity',⏎··············desc:·'Your·Driving·Identity·lives·on-chain.·Portable·across·insurers,·employers,·and·platforms.·You·control·who·sees·it.',⏎············},`  prettier/prettier
+67:14  Error: Replace `·n:·'04',·title:·'Earn·Revenue',·desc:·'Stake·DVX·and·earn·weekly·distributions·in·WETH·+·USDC·from·real·protocol·revenue.·Not·emissions.·Not·inflation.'·},␍` with `⏎··············n:·'04',⏎··············title:·'Earn·Revenue',⏎··············desc:·'Stake·DVX·and·earn·weekly·distributions·in·WETH·+·USDC·from·real·protocol·revenue.·Not·emissions.·Not·inflation.',⏎············},`  prettier/prettier
+68:25  Error: Delete `␍`  prettier/prettier
+69:50  Error: Delete `␍`  prettier/prettier
+70:88  Error: Replace `{c.n}</div>␍` with `⏎················{c.n}⏎··············</div>`  prettier/prettier
+71:89  Error: Replace `{c.title}</h3>␍` with `⏎················{c.title}⏎··············</h3>`  prettier/prettier
+72:83  Error: Replace `{c.desc}</p>␍` with `⏎················{c.desc}⏎··············</p>`  prettier/prettier
+73:19  Error: Delete `␍`  prettier/prettier
+74:14  Error: Delete `␍`  prettier/prettier
+75:15  Error: Delete `␍`  prettier/prettier
+76:17  Error: Delete `␍`  prettier/prettier
+77:1  Error: Delete `␍`  prettier/prettier
+78:82  Error: Delete `␍`  prettier/prettier
+79:73  Error: Delete `␍`  prettier/prettier
+80:44  Error: Delete `␍`  prettier/prettier
+81:55  Error: Delete `␍`  prettier/prettier
+82:78  Error: Delete `␍`  prettier/prettier
+83:39  Error: Replace `Most·crypto·driving·projects·print·tokens·as·rewards.·When·emissions·slow,·the·token·dies.·DrivX·is·structurally·different.</p>␍` with `⏎············Most·crypto·driving·projects·print·tokens·as·rewards.·When·emissions·slow,·the·token⏎············dies.·DrivX·is·structurally·different.⏎··········</p>`  prettier/prettier
+84:54  Error: Delete `␍`  prettier/prettier
+85:15  Error: Delete `␍`  prettier/prettier
+86:16  Error: Replace `·title:·'Real·Revenue,·Not·Emissions',·desc:·'Stakers·earn·WETH·+·USDC·from·trading·fees,·insurance·verification·fees,·and·marketplace·fees.·No·new·tokens·are·ever·minted.'·},␍` with `⏎················title:·'Real·Revenue,·Not·Emissions',⏎················desc:·'Stakers·earn·WETH·+·USDC·from·trading·fees,·insurance·verification·fees,·and·marketplace·fees.·No·new·tokens·are·ever·minted.',⏎··············},`  prettier/prettier
+87:16  Error: Replace `·title:·'Fixed·Supply,·Deflationary',·desc:·'100B·DVX.·No·mint·function.·Buyback-and-burn·reduces·supply·permanently.·Every·burn·is·on-chain·and·irreversible.'·},␍` with `⏎················title:·'Fixed·Supply,·Deflationary',⏎················desc:·'100B·DVX.·No·mint·function.·Buyback-and-burn·reduces·supply·permanently.·Every·burn·is·on-chain·and·irreversible.',⏎··············},`  prettier/prettier
+88:16  Error: Replace `·title:·'No·Team·Tokens',·desc:·'Zero·pre-allocation.·100%·of·supply·into·the·liquidity·pool.·Team·funded·from·20%·treasury.·All·wallets·published·at·launch.'·},␍` with `⏎················title:·'No·Team·Tokens',⏎················desc:·'Zero·pre-allocation.·100%·of·supply·into·the·liquidity·pool.·Team·funded·from·20%·treasury.·All·wallets·published·at·launch.',⏎··············},`  prettier/prettier
+89:16  Error: Replace `·title:·'On-Chain·Identity',·desc:·'Your·Safety·Score·is·portable,·verifiable,·and·composable.·No·platform·can·revoke·it.·No·company·can·lock·it.·You·own·it.'·},␍` with `⏎················title:·'On-Chain·Identity',⏎················desc:·'Your·Safety·Score·is·portable,·verifiable,·and·composable.·No·platform·can·revoke·it.·No·company·can·lock·it.·You·own·it.',⏎··············},`  prettier/prettier
+90:16  Error: Replace `·title:·'Score-Weighted·Yield',·desc:·'Revenue·share·=·stake·×·Safety·Score.·A·safe·driver·with·1K·DVX·earns·more·than·a·speculator·with·10K·DVX·and·no·score.'·},␍` with `⏎················title:·'Score-Weighted·Yield',⏎················desc:·'Revenue·share·=·stake·×·Safety·Score.·A·safe·driver·with·1K·DVX·earns·more·than·a·speculator·with·10K·DVX·and·no·score.',⏎··············},`  prettier/prettier
+91:16  Error: Replace `·title:·'Immutable·Economics',·desc:·'The·70/20/10·revenue·split·is·hardcoded.·No·admin·keys.·No·governance·can·change·it.·Verified·on·Basescan.'·},␍` with `⏎················title:·'Immutable·Economics',⏎················desc:·'The·70/20/10·revenue·split·is·hardcoded.·No·admin·keys.·No·governance·can·change·it.·Verified·on·Basescan.',⏎··············},`  prettier/prettier
+92:27  Error: Delete `␍`  prettier/prettier
+93:56  Error: Delete `␍`  prettier/prettier
+94:91  Error: Replace `{c.title}</h3>␍` with `⏎··················{c.title}⏎················</h3>`  prettier/prettier
+95:85  Error: Replace `{c.desc}</p>␍` with `⏎··················{c.desc}⏎················</p>`  prettier/prettier
+96:21  Error: Delete `␍`  prettier/prettier
+97:16  Error: Delete `␍`  prettier/prettier
+98:17  Error: Delete `␍`  prettier/prettier
+99:15  Error: Delete `␍`  prettier/prettier
+100:17  Error: Delete `␍`  prettier/prettier
+101:1  Error: Delete `␍`  prettier/prettier
+102:82  Error: Delete `␍`  prettier/prettier
+103:73  Error: Delete `␍`  prettier/prettier
+104:54  Error: Delete `␍`  prettier/prettier
+105:77  Error: Delete `␍`  prettier/prettier
+106:37  Error: Replace `100%·fair·launch·via·Bankr·Bot·on·Base.·No·pre-sale.·No·VCs.·No·vesting.·Instant·liquidity·from·block·1.</p>␍` with `⏎··········100%·fair·launch·via·Bankr·Bot·on·Base.·No·pre-sale.·No·VCs.·No·vesting.·Instant·liquidity⏎··········from·block·1.⏎········</p>`  prettier/prettier
+107:65  Error: Delete `␍`  prettier/prettier
+108:34  Error: Delete `␍`  prettier/prettier
+109:16  Error: Delete `␍`  prettier/prettier
+110:15  Error: Delete `␍`  prettier/prettier
+111:41  Error: Delete `␍`  prettier/prettier
+112:57  Error: Delete `␍`  prettier/prettier
+113:59  Error: Delete `␍`  prettier/prettier
+114:63  Error: Delete `␍`  prettier/prettier
+115:61  Error: Delete `␍`  prettier/prettier
+116:59  Error: Delete `␍`  prettier/prettier
+117:54  Error: Delete `␍`  prettier/prettier
+118:61  Error: Delete `␍`  prettier/prettier
+119:30  Error: Delete `␍`  prettier/prettier
+120:19  Error: Replace `·key={item.k}·className="flex·justify-between·items-center·py-4·border-b·border-border">␍` with `⏎················key={item.k}⏎················className="flex·justify-between·items-center·py-4·border-b·border-border"⏎··············>`  prettier/prettier
+121:72  Error: Replace `{item.k}</span>␍` with `⏎··················{item.k}⏎················</span>`  prettier/prettier
+122:86  Error: Replace `{item.v}</span>␍` with `⏎··················{item.v}⏎················</span>`  prettier/prettier
+123:21  Error: Delete `␍`  prettier/prettier
+124:16  Error: Delete `␍`  prettier/prettier
+125:17  Error: Delete `␍`  prettier/prettier
+126:32  Error: Delete `␍`  prettier/prettier
+127:16  Error: Delete `␍`  prettier/prettier
+128:87  Error: Replace `Revenue·Allocation</h3>␍` with `⏎··············Revenue·Allocation⏎············</h3>`  prettier/prettier
+129:70  Error: Replace `Hardcoded.·Immutable.·No·admin·override.</p>␍` with `⏎··············Hardcoded.·Immutable.·No·admin·override.⏎············</p>`  prettier/prettier
+130:73  Error: Delete `␍`  prettier/prettier
+131:92  Error: Delete `␍`  prettier/prettier
+132:92  Error: Delete `␍`  prettier/prettier
+133:92  Error: Delete `␍`  prettier/prettier
+134:19  Error: Delete `␍`  prettier/prettier
+135:78  Error: Delete `␍`  prettier/prettier
+136:59  Error: Replace `<span·className="w-2·h-2·rounded-sm·inline-block"·style={{·background:·'#6366f1'·}}·/>70%·Safe·Drivers</span>␍` with `⏎················<span⏎··················className="w-2·h-2·rounded-sm·inline-block"⏎··················style={{·background:·'#6366f1'·}}⏎················/>⏎················70%·Safe·Drivers⏎··············</span>`  prettier/prettier
+137:59  Error: Replace `<span·className="w-2·h-2·rounded-sm·inline-block"·style={{·background:·'#22d3ee'·}}·/>20%·Protocol·Dev</span>␍` with `⏎················<span⏎··················className="w-2·h-2·rounded-sm·inline-block"⏎··················style={{·background:·'#22d3ee'·}}⏎················/>⏎················20%·Protocol·Dev⏎··············</span>`  prettier/prettier
+138:59  Error: Replace `<span·className="w-2·h-2·rounded-sm·inline-block"·style={{·background:·'#a78bfa'·}}·/>10%·Incentive·Pool</span>␍` with `⏎················<span⏎··················className="w-2·h-2·rounded-sm·inline-block"⏎··················style={{·background:·'#a78bfa'·}}⏎················/>⏎················10%·Incentive·Pool⏎··············</span>`  prettier/prettier
+139:19  Error: Delete `␍`  prettier/prettier
+140:84  Error: Delete `␍`  prettier/prettier
+141:87  Error: Replace `Staking·Formula</h3>␍` with `⏎················Staking·Formula⏎··············</h3>`  prettier/prettier
+142:20  Error: Replace `·className="text-sm·block·mb-3"·style={{·color:·'#a1a1aa',·fontFamily:·'"Courier·New",·monospace'·}}>␍` with `⏎················className="text-sm·block·mb-3"⏎················style={{·color:·'#a1a1aa',·fontFamily:·'"Courier·New",·monospace'·}}⏎··············>`  prettier/prettier
+143:84  Error: Delete `␍`  prettier/prettier
+144:22  Error: Delete `␍`  prettier/prettier
+145:67  Error: Delete `␍`  prettier/prettier
+146:83  Error: Delete `␍`  prettier/prettier
+147:19  Error: Delete `␍`  prettier/prettier
+148:19  Error: Delete `␍`  prettier/prettier
+149:17  Error: Delete `␍`  prettier/prettier
+150:15  Error: Delete `␍`  prettier/prettier
+151:17  Error: Delete `␍`  prettier/prettier
+152:1  Error: Delete `␍`  prettier/prettier
+153:82  Error: Delete `␍`  prettier/prettier
+154:86  Error: Delete `␍`  prettier/prettier
+155:44  Error: Delete `␍`  prettier/prettier
+156:53  Error: Delete `␍`  prettier/prettier
+157:83  Error: Delete `␍`  prettier/prettier
+158:39  Error: Replace `Each·phase·builds·on·the·last.·Revenue·from·day·one.·Trustless·scoring·by·year·two.</p>␍` with `⏎············Each·phase·builds·on·the·last.·Revenue·from·day·one.·Trustless·scoring·by·year·two.⏎··········</p>`  prettier/prettier
+159:76  Error: Delete `␍`  prettier/prettier
+160:15  Error: Delete `␍`  prettier/prettier
+161:16  Error: Replace `·phase:·'Phase·1·—·Q3·2026',·title:·'Foundation',·desc:·'Mobile·app·live·(iOS·+·Android).·Auto-detection,·scoring,·trip·history.·Build·driver·base.·No·crypto·visible.'·},␍` with `⏎················phase:·'Phase·1·—·Q3·2026',⏎················title:·'Foundation',⏎················desc:·'Mobile·app·live·(iOS·+·Android).·Auto-detection,·scoring,·trip·history.·Build·driver·base.·No·crypto·visible.',⏎··············},`  prettier/prettier
+162:16  Error: Replace `·phase:·'Phase·2·—·Q4·2026',·title:·'Token·Launch',·desc:·'DVX·deployed·via·Bankr·Bot·on·Base.·Revenue·Distributor,·Staking,·Buyback·contracts·live.·Trip·rewards·enabled.·Early·contributor·bonus·active.'·},␍` with `⏎················phase:·'Phase·2·—·Q4·2026',⏎················title:·'Token·Launch',⏎················desc:·'DVX·deployed·via·Bankr·Bot·on·Base.·Revenue·Distributor,·Staking,·Buyback·contracts·live.·Trip·rewards·enabled.·Early·contributor·bonus·active.',⏎··············},`  prettier/prettier
+163:16  Error: Replace `·phase:·'Phase·3·—·Q1·2027',·title:·'Insurance·Integration',·desc:·'Verification·API·live.·First·insurer·partnerships.·Drivers·unlock·premium·discounts·from·their·Safety·Score.·Consent·management·active.'·},␍` with `⏎················phase:·'Phase·3·—·Q1·2027',⏎················title:·'Insurance·Integration',⏎················desc:·'Verification·API·live.·First·insurer·partnerships.·Drivers·unlock·premium·discounts·from·their·Safety·Score.·Consent·management·active.',⏎··············},`  prettier/prettier
+164:16  Error: Replace `·phase:·'Phase·4·—·Q2·2027',·title:·'Marketplace·&·Scale',·desc:·'Direct-hire·delivery·marketplace.·Accountability·Engine·and·public·dashboard.·Infrastructure·APIs.·Government·data·licensing.'·},␍` with `⏎················phase:·'Phase·4·—·Q2·2027',⏎················title:·'Marketplace·&·Scale',⏎················desc:·'Direct-hire·delivery·marketplace.·Accountability·Engine·and·public·dashboard.·Infrastructure·APIs.·Government·data·licensing.',⏎··············},`  prettier/prettier
+165:16  Error: Replace `·phase:·'Phase·5·—·Q3·2027+',·title:·'Trustless·Infrastructure',·desc:·'ZK·score·proofs.·Verifiable·computation·via·zkVM.·On-device·federated·scoring.·Sybil-resistant·driving·proofs.'·},␍` with `⏎················phase:·'Phase·5·—·Q3·2027+',⏎················title:·'Trustless·Infrastructure',⏎················desc:·'ZK·score·proofs.·Verifiable·computation·via·zkVM.·On-device·federated·scoring.·Sybil-resistant·driving·proofs.',⏎··············},`  prettier/prettier
+166:33  Error: Delete `␍`  prettier/prettier
+167:49  Error: Delete `␍`  prettier/prettier
+168:21  Error: Replace `·className="absolute·-left-10·top-1.5·w-3·h-3·rounded-full·border-2"·style={{·borderColor:·'#6366f1',·background:·'#09090b'·}}·/>␍` with `⏎··················className="absolute·-left-10·top-1.5·w-3·h-3·rounded-full·border-2"⏎··················style={{·borderColor:·'#6366f1',·background:·'#09090b'·}}⏎················/>`  prettier/prettier
+169:21  Error: Replace `·className="text-xs·uppercase·tracking-widest·mb-1"·style={{·color:·'#a1a1aa'·}}>{item.phase}</div>␍` with `⏎··················className="text-xs·uppercase·tracking-widest·mb-1"⏎··················style={{·color:·'#a1a1aa'·}}⏎················>⏎··················{item.phase}⏎················</div>`  prettier/prettier
+170:92  Error: Replace `{item.title}</div>␍` with `⏎··················{item.title}⏎················</div>`  prettier/prettier
+171:87  Error: Replace `{item.desc}</div>␍` with `⏎··················{item.desc}⏎················</div>`  prettier/prettier
+172:21  Error: Delete `␍`  prettier/prettier
+173:16  Error: Delete `␍`  prettier/prettier
+174:17  Error: Delete `␍`  prettier/prettier
+175:15  Error: Delete `␍`  prettier/prettier
+176:17  Error: Delete `␍`  prettier/prettier
+177:1  Error: Delete `␍`  prettier/prettier
+178:82  Error: Delete `␍`  prettier/prettier
+179:74  Error: Delete `␍`  prettier/prettier
+180:93  Error: Delete `␍`  prettier/prettier
+181:40  Error: Replace `<br·/>DrivX·makes·sure·they·get·paid.␍` with `⏎··········<br·/>⏎··········DrivX·makes·sure·they·get·paid.`  prettier/prettier
+182:14  Error: Delete `␍`  prettier/prettier
+183:66  Error: Replace `Join·the·protocol.·Own·your·data.·Earn·from·the·value·you·create.</p>␍` with `⏎··········Join·the·protocol.·Own·your·data.·Earn·from·the·value·you·create.⏎········</p>`  prettier/prettier
+184:52  Error: Delete `␍`  prettier/prettier
+185:81  Error: Replace `Launch·App</Link>␍` with `⏎············Launch·App⏎··········</Link>`  prettier/prettier
+186:85  Error: Replace `View·Leaderboard</Link>␍` with `⏎············View·Leaderboard⏎··········</Link>`  prettier/prettier
+187:15  Error: Delete `␍`  prettier/prettier
+188:17  Error: Delete `␍`  prettier/prettier
+189:11  Error: Delete `␍`  prettier/prettier
+190:5  Error: Delete `␍`  prettier/prettier
+191:2  Error: Delete `␍`  prettier/prettier
+
+./src/components/Nav.tsx
+1:14  Error: Delete `␍`  prettier/prettier
+2:30  Error: Delete `␍`  prettier/prettier
+3:32  Error: Delete `␍`  prettier/prettier
+4:47  Error: Delete `␍`  prettier/prettier
+5:29  Error: Delete `␍`  prettier/prettier
+6:1  Error: Delete `␍`  prettier/prettier
+7:16  Error: Delete `␍`  prettier/prettier
+8:50  Error: Delete `␍`  prettier/prettier
+9:56  Error: Delete `␍`  prettier/prettier
+10:46  Error: Delete `␍`  prettier/prettier
+11:40  Error: Delete `␍`  prettier/prettier
+12:3  Error: Delete `␍`  prettier/prettier
+13:1  Error: Delete `␍`  prettier/prettier
+14:24  Error: Delete `␍`  prettier/prettier
+15:30  Error: Delete `␍`  prettier/prettier
+16:11  Error: Delete `␍`  prettier/prettier
+17:9  Error: Replace `·className="fixed·top-0·w-full·z-50·border-b·border-border"␍` with `⏎······className="fixed·top-0·w-full·z-50·border-b·border-border"`  prettier/prettier
+18:80  Error: Replace `>␍` with `⏎····>`  prettier/prettier
+19:86  Error: Delete `␍`  prettier/prettier
+20:14  Error: Replace `·href="/"·className="flex·items-center·gap-2·font-bold·text-xl·tracking-tight·text-text">␍` with `⏎··········href="/"⏎··········className="flex·items-center·gap-2·font-bold·text-xl·tracking-tight·text-text"⏎········>`  prettier/prettier
+21:91  Error: Delete `␍`  prettier/prettier
+22:16  Error: Delete `␍`  prettier/prettier
+23:16  Error: Delete `␍`  prettier/prettier
+24:60  Error: Delete `␍`  prettier/prettier
+25:30  Error: Delete `␍`  prettier/prettier
+26:18  Error: Delete `␍`  prettier/prettier
+27:27  Error: Delete `␍`  prettier/prettier
+28:28  Error: Delete `␍`  prettier/prettier
+29:31  Error: Delete `␍`  prettier/prettier
+30:45  Error: Delete `␍`  prettier/prettier
+31:77  Error: Replace `␍` with `,`  prettier/prettier
+32:17  Error: Delete `␍`  prettier/prettier
+33:14  Error: Delete `␍`  prettier/prettier
+34:24  Error: Delete `␍`  prettier/prettier
+35:20  Error: Delete `␍`  prettier/prettier
+36:14  Error: Delete `␍`  prettier/prettier
+37:15  Error: Delete `␍`  prettier/prettier
+38:50  Error: Delete `␍`  prettier/prettier
+39:84  Error: Delete `␍`  prettier/prettier
+40:27  Error: Delete `␍`  prettier/prettier
+41:18  Error: Delete `␍`  prettier/prettier
+42:77  Error: Delete `␍`  prettier/prettier
+43:28  Error: Delete `␍`  prettier/prettier
+44:18  Error: Delete `␍`  prettier/prettier
+45:15  Error: Delete `␍`  prettier/prettier
+46:13  Error: Delete `␍`  prettier/prettier
+47:11  Error: Delete `␍`  prettier/prettier
+48:5  Error: Delete `␍`  prettier/prettier
+49:2  Error: Delete `␍`  prettier/prettier
+
+./src/components/ScoreRing.tsx
+1:27  Error: Delete `␍`  prettier/prettier
+2:17  Error: Delete `␍`  prettier/prettier
+3:17  Error: Delete `␍`  prettier/prettier
+4:2  Error: Delete `␍`  prettier/prettier
+5:1  Error: Delete `␍`  prettier/prettier
+6:66  Error: Delete `␍`  prettier/prettier
+7:33  Error: Delete `␍`  prettier/prettier
+8:46  Error: Delete `␍`  prettier/prettier
+9:51  Error: Delete `␍`  prettier/prettier
+10:1  Error: Delete `␍`  prettier/prettier
+11:16  Error: Replace `␍⏎····score·>=·800·?·'#22d3ee'·:␍⏎····score·>=·600·?·'#a78bfa'·:␍⏎····'#f87171';␍` with `·score·>=·800·?·'#22d3ee'·:·score·>=·600·?·'#a78bfa'·:·'#f87171';`  prettier/prettier
+15:1  Error: Delete `␍`  prettier/prettier
+16:11  Error: Delete `␍`  prettier/prettier
+17:77  Error: Delete `␍`  prettier/prettier
+18:101  Error: Delete `␍`  prettier/prettier
+19:14  Error: Delete `␍`  prettier/prettier
+20:22  Error: Replace `·cy={size·/·2}·r={radius}␍` with `⏎········cy={size·/·2}⏎········r={radius}`  prettier/prettier
+21:20  Error: Replace `·stroke={color}·strokeWidth={4}␍` with `⏎········stroke={color}⏎········strokeWidth={4}`  prettier/prettier
+22:57  Error: Delete `␍`  prettier/prettier
+23:30  Error: Delete `␍`  prettier/prettier
+24:9  Error: Delete `␍`  prettier/prettier
+25:11  Error: Delete `␍`  prettier/prettier
+26:5  Error: Delete `␍`  prettier/prettier
+27:2  Error: Delete `␍`  prettier/prettier
+
+./src/components/StatsBar.tsx
+1:29  Error: Delete `␍`  prettier/prettier
+2:18  Error: Delete `␍`  prettier/prettier
+3:50  Error: Delete `␍`  prettier/prettier
+4:48  Error: Delete `␍`  prettier/prettier
+5:50  Error: Delete `␍`  prettier/prettier
+6:49  Error: Delete `␍`  prettier/prettier
+7:49  Error: Delete `␍`  prettier/prettier
+8:5  Error: Delete `␍`  prettier/prettier
+9:1  Error: Delete `␍`  prettier/prettier
+10:11  Error: Delete `␍`  prettier/prettier
+11:45  Error: Delete `␍`  prettier/prettier
+12:52  Error: Delete `␍`  prettier/prettier
+13:76  Error: Delete `␍`  prettier/prettier
+14:30  Error: Delete `␍`  prettier/prettier
+15:32  Error: Delete `␍`  prettier/prettier
+16:91  Error: Delete `␍`  prettier/prettier
+17:97  Error: Delete `␍`  prettier/prettier
+18:19  Error: Delete `␍`  prettier/prettier
+19:14  Error: Delete `␍`  prettier/prettier
+20:15  Error: Delete `␍`  prettier/prettier
+21:13  Error: Delete `␍`  prettier/prettier
+22:11  Error: Delete `␍`  prettier/prettier
+23:5  Error: Delete `␍`  prettier/prettier
+24:2  Error: Delete `␍`  prettier/prettier
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+npm error Lifecycle script `build` failed with error:
+npm error code 1
+npm error path c:\Users\eeeaz\Downloads\test\test\packages\web
+npm error workspace @drivx/web@0.1.0
+npm error location c:\Users\eeeaz\Downloads\test\test\packages\web
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c next build
