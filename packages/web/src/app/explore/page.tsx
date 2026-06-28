@@ -3,12 +3,12 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 const pages = [
+  { href: '/demo', title: 'Trip Score Simulator', desc: 'Interact with the scoring algorithm live. Adjust 6 driving factors and see your score, grade, and DVX reward in real-time.', icon: '⚡', color: '#22d3ee' },
   { href: '/leaderboard', title: 'Safety Leaderboard', desc: 'Top drivers by Safety Score globally. Anonymised by default. Regional filters.', icon: '01', color: '#6366f1' },
   { href: '/dashboard', title: 'Driver Marketplace', desc: 'Find and hire verified safe drivers. Filter by score, zone, category. Smart contract escrow.', icon: '02', color: '#22d3ee' },
   { href: '/accountability', title: 'Platform Accountability', desc: 'Immutable on-chain reports exposing unsafe platform speed targets. k-anonymity enforced.', icon: '03', color: '#f87171' },
   { href: '/community', title: 'Community & Roadmap', desc: 'Network growth, safety improvements, and the 5-phase protocol roadmap.', icon: '04', color: '#34d399' },
   { href: '/metrics', title: 'Token Metrics', desc: 'Real-time DVX supply, staking stats, buyback rate, revenue distribution, team wallets.', icon: '05', color: '#a78bfa' },
-  { href: '/docs', title: 'API Documentation', desc: 'OpenAPI 3.0 endpoints for Safety Score verification, insurance, and marketplace.', icon: '06', color: '#fb923c' },
 ];
 
 function Card({ page }: { page: typeof pages[0] }) {
